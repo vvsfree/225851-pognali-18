@@ -1,0 +1,31 @@
+@import "fonts.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "scaffolding.scss";
+
+// common blocks
+@import "blocks/btn.scss";
+@import "blocks/title.scss";
+@import "blocks/contact-list.scss";
+
+// header
+@import "blocks/page-header.scss";
+@import "blocks/menu.scss";
+@import "blocks/intro.scss";
+@import "blocks/review.scss";
+@import "blocks/srv-list.scss";
+
+
+// main
+@import "blocks/about.scss";
+@import "blocks/countries.scss";
+@import "blocks/travelmates.scss";
+@import "blocks/travelmate.scss";
+@import "blocks/rates.scss";
+@import "blocks/rates-b.scss";
+@import "blocks/cta.scss";
+@import "blocks/contacts.scss";
+// footer
+@import "blocks/page-footer.scss";
+
+@import "outline.scss";

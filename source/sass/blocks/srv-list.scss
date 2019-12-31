@@ -1,0 +1,25 @@
+.srv-list {
+  position: relative;
+  padding: 0;
+  list-style: none;
+}
+
+.srv-list__item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 128px;
+  @include font(18px, 18px, $dark-blue-color, 700);
+  background-color: #ff8d30;
+
+  &--lighter1 {
+    background-color: #ffa530;
+  }
+
+  &--lighter2 {
+    background-color: #ffbd30;
+  }
+
+  &--lighter3 {
+    background-color: #ffd74b;
+  }
+}

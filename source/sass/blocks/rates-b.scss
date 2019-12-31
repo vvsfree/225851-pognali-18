@@ -1,0 +1,5 @@
+.rates-b {
+  display: none;
+  background-color: $lilac-color;
+  @include font(16px, 22px, $black-color, 300);
+}

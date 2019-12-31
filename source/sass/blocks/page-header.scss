@@ -1,0 +1,8 @@
+.page-header {
+  margin-bottom: -228px;
+  @include font(16px, 22px, $white-color, 300);
+  background-color: $dark-blue-color;
+  background-image: url("../../img/globe-back-mobile@1x.jpg");
+  background-position: left top;
+  background-repeat: no-repeat;
+}

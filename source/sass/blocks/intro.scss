@@ -1,0 +1,45 @@
+.intro__top-wrapper {
+  margin-bottom: -18px;
+}
+
+.intro__slogan {
+  display: block;
+  margin-bottom: 12px;
+  @include font(36px, 40px, $white-color, 700);
+  text-align: center;
+}
+
+.intro__picture {
+  display: block;
+  margin-bottom: -23px;
+}
+
+.intro__image {
+  display: block;
+  margin-left: 54px;
+}
+
+.intro__user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro__contact-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0;
+}
+
+.intro__phone {
+  &::before {
+    background-color: #ff8d30;
+  }
+}
+
+.intro__email {
+  &::before {
+    background-color: #ffbd30;
+  }
+}

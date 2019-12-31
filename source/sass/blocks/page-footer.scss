@@ -1,0 +1,4 @@
+.page-footer {
+  background-color: $white-color;
+  @include font(16px, 22px, $black-color, 400);
+}

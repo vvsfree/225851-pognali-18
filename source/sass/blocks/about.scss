@@ -1,0 +1,15 @@
+.about {
+  padding-top: 280px;
+  padding-bottom: 80px;
+  @include font(16px, 22px, $white-color, 300);
+  background-color: $blue-color;
+  background-image: url("../../img/about-mobile@1x.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.about__wrapper {
+  padding-left: 24px;
+  padding-right: 33px;
+  box-sizing: border-box;
+}

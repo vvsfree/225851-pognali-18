@@ -1,0 +1,4 @@
+.travelmate {
+  background-color: $white-color;
+  @include font(16px, 18px, $black-color, 400);
+}
