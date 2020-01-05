@@ -1,0 +1,23 @@
+.country-filter {
+  position: relative;
+  padding-top: 20px + $border-small-radius;
+  padding-bottom: 17px;
+  background-color: #e2e5f2;
+  border-bottom-left-radius: $border-small-radius;
+  border-bottom-right-radius: $border-small-radius;
+}
+
+.country-filter__title {
+  margin: 0;
+  @include font(16px, 22px, #192144, 700);
+  text-transform: uppercase;
+}
+
+.country-filter__dialog {
+  display: none;
+
+  &--opened {
+    display: block;
+    position: absolute;
+  }
+}

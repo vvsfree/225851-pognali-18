@@ -1,0 +1,13 @@
+.plans {
+  padding-top: 30px;
+  padding-bottom: 30px + $border-radius;
+  background-color: #dfe3f0;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+}
+
+.plans__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

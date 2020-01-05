@@ -1,0 +1,29 @@
+.filter {
+  padding-top: 24px + $border-small-radius;
+  padding-bottom: 28px;
+  background-color: $lilac-color;
+}
+
+.filter__title {
+  margin: 0;
+  @include font(22.5px, 22.5px, #1d2e5b, bold);
+}
+
+.filter__legend {
+  @include font(16px, 18px, #1d2e5b, bold);
+  text-transform: uppercase;
+}
+
+.filter__label {
+  @include font(15px, 15px, $black-color, normal);
+}
+
+.filter__wrapper {
+  padding-top: 26px;
+  padding-bottom: 22px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  background-color: $yellow-color;
+  border-radius: $border-small-radius;
+}

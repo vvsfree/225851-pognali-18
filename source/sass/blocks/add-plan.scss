@@ -1,0 +1,11 @@
+.add-plan {
+  padding-top: 30px;
+  padding-bottom: 44px + $border-radius;
+  background-color: #d4d9eb;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+}
+
+.add-plan__dialog {
+  display: none;
+}

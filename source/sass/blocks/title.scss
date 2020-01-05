@@ -1,4 +1,8 @@
 .title {
   margin: 0;
   @include font(24px, 24px, $orange-color, 700);
+
+  &--blue {
+    color: #1d2e5b;
+  }
 }

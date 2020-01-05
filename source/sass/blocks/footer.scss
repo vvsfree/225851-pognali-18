@@ -1,0 +1,27 @@
+.footer {
+  padding-top: 38px;
+  padding-bottom: 14px;
+  @include font(16px, 22px, $black-color, 400);
+  background-color: $white-color;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__logo {
+  display: block;
+  text-decoration: none;
+}
+
+.footer__picture {
+  display: block;
+}
+
+.footer__logo-img {
+  display: block;
+}

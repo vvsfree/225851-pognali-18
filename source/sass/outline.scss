@@ -1,7 +1,12 @@
-.page-header__menu {
+.header__menu {
   // min-height: 477px;
   box-sizing: border-box;
   outline: 1px solid red;
+}
+
+.menu {
+  outline: 1px solid greenyellow;
+  outline-offset: -1px;
 }
 
 .review {
@@ -11,4 +16,12 @@
 .wrapper {
   outline: 1px solid red;
   outline-style: dotted;
+}
+
+.form__fieldset {
+  outline: 1px solid orange;
+}
+
+.form__wrapper {
+  outline: 1px solid green;
 }

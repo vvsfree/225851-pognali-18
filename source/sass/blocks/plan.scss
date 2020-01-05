@@ -1,0 +1,7 @@
+.plan {
+  background-color: $white-color;
+}
+
+.plan__title {
+  @include font(16px, 16px, #1d2e5b, 700);
+}

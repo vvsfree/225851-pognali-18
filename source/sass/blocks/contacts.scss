@@ -1,4 +1,8 @@
 .contacts {
-  background-color: $yellow-color;
+  padding-top: 32px + $border-radius;
+  padding-bottom: $border-radius;
   @include font(16px, 22px, $blue-color, 700);
+  background-color: $yellow-color;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
 }

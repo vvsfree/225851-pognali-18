@@ -1,4 +1,8 @@
 .cta {
-  background-color: $blue-color;
+  padding-top: 72px + $border-radius;
+  padding-bottom: $border-radius;
   @include font(16px, 22px, $white-color, 300);
+  background-color: $blue-color;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
 }

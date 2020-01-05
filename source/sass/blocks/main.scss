@@ -1,0 +1,47 @@
+.main__about {
+  position: relative;
+  z-index: 90;
+  margin-bottom: -$border-radius;
+}
+
+.main__countries {
+  position: relative;
+  z-index: 80;
+  margin-bottom: -$border-radius;
+}
+
+.main__travelmates {
+  position: relative;
+  z-index: 70;
+  margin-bottom: -$border-radius;
+}
+
+.main__rates {
+  position: relative;
+  z-index: 60;
+  margin-bottom: -$border-radius;
+}
+
+.main__cta {
+  position: relative;
+  z-index: 50;
+  margin-bottom: -$border-radius;
+}
+
+.main__contacts {
+  position: relative;
+  z-index: 40;
+  margin-bottom: -$border-radius;
+}
+
+.main__user {
+  margin-bottom: -$border-radius;
+}
+
+.main__plans {
+  margin-bottom: -$border-radius;
+}
+
+.main__country-filter {
+  margin-bottom: -$border-small-radius;
+}

@@ -6,14 +6,14 @@
     <title>HTML Academy: Погнали</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header class="page-header">
+  <body class="page">
+    <header class="header page__header">
       <h1 class="visually-hidden">Сервис путешествий «Погнали?»</h1>
-      <section class="menu page-header__menu">
+      <section class="menu header__menu">
         <h2 class="visually-hidden">Меню</h2>
-        <div class="wrapper">
+        <div class="wrapper menu__wrapper">
           <a class="menu__logo">
-            <picture>
+            <picture class="menu__picture">
               <img class="menu__logo-img" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип">
             </picture>
           </a>
@@ -87,8 +87,8 @@
       </section>
     </header>
 
-    <main class="page-main">
-      <section class="about">
+    <main class="main page__main">
+      <section class="about main__about">
         <div class="wrapper about__wrapper">
           <h2 class="title">О сервисе</h2>
           <p>
@@ -99,7 +99,7 @@
           </p>
         </div>
       </section>
-      <section class="countries">
+      <section class="countries main__countries">
         <div class="wrapper">
           <h2 class="title">Направления</h2>
           <p>
@@ -134,7 +134,7 @@
           <a class="btn countries__btn" href="form.html">Показать все</a>
         </div>
       </section>
-      <section class="travelmates">
+      <section class="travelmates main__travelmates">
         <div class="wrapper">
           <h2 class="title">Попутчики</h2>
           <p>
@@ -198,7 +198,7 @@
           <a class="btn travelmates__btn" href="catalog.html">Показать всех</a>
         </div>
       </section>
-      <section class="rates">
+      <section class="rates main__rates">
         <div class="wrapper">
           <h2 class="title">Добавьте свой профиль</h2>
           <dl class="rate-list rates__rate-list">
@@ -228,7 +228,7 @@
           <button class="rates-b__close-btn" type="button">Закрыть окно</button>
         </div>
       </section>
-      <section class="cta">
+      <section class="cta main__cta">
         <div class="wrapper">
           <h2 class="title">Заинтересовались?</h2>
           <p class="cta__text">
@@ -253,24 +253,26 @@
           </ul>
         </div>
       </section>
-      <section class="contacts">
+      <section class="contacts main__contacts">
         <div class="wrapper">
           <h2 class="visually-hidden">Контакты</h2>
           <p>ул. Большая Конюшенная, 19/8</p>
           <a href="https://maps.yandex.ru" target="_blank">Проложить маршрут</a>
         </div>
-        <div class="contacts__map"></div>
+      </section>
+      <section class="map">
+        <h2 class="visually-hidden">Интерактивная карта</h2>
       </section>
     </main>
 
-    <footer class="page-footer">
-      <div class="wrapper">
-        <a class="page-footer__logo">
-          <picture>
-            <img class="page-footer__logo-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип">
+    <footer class="footer">
+      <div class="wrapper footer__wrapper">
+        <a class="footer__logo">
+          <picture class="footer__picture">
+            <img class="footer__logo-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип">
           </picture>
         </a>
-        <ul class="social-list page-footer__social-list">
+        <ul class="social-list footer__social-list">
           <li class="social-list__item">
             <a href="#">Фэйсбук</a>
           </li>
@@ -281,7 +283,7 @@
             <a href="#">Инстаграм</a>
           </li>
         </ul>
-        <address class="copyright page-footer__copyright">
+        <address class="copyright footer__copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">Разработано
             <!-- <svg class="copyright__icon" width="27" height="34" role="img">
               <use xlink:href="#icon-academy"></use>

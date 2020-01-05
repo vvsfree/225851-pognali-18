@@ -4,12 +4,14 @@
 @import "scaffolding.scss";
 
 // common blocks
+@import "blocks/page.scss";
 @import "blocks/btn.scss";
 @import "blocks/title.scss";
 @import "blocks/contact-list.scss";
 
 // header
-@import "blocks/page-header.scss";
+@import "blocks/header.scss";
+@import "blocks/inner-header.scss";
 @import "blocks/menu.scss";
 @import "blocks/intro.scss";
 @import "blocks/review.scss";
@@ -17,6 +19,7 @@
 
 
 // main
+@import "blocks/main.scss";
 @import "blocks/about.scss";
 @import "blocks/countries.scss";
 @import "blocks/travelmates.scss";
@@ -25,7 +28,29 @@
 @import "blocks/rates-b.scss";
 @import "blocks/cta.scss";
 @import "blocks/contacts.scss";
+@import "blocks/map.scss";
+
+// form
+@import "blocks/user.scss";
+@import "blocks/plans.scss";
+@import "blocks/plan.scss";
+@import "blocks/add-plan.scss";
+@import "blocks/form.scss";
+@import "blocks/step-1.scss";
+@import "blocks/step-2.scss";
+@import "blocks/step-3.scss";
+@import "blocks/country-dialog.scss";
+
+// catalog
+@import "blocks/country-filter.scss";
+@import "blocks/country-filter-dialog.scss";
+@import "blocks/filter.scss";
+@import "blocks/catalog.scss";
+@import "blocks/travellers.scss";
+@import "blocks/traveller.scss";
+@import "blocks/pager.scss";
+
 // footer
-@import "blocks/page-footer.scss";
+@import "blocks/footer.scss";
 
 @import "outline.scss";

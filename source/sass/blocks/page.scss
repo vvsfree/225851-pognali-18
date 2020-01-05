@@ -1,0 +1,22 @@
+.page {
+  margin: 0;
+  padding: 0;
+  color: $black-color;
+  background-color: $white-color;
+}
+
+.page__header {
+  position: relative;
+  z-index: 100;
+  margin-bottom: -228px;
+}
+
+.page__inner-header {
+  position: relative;
+  z-index: 100;
+  margin-bottom: -$border-small-radius;
+}
+
+.page__main {
+  margin-bottom: -$border-radius;
+}
