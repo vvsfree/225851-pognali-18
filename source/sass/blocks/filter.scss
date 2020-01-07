@@ -1,7 +1,10 @@
 .filter {
-  padding-top: 24px + $border-small-radius;
-  padding-bottom: 28px;
-  background-color: $lilac-color;
+  padding-top: 26px;
+  padding-bottom: 22px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: $yellow-color;
+  border-radius: $border-small-radius;
 }
 
 .filter__title {
@@ -18,12 +21,30 @@
   @include font(15px, 15px, $black-color, normal);
 }
 
-.filter__wrapper {
-  padding-top: 26px;
-  padding-bottom: 22px;
-  padding-left: 20px;
-  padding-right: 20px;
-  box-sizing: border-box;
-  background-color: $yellow-color;
-  border-radius: $border-small-radius;
+@media (min-width: $tablet-width) {
+  .filter {
+    padding-top: 37px;
+    padding-bottom: 38px;
+    padding-left: 35px;
+    padding-right: 35px;
+    box-sizing: border-box;
+  }
+
+  .filter__title {
+    @include font(30px, 30px, #1d2e5b, bold);
+  }
+
+  .filter__legend {
+    @include font(20px, 20px, $black-color, 400);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter {
+    padding-top: 48px;
+    padding-bottom: 47px;
+    padding-left: 48px;
+    padding-right: 41px;
+    box-sizing: border-box;
+  }
 }

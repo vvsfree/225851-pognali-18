@@ -5,3 +5,15 @@
     margin-bottom: 0;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .travellers__item {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .travellers__item {
+    margin-bottom: 30px;
+  }
+}

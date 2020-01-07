@@ -45,3 +45,9 @@
 .main__country-filter {
   margin-bottom: -$border-small-radius;
 }
+
+@media (min-width: $tablet-width) {
+  .main__country-filter {
+    margin-bottom: -$border-large-radius;
+  }
+}

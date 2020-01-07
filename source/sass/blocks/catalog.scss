@@ -1,4 +1,43 @@
 .catalog {
+  padding-top: 24px + $border-small-radius;
   padding-bottom: 46px + $border-radius;
   background-color: $lilac-color;
+}
+
+.catalog__filter {
+  margin-bottom: 28px;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog {
+    padding-top: 46px + $border-large-radius;
+    padding-bottom: 62px + $border-large-radius;
+  }
+
+  .catalog__filter {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    padding-top: 77px + $border-large-radius;
+    padding-bottom: 77px + $border-large-radius;
+  }
+
+  .catalog__wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .catalog__filter {
+    margin-bottom: 0;
+    width: 285px;
+  }
+
+  .catalog__data {
+    width: 950px;
+  }
 }

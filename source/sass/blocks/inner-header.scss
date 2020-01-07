@@ -16,3 +16,10 @@
 .inner-header__link {
   display: none;
 }
+
+@media (min-width: $tablet-width) {
+  .inner-header {
+    border-bottom-left-radius: $border-large-radius;
+    border-bottom-right-radius: $border-large-radius;
+  }
+}

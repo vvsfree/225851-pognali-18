@@ -25,3 +25,20 @@
 .form__wrapper {
   outline: 1px solid green;
 }
+
+.filter {
+  outline: 1px solid green;
+  outline-offset: -1px;
+}
+
+.data {
+  outline: 1px solid green;
+  outline-offset: -1px;
+}
+
+.country-filter {
+  &--expanded {
+    outline: 1px solid black;
+    outline-offset: -1px;
+  }
+}

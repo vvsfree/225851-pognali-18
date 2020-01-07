@@ -20,3 +20,13 @@
 .page__main {
   margin-bottom: -$border-radius;
 }
+
+@media (min-width: $tablet-width) {
+  .page__inner-header {
+    margin-bottom: -$border-large-radius;
+  }
+
+  .page__main {
+    margin-bottom: -$border-large-radius;
+  }
+}

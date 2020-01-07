@@ -25,3 +25,10 @@
 .footer__logo-img {
   display: block;
 }
+
+@media (min-width: $tablet-width) {
+  .footer {
+    border-top-left-radius: $border-large-radius;
+    border-top-right-radius: $border-large-radius;
+  }
+}
