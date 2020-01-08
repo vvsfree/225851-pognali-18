@@ -19,6 +19,10 @@
 @media (min-width: $tablet-width) {
   .wrapper {
     width: $tablet-wrapper-width;
+
+    &--narrow {
+      width: $tablet-wrapper-width - 70px;
+    }
   }
 }
 

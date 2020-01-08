@@ -3,3 +3,10 @@
   padding-bottom: 33px + $border-radius;
   background-color: $lilac-color;
 }
+
+@media (min-width: $tablet-width) {
+  .user {
+    padding-top: 64px + $border-large-radius;
+    padding-bottom: 60px + $border-radius;
+  }
+}

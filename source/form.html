@@ -62,7 +62,7 @@
   <main class="main page__main">
     <section class="user main__user">
       <h2 class="visually-hidden">Редактирование информации о пользователе</h2>
-      <form class="wrapper" action="https://echo.htmlacademy.ru" method="POST">
+      <form class="wrapper wrapper--narrow" action="https://echo.htmlacademy.ru" method="POST">
         <span class="user__level">80</span>
         <picture>
           <img class="user__img" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="70"
@@ -97,10 +97,10 @@
       </form>
     </section>
     <section class="plans main__plans">
-      <div class="wrapper">
+      <div class="wrapper wrapper--narrow">
         <h2 class="title title--blue">Мои планы</h2>
-        <ul class="plans__list">
-          <li class="plan">
+        <ul class="plan-list">
+          <li class="plan plan-list__item">
             <h3 class="plan__title">1. Франция, Италия</h3>
             <p class="plan__info">
               3 Попутчика<br>
@@ -108,7 +108,7 @@
             </p>
             <a class="plan__link" href="#">Изменить</a>
           </li>
-          <li class="plan">
+          <li class="plan plan-list__item">
             <h3 class="plan__title">2. Тайланд, Индонезия</h3>
             <p class="plan__info">
               1 Попутчик<br>
@@ -120,7 +120,7 @@
       </div>
     </section>
     <section class="add-plan">
-      <div class="wrapper">
+      <div class="wrapper wrapper--narrow">
         <h2 class="title title--blue">Добавить план:</h2>
         <ul class="steps add-plan__steps">
           <li class="steps__item steps__item--current">Даты</li>
@@ -129,166 +129,220 @@
         </ul>
         <form class="form add-plan__form" action="https://echo.htmlacademy.ru" method="POST">
           <fieldset class="step-1 form__fieldset">
-            <div class="form__wrapper">
-              <legend class="form__legend">Шаг 1. Даты пребывания</legend>
-              <p>
-                Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую
-                длительность.
-              </p>
-              <label>
-                Ищу попутчиков:
-                <input type="number" name="travelmate_count" value="2">
-                чел.
-              </label>
-              <label>
-                Длительность:
-                <input type="number" name="travel_period" value="2">
-                дн.
-              </label>
-              <label><input type="checkbox" name="children" checked>Можно с детьми</label>
-              <div class="calendar">
-                <div class="month">
-                  <button class="month__prev-btn" type="button">Предыдущий месяц</button>
-                  Март 2019
-                  <button class="month__next-btn" type="button">Следующий месяц</button>
-                </div>
-                <ul class="week-days">
-                  <li>Пн</li>
-                  <li>Вт</li>
-                  <li>Ср</li>
-                  <li>Чт</li>
-                  <li>Пт</li>
-                  <li>Сб</li>
-                  <li>Вс</li>
-                </ul>
-                <ul class="days">
-                  <li>23</li>
-                  <li>24</li>
-                  <li>25</li>
-                  <li>26</li>
-                  <li>27</li>
-                  <li>28</li>
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                  <li>6</li>
-                  <li>7</li>
-                  <li>8</li>
-                  <li>9</li>
-                  <li>10</li>
-                  <li>11</li>
-                  <li>12</li>
-                  <li>13</li>
-                  <li>14</li>
-                  <li>15</li>
-                  <li>16</li>
-                  <li>17</li>
-                  <li>18</li>
-                  <li>19</li>
-                  <li>20</li>
-                  <li>21</li>
-                  <li>22</li>
-                  <li>23</li>
-                  <li>24</li>
-                  <li>25</li>
-                  <li>26</li>
-                  <li>27</li>
-                  <li>28</li>
-                  <li>29</li>
-                  <li>30</li>
-                  <li>31</li>
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                </ul>
+            <legend class="form__legend">Шаг 1. Даты пребывания</legend>
+            <p>
+              Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую
+              длительность.
+            </p>
+            <label>
+              Ищу попутчиков:
+              <input type="number" name="travelmate_count" value="2">
+              чел.
+            </label>
+            <label>
+              Длительность:
+              <input type="number" name="travel_period" value="2">
+              дн.
+            </label>
+            <label><input type="checkbox" name="children" checked>Можно с детьми</label>
+            <div class="calendar">
+              <div class="month">
+                <button class="month__prev-btn" type="button">Предыдущий месяц</button>
+                Март 2019
+                <button class="month__next-btn" type="button">Следующий месяц</button>
               </div>
+              <ul class="week-days">
+                <li>Пн</li>
+                <li>Вт</li>
+                <li>Ср</li>
+                <li>Чт</li>
+                <li>Пт</li>
+                <li>Сб</li>
+                <li>Вс</li>
+              </ul>
+              <ul class="days">
+                <li class="days__day">23</li>
+                <li class="days__day">24</li>
+                <li class="days__day">25</li>
+                <li class="days__day">26</li>
+                <li class="days__day">27</li>
+                <li class="days__day">28</li>
+                <li class="days__day">1</li>
+                <li class="days__day">2</li>
+                <li class="days__day">3</li>
+                <li class="days__day">4</li>
+                <li class="days__day">5</li>
+                <li class="days__day">6</li>
+                <li class="days__day">7</li>
+                <li class="days__day">8</li>
+                <li class="days__day">9</li>
+                <li class="days__day">10</li>
+                <li class="days__day">11</li>
+                <li class="days__day">12</li>
+                <li class="days__day">13</li>
+                <li class="days__day">14</li>
+                <li class="days__day">15</li>
+                <li class="days__day">16</li>
+                <li class="days__day">17</li>
+                <li class="days__day">18</li>
+                <li class="days__day">19</li>
+                <li class="days__day">20</li>
+                <li class="days__day">21</li>
+                <li class="days__day">22</li>
+                <li class="days__day">23</li>
+                <li class="days__day">24</li>
+                <li class="days__day">25</li>
+                <li class="days__day">26</li>
+                <li class="days__day">27</li>
+                <li class="days__day">28</li>
+                <li class="days__day">29</li>
+                <li class="days__day">30</li>
+                <li class="days__day">31</li>
+                <li class="days__day">1</li>
+                <li class="days__day">2</li>
+                <li class="days__day">3</li>
+                <li class="days__day">4</li>
+                <li class="days__day">5</li>
+              </ul>
             </div>
             <a class="btn step-1__next-btn" href="#">Следующий шаг</a>
           </fieldset>
           <fieldset class="step-2 form__fieldset">
-            <div class="form__wrapper">
-              <legend class="form__legend">Шаг 2. Маршрут</legend с>
-              <p>
-                Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.
-              </p>
-              <label><input type="text" value="Босния и герцеговина" placeholder="Выберите страну"></label>
-              <label><input type="text" value="Чехия" placeholder="Выберите страну"></label>
-              <div class="form__country">
-                <span class="form__country-placeholder">Выберите страну</span>
-                <div class="country-dialog form__dialog">
-                  <ul class="letter-list">
-                    <li class="letter-list__item">А</li>
-                    <li class="letter-list__item">Б</li>
-                    <li class="letter-list__item">В</li>
-                    <li class="letter-list__item">Г</li>
-                    <li class="letter-list__item">Д</li>
-                    <li class="letter-list__item">Е</li>
-                    <li class="letter-list__item">З</li>
-                    <li class="letter-list__item">И</li>
-                    <li class="letter-list__item">К</li>
-                    <li class="letter-list__item">Л</li>
-                    <li class="letter-list__item">М</li>
-                    <li class="letter-list__item">Н</li>
-                    <li class="letter-list__item">О</li>
-                    <li class="letter-list__item">П</li>
-                    <li class="letter-list__item">Р</li>
-                    <li class="letter-list__item">С</li>
-                    <li class="letter-list__item">Т</li>
-                    <li class="letter-list__item">У</li>
-                    <li class="letter-list__item">Ф</li>
-                    <li class="letter-list__item">Х</li>
-                    <li class="letter-list__item">Ч</li>
-                    <li class="letter-list__item">Ш</li>
-                    <li class="letter-list__item">Э</li>
-                    <li class="letter-list__item">Ю</li>
-                    <li class="letter-list__item">Я</li>
-                  </ul>
-                  <ul class="country-list">
-                    <li class="country-list__item">Афганистан</li>
-                    <li class="country-list__item">Албания</li>
-                    <li class="country-list__item">Алжир</li>
-                    <li class="country-list__item">Андорра</li>
-                    <li class="country-list__item">Аргентина</li>
-                    <li class="country-list__item">Армения</li>
-                    <li class="country-list__item">Австралия</li>
-                    <li class="country-list__item">Австрия</li>
-                    <li class="country-list__item">Азербайджан</li>
-                  </ul>
-                </div>
+            <legend class="form__legend">Шаг 2. Маршрут</legend>
+            <p>
+              Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.
+            </p>
+
+            <label class="form__label"><input class="form__input" type="text" name="country" value="Босния и герцеговина" placeholder="Выберите страну" readonly></label>
+            <label class="form__label"><input class="form__input" type="text" name="country" value="Чехия" placeholder="Выберите страну" readonly></label>
+
+            <div class="dropdown dropdown--opened step-2__dropdown">
+              <label class="form__label dropdown__label">
+                <input class="form__input" type="text" name="country" value="" placeholder="Выберите страну" readonly>
+              </label>
+              <div class="dropdown__content">
+                <!--
+                   letters не будут жить отдельно от dropdown, country-list тоже
+                   Может быть стоит сделать единый компонент, который еще можно будет прикрутить к выбору страны в каталоге
+                   Там, в секции, есть header, после него можно сделать dropdown__content...
+                   Но тогда вся секция тоже получит класс dropdown. Что, блин, круто, да? ))
+                 -->
+                <ul class="letters dropdown__letters">
+                  <li class="letter">
+                    <span class="letter__name">А</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">Б</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">В</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">Г</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">Д</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">Е</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">З</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">И</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">К</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">Л</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">М</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">Н</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">О</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">П</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">Р</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">С</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">Т</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">У</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">Ф</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">Х</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">Ч</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">Ш</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">Э</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">Ю</span>
+                  </li>
+                  <li class="letter">
+                    <span class="letter__name">Я</span>
+                  </li>
+                </ul>
+                <ul class="dropdown__country-list">
+                  <li>Афганистан</li>
+                  <li>Албания</li>
+                  <li>Алжир</li>
+                  <li>Андорра</li>
+                  <li>Аргентина</li>
+                  <li>Армения</li>
+                  <li>Австралия</li>
+                  <li>Австрия</li>
+                  <li>Азербайджан</li>
+                </ul>
               </div>
-              <button class="step-2__add-country-btn" type="button">Добавить страну</button>
             </div>
+
+            <button class="step-2__add-country-btn" type="button">Добавить страну</button>
             <a class="btn step-2__next-btn" href="#">Следующий шаг</a>
             <a class="step-2__prev-btn" href="#">На шаг назад</a>
           </fieldset>
           <fieldset class="step-3 form__fieldset">
-            <div class="form__wrapper">
-              <legend class="form__legend">Шаг 3. Развлечения</legend>
-              <p>
-                Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
-              </p>
-              <label>
-                Босния и герцеговина
-                <textarea name="country" cols="30" rows="10"></textarea>
-              </label>
-              <label>
-                Чехия
-                <textarea name="country" cols="30" rows="10">
-                    Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
-                  </textarea>
-              </label>
-            </div>
+            <legend class="form__legend">Шаг 3. Развлечения</legend>
+            <p>
+              Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
+            </p>
+            <label>
+              Босния и герцеговина
+              <textarea name="country" cols="30" rows="10"></textarea>
+            </label>
+            <label>
+              Чехия
+              <textarea name="country" cols="30" rows="10">
+                  Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+                </textarea>
+            </label>
             <button class="btn step-3__send-btn" type="submit">Отправить</button>
             <a class="step-3__prev-btn" href="#">На шаг назад</a>
           </fieldset>
         </form>
       </div>
     </section>
-
   </main>
 
   <footer class="footer">

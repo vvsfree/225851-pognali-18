@@ -6,8 +6,9 @@
   border-top-right-radius: $border-radius;
 }
 
-.plans__list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+@media (min-width: $tablet-width) {
+  .plans {
+    padding-top: 58px;
+    padding-bottom: 74px + $border-radius;
+  }
 }

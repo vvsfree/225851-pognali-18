@@ -1,7 +1,22 @@
 .plan {
+  padding: 26px;
   background-color: $white-color;
+  border-radius: 10px;
 }
 
 .plan__title {
   @include font(16px, 16px, #1d2e5b, 700);
+}
+
+@media (min-width: $desktop-width) {
+  .plan {
+    padding-top: 41px;
+    padding-bottom: 20px;
+    padding-left: 36px;
+    padding-right: 33px;
+  }
+
+  .plan__title {
+    @include font(24px, 50px, #1d2e5b, 700);
+  }
 }

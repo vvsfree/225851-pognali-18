@@ -9,3 +9,10 @@
 .add-plan__dialog {
   display: none;
 }
+
+@media (min-width: $tablet-width) {
+  .add-plan {
+    padding-top: 57px;
+    padding-bottom: 63px + $border-large-radius;
+  }
+}

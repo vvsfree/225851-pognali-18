@@ -1,0 +1,19 @@
+.plan-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.plan-list__item {
+  margin-bottom: 10px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .plan-list__item {
+    margin-bottom: 15px;
+  }
+}

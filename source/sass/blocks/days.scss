@@ -1,0 +1,36 @@
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  align-content: center;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.days__day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 30px;
+  height: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .days__day {
+    min-width: 75px;
+    height: 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .days__day {
+    min-width: 143px;
+    height: 72px;
+  }
+
+  .days__day {
+    justify-content: flex-start;
+  }
+}
