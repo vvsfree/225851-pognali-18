@@ -8,13 +8,19 @@
     left: 0;
     right: 0;
 
+    padding-bottom: 40px;
+
     background-color: $white-color;
 
     .menu__main-nav,
     .menu__auth-btn,
-    .menu__contact-list,
-    .menu__social-list {
+    .menu__contact-list {
       display: block;
+      width: 100%;
+    }
+
+    .menu__social-list {
+      display: flex;
       width: 100%;
     }
   }
@@ -30,6 +36,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 .menu__picture,
@@ -42,4 +49,69 @@
 .menu__contact-list,
 .menu__social-list {
   display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .menu {
+    padding-top: 40px;
+
+    &--opened,
+    &--no-js {
+      padding-bottom: 90px;
+
+      .menu__social-list {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  .menu__auth-btn {
+    display: block;
+  }
+
+  .menu__logo-img {
+    width: 166px;
+    height: 42px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .menu {
+    padding-top: 47px;
+
+    &--opened,
+    &--no-js {
+      // todo: это состояние не предусмотрено для десктопа.
+      // Вопрос: а как тогда сделать так, чтобы это состояние равнялось обычному?
+      // Как красиво все сбросить?
+      // Думаю, что этого будет достаточно
+      position: static;
+      padding-bottom: 31px;
+      background-color: transparent;
+
+      .menu__main-nav,
+      .menu__auth-btn,
+      .menu__contact-list {
+        width: auto;
+      }
+
+      .menu__social-list {
+        display: none;
+      }
+    }
+  }
+
+  .menu__toggle-btn {
+    display: none;
+  }
+
+  .menu__main-nav,
+  .menu__contact-list {
+    display: block;
+  }
+
+  .menu__logo-img {
+    width: 200px;
+    height: 52px;
+  }
 }

@@ -10,11 +10,13 @@
 
 <body class="page">
   <header class="inner-header page__inner-header">
-    <section class="menu inner-header__menu">
+    <section class="menu menu--opened inner-header__menu">
       <h2 class="visually-hidden">Меню</h2>
       <div class="wrapper menu__wrapper">
         <a class="menu__logo" href="index.html">
           <picture class="menu__picture">
+            <source media="(min-width: 1400px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
             <img class="menu__logo-img" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип">
           </picture>
         </a>
@@ -32,7 +34,7 @@
             </li>
           </ul>
         </nav>
-        <a class="menu__auth-btn" href="#">Авторизация</a>
+        <a class="btn menu__auth-btn" href="#">Авторизация</a>
         <ul class="contact-list menu__contact-list">
           <li class="contact-list__item">
             <a href="tel:88005558628">8 800 555-86-28</a>
@@ -54,7 +56,7 @@
         </ul>
       </div>
     </section>
-    <div class="wrapper">
+    <div class="wrapper wrapper--narrow">
       <h1 class="inner-header__title">Направления</h1>
     </div>
   </header>
@@ -97,8 +99,8 @@
       </form>
     </section>
     <section class="plans main__plans">
-      <div class="wrapper wrapper--narrow">
-        <h2 class="title title--blue">Мои планы</h2>
+      <div class="wrapper wrapper--narrow plans__wrapper">
+        <h2 class="title title--blue">Мои планы:</h2>
         <ul class="plan-list">
           <li class="plan plan-list__item">
             <h3 class="plan__title">1. Франция, Италия</h3>
@@ -128,9 +130,9 @@
           <li class="steps__item">Развлечения</li>
         </ul>
         <form class="form add-plan__form" action="https://echo.htmlacademy.ru" method="POST">
-          <fieldset class="step-1 form__fieldset">
-            <legend class="form__legend">Шаг 1. Даты пребывания</legend>
-            <p>
+          <fieldset class="step-1 fieldset form__fieldset">
+            <legend class="fieldset__legend">Шаг 1. Даты пребывания</legend>
+            <p class="form__text">
               Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую
               длительность.
             </p>
@@ -207,9 +209,9 @@
             </div>
             <a class="btn step-1__next-btn" href="#">Следующий шаг</a>
           </fieldset>
-          <fieldset class="step-2 form__fieldset">
-            <legend class="form__legend">Шаг 2. Маршрут</legend>
-            <p>
+          <fieldset class="step-2 fieldset form__fieldset">
+            <legend class="fieldset__legend">Шаг 2. Маршрут</legend>
+            <p class="form__text">
               Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.
             </p>
 
@@ -221,12 +223,6 @@
                 <input class="form__input" type="text" name="country" value="" placeholder="Выберите страну" readonly>
               </label>
               <div class="dropdown__content">
-                <!--
-                   letters не будут жить отдельно от dropdown, country-list тоже
-                   Может быть стоит сделать единый компонент, который еще можно будет прикрутить к выбору страны в каталоге
-                   Там, в секции, есть header, после него можно сделать dropdown__content...
-                   Но тогда вся секция тоже получит класс dropdown. Что, блин, круто, да? ))
-                 -->
                 <ul class="letters dropdown__letters">
                   <li class="letter">
                     <span class="letter__name">А</span>
@@ -322,9 +318,9 @@
             <a class="btn step-2__next-btn" href="#">Следующий шаг</a>
             <a class="step-2__prev-btn" href="#">На шаг назад</a>
           </fieldset>
-          <fieldset class="step-3 form__fieldset">
-            <legend class="form__legend">Шаг 3. Развлечения</legend>
-            <p>
+          <fieldset class="step-3 fieldset form__fieldset">
+            <legend class="fieldset__legend">Шаг 3. Развлечения</legend>
+            <p class="form__text">
               Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
             </p>
             <label>
@@ -349,6 +345,8 @@
     <div class="wrapper footer__wrapper">
       <a class="footer__logo" href="index.html">
         <picture class="footer__picture">
+          <source media="(min-width: 1400px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
           <img class="footer__logo-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x"
             width="100" height="19" alt="Логотип">
         </picture>

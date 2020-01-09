@@ -1,0 +1,46 @@
+.fieldset {
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 24px;
+  padding-bottom: 22px;
+  @include font(16px, 22px, $black-color, 400);
+  border: none;
+  border-radius: 10px;
+  background-color: $white-color;
+}
+
+.fieldset__legend {
+  float: left;
+  padding: 0;
+  @include font(20px, 20px, #1d2e5b, 700);
+}
+
+@media (min-width: $tablet-width) {
+  .fieldset {
+    padding-left: 42px;
+    padding-right: 42px;
+    padding-top: 49px;
+    padding-bottom: 53px;
+    @include font(20px, 24px, $black-color, 400);
+    border-radius: $border-radius;
+  }
+
+  .fieldset__legend {
+    @include font(36px, 36px, #1d2e5b, 700);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .fieldset {
+    padding-left: 160px;
+    padding-right: 160px;
+    padding-top: 100px;
+    padding-bottom: 105px;
+    border-radius: $border-large-radius;
+  }
+
+  .fieldset__legend {
+    @include font(36px, 50px, #1d2e5b, 700);
+  }
+}

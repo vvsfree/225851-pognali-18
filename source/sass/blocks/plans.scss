@@ -12,3 +12,17 @@
     padding-bottom: 74px + $border-radius;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .plans {
+    padding-top: 58px;
+    padding-bottom: 63px + $border-large-radius;
+    border-top-left-radius: $border-large-radius;
+    border-top-right-radius: $border-large-radius;
+  }
+
+  .plans__wrapper {
+    padding-left: 64px;
+    box-sizing: border-box;
+  }
+}

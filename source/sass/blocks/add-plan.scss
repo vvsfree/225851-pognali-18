@@ -16,3 +16,12 @@
     padding-bottom: 63px + $border-large-radius;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .add-plan {
+    padding-top: 57px;
+    padding-bottom: 72px + $border-large-radius;
+    border-top-left-radius: $border-large-radius;
+    border-top-right-radius: $border-large-radius;
+    }
+}

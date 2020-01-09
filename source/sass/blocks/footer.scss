@@ -28,7 +28,26 @@
 
 @media (min-width: $tablet-width) {
   .footer {
+    padding-top: 48px;
+    padding-bottom: 46px;
     border-top-left-radius: $border-large-radius;
     border-top-right-radius: $border-large-radius;
+  }
+
+  .footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer__logo-img {
+    width: 164px;
+    height: 42px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer__logo-img {
+    width: 198px;
+    height: 52px;
   }
 }

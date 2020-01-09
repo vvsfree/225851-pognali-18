@@ -49,9 +49,33 @@
 
     list-style: none;
   }
-
 }
 
+@media (min-width: $desktop-width) {
+  .dropdown {
+    &--opened {
+      .dropdown__content {
+        left: 0;
+        right: 0;
+
+        padding-top: 34px;
+        padding-bottom: 34px;
+        padding-left: 27px;
+        padding-right: 0;
+
+        width: 100%;
+      }
+    }
+  }
+
+  .dropdown__letters {
+    width: 360px;
+  }
+
+  .dropdown__country-list {
+    width: 243px;
+  }
+}
 
 // .form__country {
 //   position: relative;

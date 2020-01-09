@@ -1,26 +1,13 @@
 .form__fieldset {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 24px;
-  padding-bottom: 22px;
-  margin: 0;
   margin-bottom: 10px;
-  @include font(16px, 22px, $black-color, 400);
-  border: none;
-  border-radius: 10px;
-  background-color: $white-color;
 
   &:last-child {
     margin-bottom: 0;
   }
 }
 
-.form__legend {
-  // todo: скорее всего fieldset должен определять поведение legend, т.к. legend без fieldset не существует.
-  // todo: нужно создать таки класс fieldset
-  float: left;
-  padding: 0;
-  @include font(20px, 20px, #1d2e5b, 700)
+.form__text {
+  clear: left;
 }
 
 .form__label {
@@ -28,16 +15,13 @@
 }
 
 @media (min-width: $tablet-width) {
-  // todo: может быть неправильно. нужно, чтобы fieldset отвечал за внутренние отступы,
-  // а form__fieldset за внешнее позиционирование
-  // а step-1, step-2, step-3 - за уникальную стилистику и позиционирование внутри fieldset
   .form__fieldset {
-    padding-left: 42px;
-    padding-right: 42px;
-    padding-top: 49px;
-    padding-bottom: 53px;
     margin-bottom: 40px;
-    @include font(16px, 22px, $black-color, 400);
-    border-radius: $border-radius;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__fieldset {
+    margin-bottom: 44px;
   }
 }

@@ -22,4 +22,10 @@
     border-bottom-left-radius: $border-large-radius;
     border-bottom-right-radius: $border-large-radius;
   }
+
+  .inner-header__title {
+    font-size: 60px;
+    line-height: 70px;
+    padding-bottom: 69px;
+  }
 }

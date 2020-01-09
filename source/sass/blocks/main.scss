@@ -51,3 +51,13 @@
     margin-bottom: -$border-large-radius;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .main__user {
+    margin-bottom: -$border-large-radius;
+  }
+
+  .main__plans {
+    margin-bottom: -$border-large-radius;
+  }
+}

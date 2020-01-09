@@ -1,6 +1,7 @@
 .user {
   padding-top: 22px + $border-radius;
   padding-bottom: 33px + $border-radius;
+  @include font(16px, 22px, $black-color, normal);
   background-color: $lilac-color;
 }
 
@@ -8,5 +9,19 @@
   .user {
     padding-top: 64px + $border-large-radius;
     padding-bottom: 60px + $border-radius;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user {
+    /* todo: здесь блок сильно наезжает __на__ заголовок,
+    чтобы  правильно рассчитать, нужно делать микросетку, но пока рано на данном этапе.
+    т.о. padding-top здесь вряд-ли нужен, здесь нужен отрицательный margin, который нужно задать в
+    main__user.scss, который к тому же перекроет отрицательный margin внутреннего заголовка.
+    */
+    padding-top: 73px + $border-large-radius;
+    padding-bottom: 65px + $border-large-radius;
   }
 }

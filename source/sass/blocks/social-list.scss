@@ -1,0 +1,24 @@
+.social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+}
+
+.social-list__item {
+  width: 45px;
+  height: 45px;
+  background-color: $yellow-color;
+  border-radius: 50%;
+}
+
+@media (min-width: $tablet-width) {
+  .social-list__item {
+    width: 60px;
+    height: 60px;
+  }
+}
