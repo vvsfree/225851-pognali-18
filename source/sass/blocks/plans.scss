@@ -11,6 +11,10 @@
     padding-top: 58px;
     padding-bottom: 74px + $border-radius;
   }
+
+  .plans__wrapper {
+    padding: 0 $tablet-content-padding;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -22,7 +26,7 @@
   }
 
   .plans__wrapper {
-    padding-left: 64px;
-    box-sizing: border-box;
+    padding-left: $desktop-content-padding;
+    padding-right: 0;
   }
 }

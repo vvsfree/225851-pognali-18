@@ -1,5 +1,5 @@
 .user {
-  padding-top: 22px + $border-radius;
+  padding-top: 22px + $border-small-radius;
   padding-bottom: 33px + $border-radius;
   @include font(16px, 22px, $black-color, normal);
   background-color: $lilac-color;
@@ -12,6 +12,10 @@
     font-size: 20px;
     line-height: 24px;
   }
+
+  .user__wrapper {
+    padding: 0 $tablet-content-padding;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -23,5 +27,10 @@
     */
     padding-top: 73px + $border-large-radius;
     padding-bottom: 65px + $border-large-radius;
+  }
+
+  .user__wrapper {
+    padding-left: $desktop-content-padding;
+    padding-right: 0;
   }
 }

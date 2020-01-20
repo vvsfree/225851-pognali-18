@@ -1,8 +1,80 @@
 .travelmates {
   padding-top: 72px + $border-radius;
   padding-bottom: $border-radius;
-  @include font(16px, 22px, $white-color, 300);
   background-color: $blue-color;
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
+}
+
+.travelmates__header {
+  padding-left: $mobile-content-padding;
+  padding-right: $mobile-content-padding;
+}
+
+.travelmates__btn {
+  &--top {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .travelmates {
+    padding-top: 65px + 77px + $border-large-radius;
+    padding-bottom: 40px + $border-large-radius;
+    border-bottom-left-radius: $border-large-radius;
+    border-bottom-right-radius: $border-large-radius;
+  }
+
+  .travelmates__wrapper {
+    padding: 0 $tablet-content-padding;
+  }
+
+  .travelmates__header {
+    padding: 0;
+  }
+
+  .travelmates__collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .travelmates {
+    padding-top: 133px + $border-large-radius;
+    padding-bottom: 80px + $border-large-radius;
+  }
+
+  .travelmates__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-left: $desktop-content-padding;
+    padding-right: 0;
+  }
+
+  .travelmates__header {
+    width: 630px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .travelmates__collection {
+    width: 630px;
+  }
+
+  .travelmates__btn {
+    &--top {
+      display: block;
+      margin-top: auto;
+    }
+
+    &--bottom {
+      display: none;
+    }
+  }
 }

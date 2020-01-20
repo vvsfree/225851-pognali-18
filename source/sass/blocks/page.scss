@@ -8,7 +8,7 @@
 .page__header {
   position: relative;
   z-index: 100;
-  margin-bottom: -228px;
+  margin-bottom: -$border-radius;
 }
 
 .page__inner-header {
@@ -22,6 +22,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .page__header {
+    margin-bottom: -$border-large-radius;
+  }
+
   .page__inner-header {
     margin-bottom: -$border-large-radius;
   }

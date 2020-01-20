@@ -1,0 +1,23 @@
+.text {
+  @include font(16px, 22px, $white-color, 300);
+
+  &--black {
+    color: $black-color;
+  }
+
+  &--small {
+    font-weight: bold;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .text {
+    font-size: 28px;
+    line-height: 33px;
+
+    &--small {
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
+}

@@ -1,62 +1,72 @@
-.main__about {
+.main__about,
+.main__countries,
+.main__travelmates,
+.main__rates-b,
+.main__rates,
+.main__cta,
+.main__contacts {
   position: relative;
-  z-index: 90;
   margin-bottom: -$border-radius;
+}
+
+.main__about {
+  z-index: 90;
 }
 
 .main__countries {
-  position: relative;
   z-index: 80;
-  margin-bottom: -$border-radius;
 }
 
 .main__travelmates {
-  position: relative;
   z-index: 70;
-  margin-bottom: -$border-radius;
+}
+
+.main__rates-b {
+  z-index: 75;
 }
 
 .main__rates {
-  position: relative;
   z-index: 60;
-  margin-bottom: -$border-radius;
 }
 
 .main__cta {
-  position: relative;
   z-index: 50;
-  margin-bottom: -$border-radius;
 }
 
 .main__contacts {
-  position: relative;
   z-index: 40;
-  margin-bottom: -$border-radius;
 }
 
-.main__user {
-  margin-bottom: -$border-radius;
-}
-
+// form
+.main__user,
 .main__plans {
   margin-bottom: -$border-radius;
 }
 
+// catalog
 .main__country-filter {
   margin-bottom: -$border-small-radius;
 }
 
 @media (min-width: $tablet-width) {
+  .main__about,
+  .main__countries,
+  .main__travelmates,
+  .main__rates,
+  .main__cta,
+  .main__contacts {
+    margin-bottom: -$border-large-radius;
+  }
+
+  // catalog
   .main__country-filter {
     margin-bottom: -$border-large-radius;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .main__user {
-    margin-bottom: -$border-large-radius;
-  }
-
+  // form
+  .main__user,
   .main__plans {
     margin-bottom: -$border-large-radius;
   }

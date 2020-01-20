@@ -14,7 +14,7 @@
         <div class="wrapper menu__wrapper">
           <a class="menu__logo">
             <picture class="menu__picture">
-              <source media="(min-width: 1400px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
               <img class="menu__logo-img" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип">
             </picture>
@@ -33,6 +33,7 @@
               </li>
             </ul>
           </nav>
+          <a class="btn menu__auth-btn" href="#">Авторизация</a>
           <ul class="contact-list menu__contact-list">
             <li class="contact-list__item">
               <a href="tel:88005558628">8 800 555-86-28</a>
@@ -41,7 +42,6 @@
               <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </li>
           </ul>
-          <a class="btn menu__auth-btn" href="#">Авторизация</a>
           <ul class="social-list menu__social-list">
             <li class="social-list__item">
               <a href="#">Фэйсбук</a>
@@ -57,9 +57,11 @@
       </section>
       <section class="intro">
         <h2 class="visually-hidden">Кратко о сервисе</h2>
-        <div class="wrapper intro__top-wrapper">
+        <div class="wrapper intro__wrapper">
           <b class="intro__slogan">В путешествие с крутыми попутчиками!</b>
           <picture class="intro__picture">
+            <source media="(min-width: 1440px)" srcset="img/traveller-illustration-desktop@1x.png 1x, img/traveller-illustration-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/traveller-illustration-tablet@1x.png 1x, img/traveller-illustration-tablet@2x.png 2x">
             <img class="intro__image" src="img/traveller-illustration-mobile@1x.png" srcset="img/traveller-illustration-mobile@2x.png 2x" width="192" height="255" alt="Изображение путешественника">
           </picture>
           <div class="intro__user">
@@ -73,13 +75,11 @@
             </ul>
             <a class="btn intro__auth-btn" href="#">Авторизация</a>
           </div>
+          <blockquote class="review intro__review">
+            <p class="text">«Лучшее предложение, что я видел в жизни!»</p c>
+            <cite class="text text--small">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
+          </blockquote>
         </div>
-        <blockquote class="review intro__review">
-          <div class="wrapper">
-            <p>«Лучшее предложение, что я видел в жизни!»</p>
-            <cite>Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
-          </div>
-        </blockquote>
         <ul class="wrapper srv-list intro__srv-list">
           <li class="srv-list__item">Выберите направление</li>
           <li class="srv-list__item srv-list__item--lighter1">Изучите идеи предшественников</li>
@@ -93,21 +93,25 @@
       <section class="about main__about">
         <div class="wrapper about__wrapper">
           <h2 class="title">О сервисе</h2>
-          <p>
+          <p class="text">
             Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
           </p>
-          <p>
+          <p class="text text--small">
             А если найдете кого-то близкого по духу — скорее зовите в совместный трип!
           </p>
+          <a class="btn about__btn" href="#">Подробнее</a>
         </div>
       </section>
       <section class="countries main__countries">
-        <div class="wrapper">
-          <h2 class="title">Направления</h2>
-          <p>
-            Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
-          </p>
-          <div class="countries__wrapper">
+        <div class="wrapper countries__wrapper">
+          <header class="countries__header">
+            <h2 class="title">Направления</h2>
+            <p class="text text--black">
+              Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
+            </p>
+            <a class="btn countries__btn countries__btn--top" href="form.html">Показать все</a>
+          </header>
+          <div class="countries__collection">
             <article class="country">
               <picture>
                 <img class="country__img" src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2x" width="270" height="110" alt="Тайланд">
@@ -133,19 +137,22 @@
               <p class="country__desc">Закоулки старой Европы</p>
           </article>
           </div>
-          <a class="btn countries__btn" href="form.html">Показать все</a>
+          <a class="btn countries__btn countries__btn--bottom" href="form.html">Показать все</a>
         </div>
       </section>
       <section class="travelmates main__travelmates">
-        <div class="wrapper">
-          <h2 class="title">Попутчики</h2>
-          <p>
-            Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
-          </p>
-          <p>
-            Теперь можно легко найти единомышленников!
-          </p>
-          <div class="travelmates__wrapper">
+        <div class="wrapper travelmates__wrapper">
+          <header class="travelmates__header">
+            <h2 class="title">Попутчики</h2>
+            <p class="text">
+              Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+            </p>
+            <p class="text text--small">
+              Теперь можно легко найти единомышленников!
+            </p>
+            <a class="btn travelmates__btn travelmates__btn--top" href="catalog.html">Показать всех</a>
+          </header>
+          <div class="travelmates__collection">
             <article class="travelmate">
               <picture>
                 <img class="travelmate__img" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-desktop@2x.jpg 2x" width="270" height="270" alt="Таня Фирсова">
@@ -197,25 +204,11 @@
               </ul>
             </article>
           </div>
-          <a class="btn travelmates__btn" href="catalog.html">Показать всех</a>
+          <a class="btn travelmates__btn travelmates__btn--bottom" href="catalog.html">Показать всех</a>
         </div>
       </section>
-      <section class="rates main__rates">
-        <div class="wrapper">
-          <h2 class="title">Добавьте свой профиль</h2>
-          <dl class="rate-list rates__rate-list">
-            <dt class=rate-list__term>Базовое размещение</dt>
-            <dd class=rate-list__price>Бесплатно</dd>
-            <dt class=rate-list__term>Вывод на первых позициях</dt>
-            <dd class=rate-list__price>99 руб./мес</dd>
-            <dt class=rate-list__term>Кастомный цвет карточки</dt>
-            <dd class=rate-list__price>59 руб./мес</dd>
-          </dl>
-          <a class="rates__link" href="#">Показать тарифы для бизнеса</a>
-        </div>
-      </section>
-      <section class="rates-b">
-        <div class="wrapper">
+      <section class="rates-b rates-b--opened main__rates-b">
+        <div class="rates-b__wrapper">
           <h2 class="title">Бизнес-тарифы</h2>
           <dl class="rate-list rates-b__rate-list">
             <dt class=rate-list__term>Базовое размещение</dt>
@@ -230,14 +223,25 @@
           <button class="rates-b__close-btn" type="button">Закрыть окно</button>
         </div>
       </section>
+      <section class="rates main__rates">
+        <div class="wrapper rates__wrapper">
+          <h2 class="title">Добавьте свой профиль</h2>
+          <dl class="rate-list rates__rate-list">
+            <dt class=rate-list__term>Базовое размещение</dt>
+            <dd class=rate-list__price>Бесплатно</dd>
+            <dt class=rate-list__term>Вывод на первых позициях</dt>
+            <dd class=rate-list__price>99 руб./мес</dd>
+            <dt class=rate-list__term>Кастомный цвет карточки</dt>
+            <dd class=rate-list__price>59 руб./мес</dd>
+          </dl>
+          <a class="rates__link" href="#">Показать тарифы для бизнеса</a>
+        </div>
+      </section>
       <section class="cta main__cta">
-        <div class="wrapper">
+        <div class="wrapper cta__wrapper">
           <h2 class="title">Заинтересовались?</h2>
-          <p class="cta__text">
+          <p class="text">
             Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="cta__link" href="#">авторизуйтесь</a>.
-          </p>
-          <p class="cta__text">
-            Остались вопросы? Мы с радостью на них ответим!
           </p>
           <form action="https://echo.htmlacademy.ru" method="POST">
             <label>
@@ -245,6 +249,9 @@
             </label>
             <button class="btn cta__btn" type="submit">Отправить</button>
           </form>
+          <p class="text">
+            Остались вопросы? Мы с радостью на них ответим!
+          </p>
           <ul class="contact-list cta__contact-list">
             <li class="contact-list__item">
               <a href="tel:88005558628">8 800 555-86-28</a>
@@ -256,9 +263,9 @@
         </div>
       </section>
       <section class="contacts main__contacts">
-        <div class="wrapper">
+        <div class="wrapper contacts__wrapper">
           <h2 class="visually-hidden">Контакты</h2>
-          <p>ул. Большая Конюшенная, 19/8</p>
+          <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
           <a href="https://maps.yandex.ru" target="_blank">Проложить маршрут</a>
         </div>
       </section>

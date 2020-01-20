@@ -15,6 +15,11 @@
     padding-top: 57px;
     padding-bottom: 63px + $border-large-radius;
   }
+
+  .add-plan__wrapper,
+  .add-plan__form {
+    padding: 0 $tablet-content-padding;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -23,5 +28,14 @@
     padding-bottom: 72px + $border-large-radius;
     border-top-left-radius: $border-large-radius;
     border-top-right-radius: $border-large-radius;
-    }
+  }
+
+  .add-plan__wrapper {
+    padding: 0 $desktop-content-padding;
+  }
+
+  .add-plan__form {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

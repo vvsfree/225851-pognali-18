@@ -7,7 +7,8 @@
 .srv-list__item {
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-right: 128px;
+  padding-left: $mobile-content-padding;
+  padding-right: $mobile-content-padding;
   @include font(18px, 18px, $dark-blue-color, 700);
   background-color: #ff8d30;
 
@@ -21,5 +22,35 @@
 
   &--lighter3 {
     background-color: #ffd74b;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .srv-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: flex-start;
+    justify-content: center;
+  }
+
+  .srv-list__item {
+    padding-top: 31px;
+    padding-bottom: 62px;
+    padding-left: $tablet-content-padding;
+    padding-right: $tablet-content-padding;
+    width: 50%;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .srv-list {
+    flex-wrap: nowrap;
+  }
+
+  .srv-list__item {
+    min-width: $desktop-wrapper-width / 4;
+    width: auto;
   }
 }

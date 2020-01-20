@@ -14,14 +14,22 @@
 .wrapper {
   margin: 0 auto;
   width: $mobile-wrapper-width;
+  box-sizing: border-box;
+
+  &--mtd {
+    padding-left: $mobile-content-padding;
+    padding-right: $mobile-content-padding;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .wrapper {
     width: $tablet-wrapper-width;
 
-    &--narrow {
-      width: $tablet-wrapper-width - 70px;
+    &--mtd,
+    &--0td {
+      padding-left: $tablet-content-padding;
+      padding-right: $tablet-content-padding;
     }
   }
 }
@@ -29,5 +37,11 @@
 @media (min-width: $desktop-width) {
   .wrapper {
     width: $desktop-wrapper-width;
+
+    &--mtd,
+    &--0td {
+      padding-left: $desktop-content-padding;
+      padding-right: 4px + $desktop-content-padding;
+    }
   }
 }

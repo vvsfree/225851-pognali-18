@@ -62,6 +62,18 @@
       .menu__social-list {
         justify-content: flex-start;
       }
+
+      .menu__main-nav,
+      .menu__contact-list,
+      .menu__social-list {
+        order: 1;
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+
+      .menu__auth-btn {
+        width: 190px;
+      }
     }
   }
 
@@ -81,10 +93,6 @@
 
     &--opened,
     &--no-js {
-      // todo: это состояние не предусмотрено для десктопа.
-      // Вопрос: а как тогда сделать так, чтобы это состояние равнялось обычному?
-      // Как красиво все сбросить?
-      // Думаю, что этого будет достаточно
       position: static;
       padding-bottom: 31px;
       background-color: transparent;
@@ -93,6 +101,12 @@
       .menu__auth-btn,
       .menu__contact-list {
         width: auto;
+      }
+
+      .menu__main-nav,
+      .menu__contact-list {
+        padding-left: 0;
+        padding-right: 0;
       }
 
       .menu__social-list {
@@ -113,5 +127,9 @@
   .menu__logo-img {
     width: 200px;
     height: 52px;
+  }
+
+  .menu__auth-btn {
+    order: 2;
   }
 }

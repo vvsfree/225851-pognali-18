@@ -6,3 +6,35 @@
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
 }
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    padding-top: 47px + $border-large-radius;
+    padding-bottom: 32px + $border-large-radius;
+
+    font-size: 28px;
+    line-height: 28px;
+
+    border-bottom-left-radius: $border-large-radius;
+    border-bottom-right-radius: $border-large-radius;
+  }
+
+  .contacts__wrapper {
+    padding: 0 $tablet-content-padding;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    padding-top: 54px + $border-large-radius;
+    padding-bottom: 56px + $border-large-radius;
+  }
+
+  .contacts__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 $desktop-content-padding;
+  }
+
+}

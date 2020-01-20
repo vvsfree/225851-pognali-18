@@ -23,9 +23,25 @@
     border-bottom-right-radius: $border-large-radius;
   }
 
+  .inner-header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 $tablet-content-padding;
+  }
+
   .inner-header__title {
     font-size: 60px;
     line-height: 70px;
     padding-bottom: 69px;
+  }
+
+  .inner-header__link {
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .inner-header__wrapper {
+    padding: 0 $desktop-content-padding;
   }
 }

@@ -1,7 +1,7 @@
 .title {
   margin: 0;
   @include font(24px, 24px, $orange-color, 700);
-  // todo: большой вопрос. Нужно ли это вообще
+
   &--blue {
     color: #1d2e5b;
   }
@@ -9,7 +9,12 @@
 
 @media (min-width: $tablet-width) {
   .title {
-    font-size: 36px;
-    line-height: 50px;
+    font-size: 45px;
+    line-height: 45px;
+
+    &--blue {
+      font-size: 36px;
+      line-height: 50px;
+    }
   }
 }

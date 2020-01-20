@@ -2,3 +2,12 @@
   background-color: $white-color;
   @include font(16px, 18px, $black-color, 400);
 }
+
+@media (min-width: $tablet-width) {
+}
+
+@media (min-width: $desktop-width) {
+  .travelmate {
+    width: 285px;
+  }
+}

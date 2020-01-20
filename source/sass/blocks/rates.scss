@@ -6,3 +6,35 @@
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
 }
+
+.rates__wrapper {
+  padding: 0 $mobile-content-padding;
+}
+
+@media (min-width: $tablet-width) {
+  .rates {
+    padding-top: 72px + $border-large-radius;
+    padding-bottom: $border-large-radius;
+
+    font-size: 28px;
+    line-height: 33px;
+
+    border-bottom-left-radius: $border-large-radius;
+    border-bottom-right-radius: $border-large-radius;
+  }
+
+  .rates__wrapper {
+    padding: 0 $tablet-content-padding;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .rates {
+    padding-top: 110px + $border-large-radius;
+    padding-bottom: 104px + $border-large-radius;
+  }
+
+  .rates__wrapper {
+    padding: 0 $desktop-content-padding;
+  }
+}

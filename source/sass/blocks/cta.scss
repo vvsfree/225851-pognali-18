@@ -1,8 +1,31 @@
 .cta {
   padding-top: 72px + $border-radius;
   padding-bottom: $border-radius;
-  @include font(16px, 22px, $white-color, 300);
   background-color: $blue-color;
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
+}
+
+@media (min-width: $tablet-width) {
+  .cta {
+    padding-top: 74px + $border-large-radius;
+    padding-bottom: $border-large-radius;
+    border-bottom-left-radius: $border-large-radius;
+    border-bottom-right-radius: $border-large-radius;
+  }
+
+  .cta__wrapper {
+    padding: 0 $tablet-content-padding;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .cta {
+    padding-top: 106px + $border-large-radius;
+    padding-bottom: 50px + $border-large-radius;
+  }
+
+  .cta__wrapper {
+    padding: 0 $desktop-content-padding;
+  }
 }
