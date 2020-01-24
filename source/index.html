@@ -143,68 +143,97 @@
       <section class="travelmates main__travelmates">
         <div class="wrapper travelmates__wrapper">
           <header class="travelmates__header">
-            <h2 class="title">Попутчики</h2>
-            <p class="text">
-              Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+            <h2 class="title travelmates__title">Попутчики</h2>
+            <p class="text travelmates__text">
+              Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, <br class="travelmates__text-br">а другому маршрут для хайкинга.
             </p>
-            <p class="text text--small">
-              Теперь можно легко найти единомышленников!
+            <p class="text text--small travelmates__text">
+              Теперь можно легко <br class="travelmates__text-br">найти единомышленников!
             </p>
-            <a class="btn travelmates__btn travelmates__btn--top" href="catalog.html">Показать всех</a>
           </header>
           <div class="travelmates__collection">
-            <article class="travelmate">
-              <picture>
+            <article class="travelmate travelmates__travelmate">
+              <picture class="travelmate__picture">
                 <img class="travelmate__img" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-desktop@2x.jpg 2x" width="270" height="270" alt="Таня Фирсова">
               </picture>
-              <h3 class="travelmate__name">Таня Фирсова</h3>
-              <span class="travelmate__level">99</span>
-              <ul class="country-list">
-                <li class="country-list__item">Шри-Ланка</li>
-                <li class="country-list__item">Тайланд</li>
-                <li class="country-list__item">Сейшеллы</li>
-              </ul>
-              <ul class="hastag-list travelmate__hashtag-list">
-                <li class="hastag-list__item">ЗОЖ</li>
-                <li class="hastag-list__item">ПП</li>
-                <li class="hastag-list__item">Фитнес</li>
-                <li class="hastag-list__item">пляж</li>
-                <li class="hastag-list__item">авокадо</li>
-                <li class="hastag-list__item">смузи</li>
-              </ul>
-              <ul class="transport-list travelmate__transport-list">
-                <li class="transport-list__item transport-list__item--active">Авиаперелет</li>
-                <li class="transport-list__item">Автотранспорт</li>
-                <li class="transport-list__item">Велосипед</li>
-                <li class="transport-list__item">Пешком</li>
-              </ul>
+              <div class="travelmate__wrapper">
+                <ul class="country-list travelmate__country-list">
+                  <li class="country-list__item">
+                    <img class="country-list__img" src="img/flag-sri-lanka.svg" width="35" height="24" alt="Шри-Ланка">
+                  </li>
+                  <li class="country-list__item">
+                    <img class="country-list__img" src="img/flag-thailand.svg" width="35" height="24" alt="Тайланд">
+                  </li>
+                  <li class="country-list__item">
+                    <img class="country-list__img" src="img/flag-seychelles.svg" width="35" height="24" alt="Сейшеллы">
+                  </li>
+                </ul>
+                <h3 class="travelmate__name">Таня Фирсова</h3>
+                <ul class="hashtag-list travelmate__hashtag-list">
+                  <li class="hashtag-list__item">ЗОЖ</li>
+                  <li class="hashtag-list__item">ПП</li>
+                  <li class="hashtag-list__item">Фитнес</li>
+                  <li class="hashtag-list__item">пляж</li>
+                  <li class="hashtag-list__item">авокадо</li>
+                  <li class="hashtag-list__item">смузи</li>
+                </ul>
+                <ul class="transport-list travelmate__transport-list">
+                  <li class="transport-list__item transport-list__item--active">
+                    <img class="transport-list__img" src="img/plane.svg" width="19" height="21" alt="Авиаперелет">
+                  </li>
+                  <li class="transport-list__item">
+                    <img class="transport-list__img" src="img/bus.svg" width="17" height="21" alt="Автотранспорт">
+                  </li>
+                  <li class="transport-list__item">
+                    <img class="transport-list__img" src="img/bike.svg" width="24" height="21" alt="Велосипед">
+                  </li>
+                  <li class="transport-list__item">
+                    <img class="transport-list__img" src="img/run.svg" width="20" height="21" alt="Пешком">
+                  </li>
+                </ul>
+                <span class="travelmate__level">99</span>
+              </div>
             </article>
-            <article class="travelmate">
-              <picture>
+            <article class="travelmate travelmates__travelmate">
+              <picture class="travelmate__picture">
                 <img class="travelmate__img" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2x" width="270" height="270" alt="Петя Демин">
               </picture>
-              <h3 class="travelmate__name travelmate__name--online">Петя Демин</h3>
-              <span class="travelmate__level">80</span>
-              <ul class="country-list">
-                <li class="country-list__item">Бельгия</li>
-                <li class="country-list__item">Чехия</li>
-              </ul>
-              <ul class="hastag-list travelmate__hashtag-list">
-                <li class="hastag-list__item">бургер</li>
-                <li class="hastag-list__item">бар</li>
-                <li class="hastag-list__item">футбол</li>
-                <li class="hastag-list__item">концерт</li>
-                <li class="hastag-list__item">крафт</li>
-              </ul>
-              <ul class="transport-list travelmate__transport-list">
-                <li class="transport-list__item transport-list__item--active">Авиаперелет</li>
-                <li class="transport-list__item transport-list__item--active">Автотранспорт</li>
-                <li class="transport-list__item">Велосипед</li>
-                <li class="transport-list__item transport-list__item--active">Пешком</li>
-              </ul>
+              <div class="travelmate__wrapper">
+                <ul class="country-list travelmate__country-list">
+                  <li class="country-list__item">
+                    <img class="country-list__img" src="img/flag-belgium.svg" width="35" height="24" alt="Бельгия">
+                  </li>
+                  <li class="country-list__item">
+                    <img class="country-list__img" src="img/flag-czech.svg" width="35" height="24" alt="Чехия">
+                  </li>
+                </ul>
+                <h3 class="travelmate__name travelmate__name--online">Петя Демин</h3>
+                <ul class="hashtag-list travelmate__hashtag-list">
+                  <li class="hashtag-list__item">бургер</li>
+                  <li class="hashtag-list__item">бар</li>
+                  <li class="hashtag-list__item">футбол</li>
+                  <li class="hashtag-list__item">концерт</li>
+                  <li class="hashtag-list__item">крафт</li>
+                </ul>
+                <ul class="transport-list travelmate__transport-list">
+                  <li class="transport-list__item transport-list__item--active">
+                    <img class="transport-list__img" src="img/plane.svg" width="19" height="21" alt="Авиаперелет">
+                  </li>
+                  <li class="transport-list__item transport-list__item--active">
+                    <img class="transport-list__img" src="img/bus.svg" width="17" height="21" alt="Автотранспорт">
+                  </li>
+                  <li class="transport-list__item">
+                    <img class="transport-list__img" src="img/bike.svg" width="24" height="21" alt="Велосипед">
+                  </li>
+                  <li class="transport-list__item transport-list__item--active">
+                    <img class="transport-list__img" src="img/run.svg" width="20" height="21" alt="Пешком">
+                  </li>
+                </ul>
+                <span class="travelmate__level">80</span>
+              </div>
             </article>
           </div>
-          <a class="btn travelmates__btn travelmates__btn--bottom" href="catalog.html">Показать всех</a>
+          <a class="btn travelmates__btn" href="catalog.html">Показать всех</a>
         </div>
       </section>
       <section class="rates-b rates-b--opened main__rates-b">

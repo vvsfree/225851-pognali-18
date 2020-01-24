@@ -1,13 +1,48 @@
+// TODO: подойдет для кнопки авторизации. Может быть модификатор, типа более круглая
+// .btn {
+//   display: block;
+//   padding-top: 6px;
+//   padding-bottom: 4px;
+//   padding-left: 37px;
+//   padding-right: 40px;
+//   @include font(17px, 30px, $dark-blue-color, 700);
+//   text-decoration: none;
+//   text-transform: uppercase;;
+//   text-align: center;
+//   background-color: $yellow-color;
+//   border-radius: $border-small-radius;
+// }
+
 .btn {
   display: block;
-  padding-top: 6px;
-  padding-bottom: 4px;
-  padding-left: 37px;
-  padding-right: 40px;
-  @include font(17px, 30px, $dark-blue-color, 700);
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 24px;
+  padding-right: 45px;
+  box-sizing: border-box;
+  @include font(18px, 18px, #1d2e5b, 700);
   text-decoration: none;
-  text-transform: uppercase;;
-  text-align: center;
+  text-align: left;
   background-color: $yellow-color;
-  border-radius: $border-small-radius;
+  // TODO: Стоит ли делать inline svg для оптимизации?
+  background-image: url("../../img/triangle-arrow-right.svg");
+  background-repeat: no-repeat;
+  background-size: 10px 14px;
+  background-position: right 24px top 50%;
+  border-radius: $border-extra-small-radius;
+}
+
+@media (min-width: $tablet-width) {
+  .btn {
+    padding-top: 29px;
+    padding-bottom: 28px;
+    padding-left: 34px;
+    padding-right: 45px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    background-position: right 36px top 50%;
+    border-radius: $border-small-radius;
+  }
 }

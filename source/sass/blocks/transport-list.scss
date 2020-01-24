@@ -1,0 +1,36 @@
+.transport-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.transport-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 10px;
+  width: 25px;
+  height: 21px;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  opacity: 0.15;
+
+  &--active {
+    opacity: 1;
+  }
+}
+
+// .transport-list__img {
+  // TODO: прописать размеры каждой картинке? Потом будет svg-спрайт. Там и посмотрим
+  // display: block;
+// }

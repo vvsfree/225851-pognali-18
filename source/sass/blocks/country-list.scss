@@ -1,0 +1,25 @@
+.country-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.country-list__item {
+  margin-left: 19px;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+}
+
+.country-list__img {
+  display: block;
+  width: 35px;
+  height: 24px;
+}

@@ -1,0 +1,28 @@
+.hashtag-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-start;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hashtag-list__item {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-left: 5px;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &::before {
+    content: "#";
+  }
+}

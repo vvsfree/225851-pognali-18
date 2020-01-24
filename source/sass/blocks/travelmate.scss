@@ -1,13 +1,126 @@
 .travelmate {
+  position: relative;
+  padding-bottom: 22px;
   background-color: $white-color;
   @include font(16px, 18px, $black-color, 400);
+  text-align: center;
+  border-radius: $border-extra-small-radius;
+}
+
+.travelmate__picture {
+  display: block;
+  margin-bottom: -14px;
+}
+
+.travelmate__img {
+  display: block;
+  width: 270px;
+  height: 270px;
+  border-top-left-radius: $border-extra-small-radius;
+  border-top-right-radius: $border-extra-small-radius;
+}
+
+.travelmate__wrapper {
+  padding: 0 30px;
+}
+
+.travelmate__country-list {
+  margin-bottom: 15px;
+}
+
+.travelmate__name {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 15px;
+  @include font(21px, 21px, #1d2e5b, 700);
+  overflow-wrap: break-word;
+  word-break: break-all;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc((21px - 5px) / 2);
+    left: -15px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #f97676;
+  }
+
+  &--online {
+    &::before {
+      background-color: #81e31e;
+    }
+  }
+}
+
+.travelmate__hashtag-list {
+  margin-bottom: 20px;
+}
+
+.travelmate__level {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  background-color: gray;
+  border: 3px solid #ff8d30;
+  border-radius: 50%;
 }
 
 @media (min-width: $tablet-width) {
+  .travelmate {
+    padding-bottom: 29px;
+    width: 285px;
+    font-size: 20px;
+    line-height: 24px;
+    border-radius: $border-small-radius;
+  }
+
+  .travelmate__img {
+    width: 285px;
+    height: 285px;
+    border-top-left-radius: $border-small-radius;
+    border-top-right-radius: $border-small-radius;
+  }
+
+  .travelmate__country-list {
+    margin-bottom: 20px;
+  }
+
+  .travelmate__name {
+    margin-bottom: 25px;
+    font-size: 24px;
+    line-height: 24px;
+
+    &::before {
+      top: calc((24px - 7px) / 2);
+      left: -22px;
+      width: 7px;
+      height: 7px;
+    }
+  }
+
+  .travelmate__hashtag-list {
+    margin-bottom: 30px;
+  }
+
+  .travelmate__level {
+    top: 20px;
+    left: 20px;
+  }
 }
 
 @media (min-width: $desktop-width) {
-  .travelmate {
-    width: 285px;
+  .travelmate__country-list {
+    margin-bottom: 22px;
+  }
+
+  .travelmate__level {
+    top: 23px;
+    left: 23px;
   }
 }
