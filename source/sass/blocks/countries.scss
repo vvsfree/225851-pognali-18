@@ -7,13 +7,36 @@
 }
 
 .countries__header {
-  padding: 0 $mobile-content-padding;
+  padding-left: $mobile-content-padding;
+  padding-right: 50px;
+  margin-bottom: 64px;
 }
 
-.countries__btn {
-  &--top {
-    display: none;
+.countries__title {
+  margin-bottom: 20px;
+}
+
+.countries__country {
+  margin-bottom: 10px;
+
+  &:last-of-type {
+    position: relative;
+    margin-bottom: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 81px;
+      background-image: linear-gradient(180deg, hsla(227, 33%, 95%, 0), hsla(227, 33%, 95%, 1));
+    }
   }
+}
+
+.countries__collection {
+  margin-bottom: 25px;
 }
 
 @media (min-width: $tablet-width) {
@@ -35,6 +58,29 @@
 
   .countries__header {
     padding: 0;
+    margin-bottom: 106px;
+    width: 55%;
+  }
+
+  .countries__title {
+    margin-bottom: 58px;
+  }
+
+  .countries__collection {
+    position: relative;
+    margin-bottom: 47px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: -$tablet-content-padding;
+      z-index: -1;
+      width: 141px;
+      height: 141px;
+      background-color: #e2e5f2;
+      border-radius: $border-small-radius;
+    }
   }
 }
 
@@ -45,6 +91,7 @@
   }
 
   .countries__wrapper {
+    position: relative;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -53,24 +100,36 @@
   }
 
   .countries__header {
-    width: 560px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin-bottom: 0;
+    padding-left: 114px;
+    padding-right: 100px;
+    // Чтобы не наехать на кнопку ниже
+    padding-bottom: 130px;
+    width: 560px;
+    box-sizing: border-box;
   }
 
   .countries__collection {
+    margin-bottom: 0;
     width: 560px;
+
+    &::before {
+      top: -72px;
+      left: -$desktop-content-padding;
+    }
   }
 
   .countries__btn {
-    &--top {
-      display: block;
-      margin-top: auto;
-    }
-
-    &--bottom {
-      display: none;
-    }
+    position: absolute;
+    // width of left block + gap + padding-left of right block
+    left: 630px + 60px + 114px;
+    // По макету выходит за границы wrapper
+    // Скорее всего это нижний внешний отступ от последнего блока страны
+    // Но я его убираю. Тогда просто смещу вниз кнопку.
+    bottom: -10px;
+    width: auto;
   }
 }

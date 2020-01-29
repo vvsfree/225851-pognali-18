@@ -1,5 +1,149 @@
+.country {
+  display: flex;
+  flex-direction: column;
+  @include font(16px, 18px, $black-color, 500);
+}
+
+.country__picture {
+  margin-bottom: -(12px + $border-extra-small-radius);
+}
+
+.country__img {
+  display: block;
+  width: 270px;
+  height: 110px;
+  border-top-left-radius: $border-extra-small-radius;
+  border-top-right-radius: $border-extra-small-radius;
+}
+
+.country__flag {
+  position: relative;
+  left: 25px;
+  margin-bottom: -12px;
+}
+
+.country__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  padding: $mobile-content-padding;
+  padding-top: 28px;
+  background-color: $white-color;
+  border-radius: $border-extra-small-radius;
+}
+
+.country__title {
+  margin: 0;
+  @include font(21px, 21px, $dark-blue-color, 700);
+}
+
+.country__desc {
+  margin: 0;
+  width: 100%;
+  opacity: 0.3;
+}
+
+.country__travelers-count {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  // Подобрал, чтобы название страны и кол-во посетителей выровнялось по base-line
+  line-height: 25px;
+  opacity: 0.3;
+
+  &::before {
+    content: "";
+    margin-right: 8px;
+    width: 11px;
+    height: 11px;
+    background-image: url("../../img/user.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.33;
+  }
+}
+
 @media (min-width: $tablet-width) {
+  .country {
+    flex-direction: row-reverse;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .country__picture {
+    margin-bottom: 0;
+    margin-left: -35px;
+  }
+
+  .country__img {
+    width: 186px;
+    height: 140px;
+    border-radius: 0;
+    border-top-right-radius: $border-small-radius;
+    border-bottom-right-radius: $border-small-radius;
+  }
+
+  .country__flag {
+    left: 0;
+    top: 16px;
+    margin-left: -35px;
+    margin-bottom: 0;
+    width: 70px;
+    height: 47px;
+  }
+
+  .country__wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+    padding-top: 30px;
+    padding-bottom: 24px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 0;
+    border-top-left-radius: $border-small-radius;
+    border-bottom-left-radius: $border-small-radius;
+  }
+
+  .country__title {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+
+  .country__desc {
+    margin-bottom: 17px;
+    line-height: 17.68px;
+  }
+
+  .country__travelers-count {
+    justify-content: flex-start;
+    order: 1;
+
+    line-height: 20px;
+
+    &::before {
+      content: "";
+      margin-right: 11px;
+      width: 20px;
+      height: 20px;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
+  .country__flag {
+    top: 23px;
+  }
+
+  .country__wrapper {
+    padding-top: 23px;
+  }
+
+  .country__desc {
+    margin-bottom: 24px;
+  }
 }

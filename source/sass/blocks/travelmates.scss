@@ -202,6 +202,8 @@
   }
 
   .travelmates__collection {
+    // Компенсируется нижний внешний отступ, который нужен на случай,
+    // если путешественников будет несколько рядов. Между рядами положил промежуток в 10px
     margin-bottom: -10px;
     width: 630px;
 
@@ -214,6 +216,6 @@
     position: absolute;
     left: $desktop-content-padding;
     bottom: 0;
-    width: 280px;
+    width: auto;
   }
 }

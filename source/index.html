@@ -105,39 +105,50 @@
       <section class="countries main__countries">
         <div class="wrapper countries__wrapper">
           <header class="countries__header">
-            <h2 class="title">Направления</h2>
+            <h2 class="title countries__title">Направления</h2>
             <p class="text text--black">
-              Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
+              Мы не продаем туры<br>и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
             </p>
-            <a class="btn countries__btn countries__btn--top" href="form.html">Показать все</a>
           </header>
           <div class="countries__collection">
-            <article class="country">
-              <picture>
-                <img class="country__img" src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2x" width="270" height="110" alt="Тайланд">
+            <article class="country countries__country">
+              <picture class="country__picture">
+                <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x">
+                <img class="country__img" src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2x" width="270" height="110" alt="Таиланд">
               </picture>
-              <h3 class="country__title">Тайланд</h3>
-              <span class="country__travelers-count">18321</span>
-              <p class="country__desc">Джунгли зовут!</p>
+              <img class="country__flag" src="img/flag-thailand.svg" width="35" height="24" alt="Флаг Таиланда">
+              <div class="country__wrapper">
+                <h3 class="country__title">Таиланд</h3>
+                <span class="country__travelers-count">18321</span>
+                <p class="country__desc">Джунгли зовут!</p>
+              </div>
             </article>
-            <article class="country">
-              <picture>
+            <article class="country countries__country">
+              <picture class="country__picture">
+                <source media="(min-width: 768px)" srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x">
                 <img class="country__img" src="img/france-mobile@1x.jpg" srcset="img/france-mobile@2x.jpg 2x" width="270" height="110" alt="Франция">
               </picture>
-              <h3 class="country__title">Франция</h3>
-              <span class="country__travelers-count">12518</span>
-              <p class="country__desc">Трэ бьен, манифик!</p>
+              <img class="country__flag" src="img/flag-france.svg" width="35" height="24" alt="Флаг Франции">
+              <div class="country__wrapper">
+                <h3 class="country__title">Франция</h3>
+                <span class="country__travelers-count">12518</span>
+                <p class="country__desc">Трэ бьен, манифик!</p>
+              </div>
             </article>
-            <article class="country">
-              <picture>
+            <article class="country countries__country">
+              <picture class="country__picture">
+                <source media="(min-width: 768px)" srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x">
                 <img class="country__img" src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@2x.jpg 2x" width="270" height="110" alt="Чехия">
               </picture>
-              <h3 class="country__title">Чехия</h3>
-              <span class="country__travelers-count">5326</span>
-              <p class="country__desc">Закоулки старой Европы</p>
-          </article>
+              <img class="country__flag" src="img/flag-czech.svg" width="35" height="24" alt="Флаг Чехии">
+              <div class="country__wrapper">
+                <h3 class="country__title">Чехия</h3>
+                <span class="country__travelers-count">5326</span>
+                <p class="country__desc">Закоулки старой Европы</p>
+              </div>
+            </article>
           </div>
-          <a class="btn countries__btn countries__btn--bottom" href="form.html">Показать все</a>
+          <a class="btn countries__btn" href="form.html">Показать все</a>
         </div>
       </section>
       <section class="travelmates main__travelmates">
@@ -162,7 +173,7 @@
                     <img class="country-list__img" src="img/flag-sri-lanka.svg" width="35" height="24" alt="Шри-Ланка">
                   </li>
                   <li class="country-list__item">
-                    <img class="country-list__img" src="img/flag-thailand.svg" width="35" height="24" alt="Тайланд">
+                    <img class="country-list__img" src="img/flag-thailand.svg" width="35" height="24" alt="Таиланд">
                   </li>
                   <li class="country-list__item">
                     <img class="country-list__img" src="img/flag-seychelles.svg" width="35" height="24" alt="Сейшеллы">
