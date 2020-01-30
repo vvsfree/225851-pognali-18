@@ -67,19 +67,24 @@
   }
 
   .countries__collection {
-    position: relative;
     margin-bottom: 47px;
+  }
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: -40px;
-      left: -$tablet-content-padding;
-      z-index: -1;
-      width: 141px;
-      height: 141px;
-      background-color: #e2e5f2;
-      border-radius: $border-small-radius;
+  .countries__country {
+    &:first-of-type {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -40px;
+        left: -$tablet-content-padding;
+        z-index: -1;
+        width: 141px;
+        height: 141px;
+        background-color: #e2e5f2;
+        border-radius: $border-small-radius;
+      }
     }
   }
 }
@@ -115,10 +120,14 @@
   .countries__collection {
     margin-bottom: 0;
     width: 560px;
+  }
 
-    &::before {
-      top: -72px;
-      left: -$desktop-content-padding;
+  .countries__country {
+    &:first-of-type {
+      &::before {
+        top: -72px;
+        left: -$desktop-content-padding;
+      }
     }
   }
 
@@ -131,5 +140,6 @@
     // Но я его убираю. Тогда просто смещу вниз кнопку.
     bottom: -10px;
     width: auto;
+    min-width: 274px;
   }
 }
