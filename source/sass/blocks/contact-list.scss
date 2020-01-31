@@ -2,22 +2,100 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  &--cta {
+    text-align: left;
+
+    .contact-list__link {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      @include font(16px, 22px, $yellow-color, 700);
+
+      &::before {
+        content: "";
+        flex-shrink: 0;
+        margin-right: 16px;
+        width: 45px;
+        height: 45px;
+        background-color: #121936;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &--intro {
+    .contact-list__link {
+      position: relative;
+      display: block;
+      min-width: 40px;
+      min-height: 40px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+    }
+  }
 }
 
 .contact-list__link {
-  position: relative;
-  display: block;
   text-decoration: none;
-  min-width: 40px;
-  min-height: 40px;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+@media (min-width: $tablet-width) {
+  .contact-list {
+    &--cta {
+      .contact-list__link {
+        font-size: 28px;
+        line-height: 28px;
+
+        &::before {
+          margin-right: 23px;
+          width: 68px;
+          height: 68px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contact-list {
+    &--cta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .contact-list__item {
+        width: 50%;
+        box-sizing: border-box;
+
+        &:first-of-type {
+          display: flex;
+          justify-content: flex-end;
+          padding-right: 30px;
+        }
+      }
+
+      .contact-list__link {
+        min-width: 407px;
+
+        &::before {
+          margin-right: 32px;
+          width: 90px;
+          height: 90px;
+        }
+      }
+    }
   }
 }

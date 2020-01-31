@@ -1,9 +1,67 @@
 .cta {
   padding-top: 72px + $border-radius;
   padding-bottom: $border-radius;
+
+  text-align: center;
+
   background-color: $blue-color;
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
+}
+
+.cta__title {
+  margin-bottom: 22px;
+}
+
+.cta__text {
+  &--top {
+    padding: 0 25px;
+    margin-bottom: 30px;
+  }
+
+  &--bottom {
+    margin-bottom: 20px;
+  }
+}
+
+.cta__link {
+  color: $yellow-color;
+}
+
+.cta__form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.cta__label {
+  margin-right: -60px;
+  width: 100%;
+}
+
+.cta__input {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 24px;
+  padding-right: 24px + 60px;
+  width: 100%;
+  height: 62px;
+  box-sizing: border-box;
+  @include font(18px, 18px, rgba(68, 68, 68, 0.3), 700);
+  border: none;
+  border-radius: $border-extra-small-radius;
+
+  &::placeholder {
+    color: inherit;
+  }
+}
+
+.cta__btn {
+  padding-left: 0;
+  width: 60px;
+  box-sizing: border-box;
+  font-size: 0;
 }
 
 @media (min-width: $tablet-width) {
@@ -17,6 +75,51 @@
   .cta__wrapper {
     padding: 0 $tablet-content-padding;
   }
+
+  .cta__title {
+    margin-bottom: 60px;
+  }
+
+  .cta__text {
+    &--top {
+      padding: 0;
+      margin-bottom: 66px;
+    }
+
+    &--bottom {
+      margin-bottom: 40px;
+    }
+  }
+
+  .cta__text-br {
+    display: none;
+  }
+
+  .cta__form {
+    margin-bottom: 60px;
+  }
+
+  .cta__label {
+    margin-right: -82px;
+  }
+
+  .cta__input {
+    padding-top: 16px;
+    padding-bottom: 17px;
+    padding-left: 35px;
+    padding-right: 35px + 82px;
+
+    height: 81px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    border-radius: $border-small-radius;
+  }
+
+  .cta__btn {
+    width: 82px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -27,5 +130,35 @@
 
   .cta__wrapper {
     padding: 0 $desktop-content-padding;
+  }
+
+  .cta__text {
+    &--top {
+      margin-bottom: 60px;
+    }
+
+    &--bottom {
+      margin-bottom: 44px;
+    }
+  }
+
+  .cta__form {
+    margin-bottom: 70px;
+  }
+
+  .cta__label {
+    margin-right: -324px;
+  }
+
+  .cta__input {
+    padding-right: 35px + 324px;
+  }
+
+  .cta__btn {
+    padding-left: 37px;
+    width: 324px;
+    font-size: 24px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 }
