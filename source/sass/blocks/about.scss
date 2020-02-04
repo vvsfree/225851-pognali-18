@@ -1,16 +1,69 @@
 .about {
-  padding-top: 33px + 40px + $mobile-srv-shift + $border-radius;
+  padding-top: 40px + $mobile-srv-shift + $border-radius;
   padding-bottom: 80px;
   background-color: $blue-color;
-  background-image: url("../../img/about-mobile@1x.png");
-  background-position: 50% 40px + $mobile-srv-shift + $border-radius;
-  background-repeat: no-repeat;
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
+
+  // Использование псевдоэлементов обусловлено тем, что картинка должна находиться над квадратом.
+  // Если делать картинку как background-image у блока .about, а квадрат сделать псевдоэлементом,
+  // то квадрат всегда будет __над__ картинкой.
+  // Как вариант, квадрат можно нарисовать в SVG и сделать множественный фон (SVG + картинка)
+  &::before {
+    content: '';
+    position: absolute;
+    top: 40px + $mobile-srv-shift + $border-radius;
+    // для того, чтобы квадрат уперся в левую границу wrapper добавляем к right позиции 3px:
+    // 3px = ($mobile-wrapper-width - 132px * 2) / 2
+    // 44px - квадрат "выпадает" из wrapper по макету
+    right: calc(50% + 3px + 44px);
+    z-index: -1;
+
+    width: 132px;
+    height: 132px;
+
+    background-color: #141b3b;
+    border-radius: $border-small-radius;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 40px + $mobile-srv-shift + $border-radius;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 352px;
+
+    background-image: url("../../img/about-mobile@1x.png");
+    background-position: left calc(50% + 4px) top;
+    background-repeat: no-repeat;
+    background-size: 292px 352px;
+  }
 }
 
 .about__wrapper {
   padding: 0 $mobile-content-padding;
+  // Обычно отталкивается wrapper.
+  // Здесь с верхним внутренним отступом удобнее позиционировать псевдоэлементы
+  padding-top: 33px;
+}
+
+.about__title {
+  margin-bottom: 22px;
+}
+
+.about__text {
+  margin-bottom: 24px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.about__text-br {
+  display: none;
 }
 
 .about__btn {
@@ -19,35 +72,107 @@
 
 @media (min-width: $tablet-width) {
   .about {
-    padding-top: 133px + $tablet-srv-shift + $border-large-radius;
+    padding-top: 96px + $tablet-srv-shift + $border-large-radius;
     padding-bottom: 90px;
-    background-image: url("../../img/about-tablet@1x.png");
-    // todo: background-clip, background-origin?
-    background-position: calc(50% + 198px) 133px + $tablet-srv-shift + $border-large-radius;
     border-bottom-left-radius: $border-large-radius;
     border-bottom-right-radius: $border-large-radius;
+
+    &::before {
+      top: 96px + $tablet-srv-shift + $border-large-radius;
+      left: calc(50% - #{$tablet-wrapper-width} / 2);
+
+      width: $tablet-wrapper-width;
+      height: 213px;
+    }
+
+    &::after {
+      top: auto;
+      bottom: 90px;
+      left: 50%;
+
+      width: 376px;
+      height: 548px;
+
+      background-image: url("../../img/about-tablet@1x.png");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
   }
 
   .about__wrapper {
+    padding-top: 40px;
     padding-left: $tablet-content-padding;
-    padding-right: $tablet-wrapper-width / 2;
+    padding-right: 8px + $tablet-wrapper-width / 2;
+  }
+
+  .about__title {
+    margin-bottom: 42px;
+  }
+
+  .about__text {
+    margin-bottom: 36px;
+
+    &:last-of-type {
+      margin-bottom: 52px;
+    }
+  }
+
+  .about__text-br {
+    display: inline;
   }
 
   .about__btn {
-    display: block;
+    display: inline-block;
+    min-width: 274px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .about {
-    padding-top: 52px + 81px + $border-large-radius;
+    padding-top: 81px + $border-large-radius;
     padding-bottom: 163px;
-    background-image: url("../../img/about-desktop@1x.png");
-    background-position: calc(50% + 345px) 81px + $border-large-radius;
+
+    &::before {
+      top: 81px + $border-large-radius;;
+      left: calc(50% - #{$desktop-wrapper-width} / 2);
+
+      width: 213px;
+      height: 213px;
+    }
+
+    &::after {
+      bottom: 0;
+      left: calc(50% + 30px);
+
+      width: 630px;
+      height: 665px;
+
+      background-image: url("../../img/about-desktop@1x.png");
+      background-size: contain;
+    }
   }
 
   .about__wrapper {
+    padding-top: 52px;
     padding-left: $desktop-content-padding;
-    padding-right: $desktop-wrapper-width / 2;
+    padding-right: $desktop-wrapper-width / 2 - 22px;
+  }
+
+  .about__title {
+    margin-bottom: 58px;
+  }
+
+  .about__text {
+    margin-bottom: 44px;
+
+    &:last-of-type {
+      padding-right: 200px;
+      margin-bottom: 84px;
+    }
+  }
+
+  .about__text-br {
+    display: none;
   }
 }
