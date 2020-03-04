@@ -29,30 +29,30 @@
   }
 }
 
-.rates__list {
+.rates__rates-list {
   margin-bottom: 30px;
   width: calc(100% - 45px);
-  border-collapse: collapse;
+  // border-collapse: collapse;
   counter-reset: item;
 }
 
-.rates__item {
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
+// .rates__item {
+//   border-top: 1px solid rgba(0, 0, 0, 0.05);
 
-  &:last-of-type {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  }
-}
+//   &:last-of-type {
+//     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+//   }
+// }
 
-.rates__term,
-.rates__price {
-  display: block;
-  padding: 0;
-}
+// .rates__term,
+// .rates__price {
+//   display: block;
+//   padding: 0;
+// }
 
 .rates__term {
   position: relative;
-  margin-top: 14px;
+  // margin-top: 14px;
 
   &::after {
     counter-increment: item;
@@ -89,9 +89,9 @@
   }
 }
 
-.rates__price {
-  margin-bottom: 14px;
-}
+// .rates__price {
+//   margin-bottom: 14px;
+// }
 
 .rates__link {
   @include font(16px, 16px, $blue-color, bold);
@@ -115,7 +115,7 @@
   }
 
   .rates__title {
-    display: block;
+    // display: block;
     margin-bottom: 74px;
     text-align: center;
 
@@ -124,7 +124,7 @@
     }
   }
 
-  .rates__list {
+  .rates__rates-list {
     position: relative;
     margin-left: auto;
     margin-bottom: 33px;
@@ -157,17 +157,17 @@
     }
   }
 
-  .rates__term,
-  .rates__price {
-    display: table-cell;
-    padding: 0;
-    padding-top: 16px;
-    padding-bottom: 17px;
-    margin: 0;
-  }
+  // .rates__term,
+  // .rates__price {
+  //   display: table-cell;
+  //   padding: 0;
+  //   padding-top: 16px;
+  //   padding-bottom: 17px;
+  //   margin: 0;
+  // }
 
   .rates__term {
-    padding-right: 10px;
+    // padding-right: 10px;
     width: 71%;
 
     &::after {
@@ -182,9 +182,9 @@
   }
 
   .rates__price {
-    padding-left: 10px;
+    // padding-left: 10px;
     width: 29%;
-    text-align: right;
+    // text-align: right;
   }
 
   .rates__link {
@@ -230,7 +230,7 @@
     margin-bottom: 134px;
   }
 
-  .rates__list {
+  .rates__rates-list {
     margin-left: 90px;
     // Это максимальная ширина, даже при резиновой верстке она не должна тянуться.
     // Ширина таблицы вполне может быть фиксированной

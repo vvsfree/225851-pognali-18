@@ -1,62 +1,100 @@
 .rates-b {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  // Чтобы отодвинуться от кнопки верхнего блока
+  padding-top: 20px;
+
+  width: $mobile-wrapper-width;
   @include font(16px, 22px, $black-color, 300);
+  background-color: transparent;
 
   &--opened {
-    .rates-b__wrapper {
-      display: block;
-      position: absolute;
-      top: $border-radius / 2;
-      left: 50%;
-      transform: translateX(-($mobile-wrapper-width / 2));
-      padding-left: $mobile-content-padding;
-      padding-right: $mobile-content-padding;
-      padding-top: 15px + $border-small-radius;
-      padding-bottom: 8px + $border-small-radius;
-      width: $mobile-wrapper-width;
-      box-sizing: border-box;
-      background-color: $white-color;
-      border-radius: $border-small-radius;
-    }
+    display: block;
   }
 }
 
 .rates-b__wrapper {
-  display: none;
+  padding-left: $mobile-content-padding;
+  padding-right: $mobile-content-padding;
+  padding-top: 15px + $border-small-radius;
+  padding-bottom: 33px;
+  box-sizing: border-box;
+  background-color: $white-color;
+  border-top-left-radius: $border-small-radius;
+  border-top-right-radius: $border-small-radius;
+}
+
+.rates-b__title {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.rates-b__rates-list {
+  width: 100%;
+}
+
+.rates-b__close-btn {
+  margin: 0;
+  padding: 0;
+  padding-top: 17px;
+  padding-bottom: 18px;
+  width: 100%;
+  @include font(16px, 24px, #1d2e5b, 700);
+  text-transform: uppercase;
+  background-color: #f3f4f8;
+  border: none;
+  border-bottom-left-radius: $border-small-radius;
+  border-bottom-right-radius: $border-small-radius;
+  cursor: pointer;
 }
 
 @media (min-width: $tablet-width) {
   .rates-b {
-    font-size: 28px;
-    line-height: 33px;
-
-    &--opened {
-      .rates-b__wrapper {
-        top: $border-large-radius;
-        left: 50%;
-        transform: translateX(-($tablet-wrapper-width / 2));
-        padding-left: 88px;
-        padding-right: 88px;
-        padding-top: 26px + $border-radius;
-        padding-bottom: 18px + $border-radius;
-        width: $tablet-wrapper-width;
-        border-radius: $border-radius;
-      }
-    }
+    padding-top: 2px + $border-large-radius;
+    width: $tablet-wrapper-width;
+    font-size: 22px;
+    line-height: 28px;
   }
+
+  .rates-b__wrapper {
+    padding-left: 88px;
+    padding-right: 88px;
+    padding-top: 26px + $border-radius;
+    padding-bottom: 50px;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+
+  .rates-b__title {
+    margin-bottom: 46px;
+  }
+
+  .rates-b__term {
+    width: 60%;
+  }
+
+  .rates-b__close-btn {
+    padding-top: 42px;
+    padding-bottom: 12px + $border-radius;
+    font-size: 24px;
+    text-transform: none;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+
 }
 
 @media (min-width: $desktop-width) {
   .rates-b {
-    &--opened {
-      .rates-b__wrapper {
-        top: 109px + $border-large-radius;
-        left: 50%;
-        transform: translateX(-(750px / 2));
-        padding-left: 60px;
-        padding-right: 60px;
-        padding-top: 16px + $border-radius;
-        width: 750px;
-      }
-    }
+    padding-top: 110px + $border-large-radius;
+    width: 750px;
+  }
+
+  .rates-b__wrapper {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 16px + $border-radius;
   }
 }

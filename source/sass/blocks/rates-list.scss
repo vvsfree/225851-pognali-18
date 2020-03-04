@@ -1,0 +1,45 @@
+.rates-list {
+  border-collapse: collapse;
+}
+
+.rates-list__item {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+  &:last-of-type {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+}
+
+.rates-list__term,
+.rates-list__price {
+  display: block;
+  padding: 0;
+}
+
+.rates-list__term {
+  margin-top: 14px;
+}
+
+.rates-list__price {
+  margin-bottom: 14px;
+}
+
+@media (min-width: $tablet-width) {
+  .rates-list__term,
+  .rates-list__price {
+    display: table-cell;
+    padding: 0;
+    padding-top: 16px;
+    padding-bottom: 17px;
+    margin: 0;
+  }
+
+  .rates-list__term {
+    padding-right: 10px;
+  }
+
+  .rates-list__price {
+    padding-left: 10px;
+    text-align: right;
+  }
+}
