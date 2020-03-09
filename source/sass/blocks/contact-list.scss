@@ -71,6 +71,44 @@
 
 @media (min-width: $desktop-width) {
   .contact-list {
+    &--menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+
+      margin-left: auto;
+      max-width: 150px;
+
+      .contact-list__link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+
+        &--phone {
+          background-color: $orange-color;
+        }
+
+        &--mail {
+          background-color: #ffbd30;
+        }
+      }
+
+      .contact-list__icon {
+        display: block;
+        fill: $dark-blue-color;
+      }
+
+      .contact-list__text {
+        @include visuallyHidden();
+      }
+    }
+
     &--cta {
       display: flex;
       justify-content: center;
