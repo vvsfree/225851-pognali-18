@@ -1,35 +1,6 @@
 .menu {
   padding-top: 27px;
   padding-bottom: 31px;
-
-  &--opened,
-  &--no-js {
-    position: absolute;
-    left: 0;
-    right: 0;
-
-    padding-bottom: 40px;
-
-    background-color: $white-color;
-
-    .menu__main-nav,
-    .menu__auth-btn,
-    .menu__contact-list {
-      display: block;
-      width: 100%;
-    }
-
-    .menu__social-list {
-      display: flex;
-      width: 100%;
-    }
-  }
-
-  &--no-js {
-    .menu__toggle-btn {
-      display: none;
-    }
-  }
 }
 
 .menu__wrapper {
@@ -50,27 +21,27 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-
-  // &--open {
-  //   background-image: url("../../img/icon-mobile-menu.svg");
-  // }
-
-  // &--close {
-  //   background-image: url("../../img/icon-close.svg");
-  // }
-
-  // &--nojs {
-  //   display: none;
-  // }
 }
 
 .menu__toggle-icon {
   display: block;
-  width: 25px;
-  height: 11px;
-  fill: #ffffff;
+
+  &--closed {
+    width: 25px;
+    height: 11px;
+    fill: #ffffff;
+  }
+
+  &--opened {
+    width: 19px;
+    height: 19px;
+    fill: #cccccc;
+  }
 }
 
+.menu__picture--opened,
+.menu__toggle-icon--opened,
+.menu__top-contact-list,
 .menu__main-nav,
 .menu__auth-btn,
 .menu__contact-list,
@@ -78,17 +49,98 @@
   display: none;
 }
 
+@media (max-width: $desktop-width - 1) {
+  .menu {
+    &--opened,
+    &--no-js {
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 20;
+
+      padding-bottom: 40px;
+
+      background-color: $white-color;
+
+      .menu__main-nav,
+      .menu__auth-btn,
+      .menu__contact-list {
+        display: block;
+        width: 100%;
+      }
+
+      .menu__main-nav {
+        margin-top: 72px;
+        margin-bottom: 52px;
+      }
+
+      .menu__auth-btn {
+        margin-bottom: 50px;
+      }
+
+      .menu__contact-list {
+        margin-bottom: 30px;
+      }
+
+      .menu__social-list {
+        display: flex;
+        width: 100%;
+      }
+
+      .menu__picture {
+        &--opened {
+          display: block;
+        }
+
+        &--closed {
+          display: none;
+        }
+      }
+
+      .menu__toggle-icon {
+        &--opened {
+          display: block;
+        }
+
+        &--closed {
+          display: none;
+        }
+      }
+    }
+
+    &--no-js {
+      .menu__toggle-btn {
+        display: none;
+      }
+    }
+  }
+}
+
 @media (min-width: $tablet-width) {
+  .menu__auth-btn {
+    display: block;
+  }
+
+  .menu__logo-img {
+    width: 166px;
+    height: 42px;
+  }
+
+  .menu__toggle-icon {
+    &--opened {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1){
   .menu {
     padding-top: 40px;
 
     &--opened,
     &--no-js {
       padding-bottom: 90px;
-
-      .menu__social-list {
-        justify-content: flex-start;
-      }
 
       .menu__main-nav,
       .menu__contact-list,
@@ -98,56 +150,35 @@
         padding-right: 60px;
       }
 
+      .menu__main-nav {
+        margin-top: 98px;
+        margin-bottom: 146px;
+      }
+
       .menu__auth-btn {
+        margin-bottom: 0;
         width: 190px;
       }
+
+      .menu__contact-list {
+        margin-bottom: 114px;
+      }
     }
-  }
-
-  .menu__auth-btn {
-    display: block;
-  }
-
-  .menu__logo-img {
-    width: 166px;
-    height: 42px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .menu {
     padding-top: 47px;
-
-    &--opened,
-    &--no-js {
-      position: static;
-      padding-bottom: 31px;
-      background-color: transparent;
-
-      .menu__main-nav,
-      .menu__auth-btn,
-      .menu__contact-list {
-        width: auto;
-      }
-
-      .menu__main-nav,
-      .menu__contact-list {
-        padding-left: 0;
-        padding-right: 0;
-      }
-
-      .menu__social-list {
-        display: none;
-      }
-    }
   }
 
   .menu__wrapper {
     justify-content: flex-start;
   }
 
-  .menu__toggle-btn {
-    display: none;
+  .menu__logo-img {
+    width: 200px;
+    height: 52px;
   }
 
   .menu__main-nav {
@@ -155,13 +186,13 @@
     margin-left: 42px;
   }
 
-  .menu__contact-list {
+  .menu__top-contact-list {
     display: flex;
+    margin-left: auto;
   }
 
-  .menu__logo-img {
-    width: 200px;
-    height: 52px;
+  .menu__toggle-btn {
+    display: none;
   }
 
   .menu__auth-btn {

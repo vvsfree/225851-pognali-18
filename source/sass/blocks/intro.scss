@@ -26,25 +26,6 @@
   margin-bottom: -20px;
 }
 
-.intro__contact-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0;
-}
-
-.intro__phone {
-  &::before {
-    background-color: #ff8d30;
-  }
-}
-
-.intro__email {
-  &::before {
-    background-color: #ffbd30;
-  }
-}
-
 .intro__srv-list {
   transform: translateY($mobile-srv-shift);
 }

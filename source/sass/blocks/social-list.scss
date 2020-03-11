@@ -7,20 +7,72 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  &--menu {
+    .social-list__link {
+      background-color: transparent;
+    }
+
+    .social-list__icon {
+      fill: #cccccc;
+    }
+  }
 }
 
 .social-list__link {
-  display: block;
-  min-width: 45px;
-  min-height: 45px;
-  font-size: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  font-size: 0; // TODO: потом убрать, по другому установив иконки
   background-color: $yellow-color;
   border-radius: 50%;
 }
 
+.social-list__icon {
+  fill: #1d2e5b;
+
+  &--fb {
+    width: 11px;
+    height: 21px;
+  }
+
+  &--vk {
+    width: 23px;
+    height: 12px;
+  }
+
+  &--insta {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 @media (min-width: $tablet-width) {
+  .social-list {
+    justify-content: flex-start;
+  }
+
   .social-list__link {
     width: 60px;
     height: 60px;
+  }
+
+  .social-list__icon {
+    &--fb {
+      width: 14px;
+      height: 28px;
+    }
+
+    &--vk {
+      width: 31px;
+      height: 16px;
+    }
+
+    &--insta {
+      width: 24px;
+      height: 24px;
+    }
   }
 }
