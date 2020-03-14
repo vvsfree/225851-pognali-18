@@ -16,7 +16,7 @@
 @media (min-width: $tablet-width) {
   .wrapper {
     width: $tablet-wrapper-width;
-
+    // TODO: Это есть?
     &--mtd,
     &--0td {
       padding-left: $tablet-content-padding;

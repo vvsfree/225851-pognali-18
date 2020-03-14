@@ -8,7 +8,8 @@
 .page__header {
   position: relative;
   z-index: 100;
-  margin-bottom: -$border-radius;
+  // Для того, чтобы псевдо-блок с луной из intro поместить под header (только на мобильной версии)
+  margin-bottom: -77px;
 }
 
 .page__inner-header {
@@ -23,7 +24,7 @@
 
 @media (min-width: $tablet-width) {
   .page__header {
-    margin-bottom: -$border-large-radius;
+    margin-bottom: 0;
   }
 
   .page__inner-header {

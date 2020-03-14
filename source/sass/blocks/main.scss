@@ -1,3 +1,4 @@
+.main__intro,
 .main__about,
 .main__countries,
 .main__travelmates,
@@ -8,32 +9,36 @@
   margin-bottom: -$border-radius;
 }
 
-.main__about {
+.main__intro {
   z-index: 90;
 }
 
-.main__countries {
+.main__about {
   z-index: 80;
 }
 
-.main__travelmates {
+.main__countries {
   z-index: 70;
 }
 
-.main__rates-b {
-  z-index: 75;
-}
-
-.main__rates {
+.main__travelmates {
   z-index: 60;
 }
 
-.main__cta {
+.main__rates-b {
+  z-index: 55;
+}
+
+.main__rates {
   z-index: 50;
 }
 
-.main__contacts {
+.main__cta {
   z-index: 40;
+}
+
+.main__contacts {
+  z-index: 30;
 }
 
 // form
@@ -48,6 +53,7 @@
 }
 
 @media (min-width: $tablet-width) {
+  .main__intro,
   .main__about,
   .main__countries,
   .main__travelmates,

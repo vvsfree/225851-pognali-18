@@ -1,10 +1,48 @@
+.intro {
+  padding-top: 96px;
+
+  background-color: $blue-color;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+
+  // Необходимо для того, чтобы луну закрепить снизу блока, чтобы при увеличении ширины экрана
+  // луна росла вверх, визуально расширяясь - этому способствует contain.
+  // Как вариант, убрать этот блок и в самом intro добавить изображение луны, закрепленное сверху.
+  // Тогда при увеличении ширины экрана луна будет уходить вниз, уходя с видимой части экрана ближе к планшетной ширине.
+  // Если оставить луну как есть, без contain, то при расширении экрана она будет выглядеть огрызком посреди экрана.
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 569px;
+
+    background-image: url("../../img/globe-back-mobile@1x.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
 .intro__wrapper {
-  margin-bottom: -$mobile-srv-shift;
+  background-color: transparent;
+}
+
+// Уходим от центровщика. Здесь он только мешает
+.intro__slogan,
+.intro__image,
+.intro__user {
+  margin: 0 auto;
 }
 
 .intro__slogan {
   display: block;
   margin-bottom: 12px;
+  width: $mobile-wrapper-width;
   @include font(36px, 40px, $white-color, 700);
   text-align: center;
 }
@@ -12,74 +50,107 @@
 .intro__picture {
   display: block;
   margin-bottom: -23px;
-  margin-left: 54px;
 }
 
 .intro__image {
   display: block;
+  padding-left: 30px;
+  width: 192px;
+  height: 255px;
 }
 
 .intro__user {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: -20px;
-}
-
-.intro__srv-list {
-  transform: translateY($mobile-srv-shift);
+  margin-bottom: -17px;
+  width: $mobile-wrapper-width;
 }
 
 @media (min-width: $tablet-width) {
+  .intro {
+    padding-top: 36px;
+
+    background-image: url("../../img/globe-back-tablet@1x.jpg"), linear-gradient(to bottom, #182044 868px, $blue-color 868px);
+    background-position: center top 256px, left top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 1479px 612px, 100% 100%;
+    border-bottom-left-radius: $border-large-radius;
+    border-bottom-right-radius: $border-large-radius;
+
+    &::before {
+      display: none;
+    }
+  }
+
   .intro__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: flex-start;
-    align-items: flex-start;
-    margin-bottom: -$tablet-srv-shift;
+    align-items: flex-end;
+
+    margin: 0 auto;
     padding: 0 $tablet-content-padding;
+
+    width: $tablet-wrapper-width;
+    box-sizing: border-box;
+  }
+
+  .intro__slogan {
+    margin-bottom: 32px;
+    width: 100%;
+    font-size: 60px;
+    line-height: 70px;
   }
 
   .intro__user {
     display: none;
   }
 
-  .intro__review {
-    width: 260px;
-  }
-
   .intro__picture {
     order: 1;
     margin-bottom: 0;
-    margin-left: -85px;
+    margin-left: -60px;
   }
 
   .intro__image {
+    padding-left: 0;
     width: 372px;
     height: 451px;
-  }
-
-  .intro__srv-list {
-    transform: translateY($tablet-srv-shift);
   }
 }
 
 @media (min-width: $desktop-width) {
+  .intro {
+    padding-top: 0;
+
+    background-color: $dark-blue-color;
+    background-image: url("../../img/globe-back-desktop@1x.jpg");
+    background-position: center bottom;
+    background-size: 1800px 750px;
+  }
+
   .intro__wrapper {
+    align-items: flex-start;
     padding-left: $desktop-content-padding;
     padding-right: 0;
-    margin-bottom: -127px;
+    margin-bottom: -106px;
+    width: $desktop-wrapper-width;
   }
 
   .intro__slogan {
+    padding-top: 100px;
     margin-bottom: 0;
     width: 450px;
+    text-align: left;
   }
 
   .intro__review {
     order: 2;
-    margin-left: auto;
+    padding-top: 112px;
+    padding-bottom: 20px;
+    margin-left: 53px;
     width: 285px;
   }
 

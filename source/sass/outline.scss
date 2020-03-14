@@ -13,7 +13,13 @@
   outline: 1px solid white;
 }
 
-.wrapper {
+.intro {
+  outline: 2px solid orange;
+  outline-offset: -2px;
+}
+
+.wrapper,
+.intro__wrapper {
   outline: 1px solid red;
   outline-style: dotted;
 }

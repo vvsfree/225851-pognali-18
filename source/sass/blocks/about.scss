@@ -1,6 +1,6 @@
 .about {
-  padding-top: 40px + $mobile-srv-shift + $border-radius;
-  padding-bottom: 80px;
+  padding-top: 40px + $border-radius;
+  padding-bottom: 74px;
   background-color: $blue-color;
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
@@ -12,7 +12,7 @@
   &::before {
     content: '';
     position: absolute;
-    top: 40px + $mobile-srv-shift + $border-radius;
+    top: 40px + $border-radius;
     // для того, чтобы квадрат уперся в левую границу wrapper добавляем к right позиции 3px:
     // 3px = ($mobile-wrapper-width - 132px * 2) / 2
     // 44px - квадрат "выпадает" из wrapper по макету
@@ -29,7 +29,7 @@
   &::after {
     content: '';
     position: absolute;
-    top: 40px + $mobile-srv-shift + $border-radius;
+    top: 40px + $border-radius;
     left: 0;
     z-index: -1;
 
@@ -72,13 +72,13 @@
 
 @media (min-width: $tablet-width) {
   .about {
-    padding-top: 96px + $tablet-srv-shift + $border-large-radius;
+    padding-top: 96px + $border-large-radius;
     padding-bottom: 90px;
     border-bottom-left-radius: $border-large-radius;
     border-bottom-right-radius: $border-large-radius;
 
     &::before {
-      top: 96px + $tablet-srv-shift + $border-large-radius;
+      top: 96px + $border-large-radius;
       left: calc(50% - #{$tablet-wrapper-width} / 2);
 
       width: $tablet-wrapper-width;
@@ -86,8 +86,7 @@
     }
 
     &::after {
-      top: auto;
-      bottom: 90px;
+      top: 96px + 50px + $border-large-radius;
       left: 50%;
 
       width: 376px;
@@ -131,10 +130,10 @@
 @media (min-width: $desktop-width) {
   .about {
     padding-top: 81px + $border-large-radius;
-    padding-bottom: 163px;
+    padding-bottom: 152px;
 
     &::before {
-      top: 81px + $border-large-radius;;
+      top: 81px + $border-large-radius;
       left: calc(50% - #{$desktop-wrapper-width} / 2);
 
       width: 213px;
@@ -142,7 +141,7 @@
     }
 
     &::after {
-      bottom: 0;
+      top: 81px + $border-large-radius;
       left: calc(50% + 30px);
 
       width: 630px;
