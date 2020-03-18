@@ -11,7 +11,7 @@
   padding-left: $mobile-content-padding;
 }
 
-.rates__title {
+.rates__heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -114,7 +114,7 @@
     padding: 0 $tablet-content-padding;
   }
 
-  .rates__title {
+  .rates__heading {
     // display: block;
     margin-bottom: 74px;
     text-align: center;
@@ -226,7 +226,7 @@
     padding: 0 $desktop-content-padding;
   }
 
-  .rates__title {
+  .rates__heading {
     margin-bottom: 134px;
   }
 

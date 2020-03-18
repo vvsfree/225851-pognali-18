@@ -4,7 +4,7 @@
   border-radius: 10px;
 }
 
-.plan__title {
+.plan__heading {
   margin: 0;
   @include font(16px, 16px, #1d2e5b, 700);
 }
@@ -17,7 +17,7 @@
     padding-right: 36px;
   }
 
-  .plan__title {
+  .plan__heading {
     @include font(24px, 50px, #1d2e5b, 700);
   }
 }

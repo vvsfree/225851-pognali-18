@@ -31,9 +31,7 @@
 .travelmate__name {
   position: relative;
   display: inline-block;
-  margin: 0;
   margin-bottom: 15px;
-  @include font(21px, 21px, #1d2e5b, 700);
   overflow-wrap: break-word;
   word-break: break-all;
 
@@ -93,8 +91,6 @@
 
   .travelmate__name {
     margin-bottom: 25px;
-    font-size: 24px;
-    line-height: 24px;
 
     &::before {
       top: calc((24px - 7px) / 2);

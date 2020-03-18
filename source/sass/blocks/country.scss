@@ -34,11 +34,6 @@
   border-radius: $border-extra-small-radius;
 }
 
-.country__title {
-  margin: 0;
-  @include font(21px, 21px, $dark-blue-color, 700);
-}
-
 .country__desc {
   margin: 0;
   width: 100%;
@@ -108,9 +103,7 @@
     border-bottom-left-radius: $border-small-radius;
   }
 
-  .country__title {
-    font-size: 24px;
-    line-height: 24px;
+  .country__name {
     margin-bottom: 8px;
   }
 

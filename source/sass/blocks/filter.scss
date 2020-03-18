@@ -7,7 +7,7 @@
   border-radius: $border-small-radius;
 }
 
-.filter__title {
+.filter__heading {
   margin: 0;
   @include font(22.5px, 22.5px, #1d2e5b, bold);
 }
@@ -30,7 +30,7 @@
     box-sizing: border-box;
   }
 
-  .filter__title {
+  .filter__heading {
     @include font(30px, 30px, #1d2e5b, bold);
   }
 

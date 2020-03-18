@@ -6,12 +6,11 @@
     <title>HTML Academy: Погнали</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page">
-    <header class="header page__header">
-      <h1 class="visually-hidden">Сервис путешествий «Погнали?»</h1>
-      <!-- <section class="menu menu--no-js header__menu"> -->
-      <section class="menu menu--opened header__menu">
-      <!-- <section class="menu header__menu"> -->
+  <body class="body">
+    <header class="header">
+      <section class="menu header__menu">
+        <!-- <section class="menu menu--no-js header__menu"> -->
+        <!-- <section class="menu menu--opened header__menu"> -->
         <h2 class="visually-hidden">Меню</h2>
         <div class="wrapper menu__wrapper">
           <a class="menu__logo">
@@ -38,7 +37,7 @@
           <nav class="main-nav menu__main-nav">
             <ul class="site-list">
               <li class=site-list__item>
-                <a class="site-list__link" href="#">О сервисе</a>
+                <a class="site-list__link">О сервисе</a>
               </li>
               <li class=site-list__item>
                 <a class="site-list__link" href="form.html">Направления</a>
@@ -114,11 +113,12 @@
       </section>
     </header>
 
-    <main class="main page__main">
+    <main class="main body__main">
+      <h1 class="visually-hidden">Сервис путешествий «Погнали?»</h1>
       <section class="intro main__intro">
         <h2 class="visually-hidden">Кратко о сервисе</h2>
         <div class="intro__wrapper">
-          <b class="intro__slogan">В путешествие<br>с крутыми попутчиками!</b>
+          <b class="heading1 intro__slogan">В путешествие<br>с крутыми попутчиками!</b>
           <picture class="intro__picture">
             <source media="(min-width: 1440px)" srcset="img/traveller-illustration-desktop@1x.png 1x, img/traveller-illustration-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/traveller-illustration-tablet@1x.png 1x, img/traveller-illustration-tablet@2x.png 2x">
@@ -157,7 +157,7 @@
       </section>
       <section class="about main__about">
         <div class="wrapper about__wrapper">
-          <h2 class="title about__title">О сервисе</h2>
+          <h2 class="heading2 about__heading">О сервисе</h2>
           <p class="text about__text">
             Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий <br class="about__text-br">и черпайте вдохновение в чужих.
           </p>
@@ -170,7 +170,7 @@
       <section class="countries main__countries">
         <div class="wrapper countries__wrapper">
           <header class="countries__header">
-            <h2 class="title countries__title">Направления</h2>
+            <h2 class="heading2 countries__heading">Направления</h2>
             <p class="text text--black">
               Мы не продаем туры<br>и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
             </p>
@@ -183,7 +183,7 @@
               </picture>
               <img class="country__flag" src="img/flag-thailand.svg" width="35" height="24" alt="Флаг Таиланда">
               <div class="country__wrapper">
-                <h3 class="country__title">Таиланд</h3>
+                <h3 class="heading3 country__name">Таиланд</h3>
                 <span class="country__travelers-count">18321</span>
                 <p class="country__desc">Джунгли зовут!</p>
               </div>
@@ -195,7 +195,7 @@
               </picture>
               <img class="country__flag" src="img/flag-france.svg" width="35" height="24" alt="Флаг Франции">
               <div class="country__wrapper">
-                <h3 class="country__title">Франция</h3>
+                <h3 class="heading3 country__name">Франция</h3>
                 <span class="country__travelers-count">12518</span>
                 <p class="country__desc">Трэ бьен, манифик!</p>
               </div>
@@ -207,7 +207,7 @@
               </picture>
               <img class="country__flag" src="img/flag-czech.svg" width="35" height="24" alt="Флаг Чехии">
               <div class="country__wrapper">
-                <h3 class="country__title">Чехия</h3>
+                <h3 class="heading3 country__name">Чехия</h3>
                 <span class="country__travelers-count">5326</span>
                 <p class="country__desc">Закоулки старой Европы</p>
               </div>
@@ -219,7 +219,7 @@
       <section class="travelmates main__travelmates">
         <div class="wrapper travelmates__wrapper">
           <header class="travelmates__header">
-            <h2 class="title travelmates__title">Попутчики</h2>
+            <h2 class="heading2 travelmates__heading">Попутчики</h2>
             <p class="text travelmates__text">
               Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, <br class="travelmates__text-br">а другому маршрут для хайкинга.
             </p>
@@ -244,7 +244,7 @@
                     <img class="country-list__img" src="img/flag-seychelles.svg" width="35" height="24" alt="Сейшеллы">
                   </li>
                 </ul>
-                <h3 class="travelmate__name">Таня Фирсова</h3>
+                <h3 class="heading3 heading3--blue travelmate__name">Таня Фирсова</h3>
                 <ul class="hashtag-list travelmate__hashtag-list">
                   <li class="hashtag-list__item">ЗОЖ</li>
                   <li class="hashtag-list__item">ПП</li>
@@ -283,7 +283,7 @@
                     <img class="country-list__img" src="img/flag-czech.svg" width="35" height="24" alt="Чехия">
                   </li>
                 </ul>
-                <h3 class="travelmate__name travelmate__name--online">Петя Демин</h3>
+                <h3 class="heading3 heading3--blue travelmate__name travelmate__name--online">Петя Демин</h3>
                 <ul class="hashtag-list travelmate__hashtag-list">
                   <li class="hashtag-list__item">бургер</li>
                   <li class="hashtag-list__item">бар</li>
@@ -313,9 +313,9 @@
         </div>
       </section>
       <section class="rates-b main__rates-b">
-      <!-- <section class="rates-b rates-b--opened main__rates-b"> -->
+        <!-- <section class="rates-b rates-b--opened main__rates-b"> -->
         <div class="rates-b__wrapper">
-          <h2 class="title rates-b__title">Бизнес-тарифы</h2>
+          <h2 class="heading2 rates-b__heading">Бизнес-тарифы</h2>
           <table class="rates-list rates-b__rates-list">
             <tr class="rates-list__item">
               <td class="rates-list__term rates-b__term">Реклама у блоггера</td>
@@ -339,7 +339,7 @@
       </section>
       <section class="rates main__rates">
         <div class="wrapper rates__wrapper">
-          <h2 class="title rates__title">Добавьте свой профиль</h2>
+          <h2 class="heading2 rates__heading">Добавьте свой профиль</h2>
           <table class="rates-list rates__rates-list">
             <tr class="rates-list__item">
               <td class="rates-list__term rates__term">Базовое размещение</td>
@@ -359,7 +359,7 @@
       </section>
       <section class="cta main__cta">
         <div class="wrapper cta__wrapper">
-          <h2 class="title cta__title">Заинтересовались?</h2>
+          <h2 class="heading2 cta__heading">Заинтересовались?</h2>
           <p class="text cta__text--top">
             Зарегистрируйтесь, <br class="cta__text-br">это быстро и бесплатно!<br>Уже зарегистрированы? Тогда скорее <a class="cta__link" href="#">авторизуйтесь</a>.
           </p>

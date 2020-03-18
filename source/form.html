@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page">
-  <header class="inner-header page__inner-header">
+<body class="body">
+  <header class="inner-header body__inner-header">
     <section class="menu inner-header__menu">
       <h2 class="visually-hidden">Меню</h2>
       <div class="wrapper menu__wrapper">
@@ -61,7 +61,7 @@
     </div>
   </header>
 
-  <main class="main page__main">
+  <main class="main body__main">
     <section class="user main__user">
       <h2 class="visually-hidden">Редактирование информации о пользователе</h2>
       <form class="wrapper user__wrapper" action="https://echo.htmlacademy.ru" method="POST">
@@ -100,10 +100,11 @@
     </section>
     <section class="plans main__plans">
       <div class="wrapper plans__wrapper">
-        <h2 class="title title--blue">Мои планы:</h2>
+        <h2 class="heading heading--blue">Мои планы:</h2>
         <ul class="plan-list">
           <li class="plan plan-list__item">
-            <h3 class="plan__title">1. Франция, Италия</h3>
+            <!-- TODO: heading - другая стилизация на h3 -->
+            <h3 class="heading plan__heading">1. Франция, Италия</h3>
             <p class="plan__info">
               3 Попутчика<br>
               26 мар - 29 мар
@@ -111,7 +112,7 @@
             <a class="plan__link" href="#">Изменить</a>
           </li>
           <li class="plan plan-list__item">
-            <h3 class="plan__title">2. Таиланд, Индонезия</h3>
+            <h3 class="heading plan__heading">2. Таиланд, Индонезия</h3>
             <p class="plan__info">
               1 Попутчик<br>
               1 июл - 15 июл
@@ -123,7 +124,7 @@
     </section>
     <section class="add-plan">
       <header class="wrapper add-plan__wrapper">
-        <h2 class="title title--blue">Добавить план:</h2>
+        <h2 class="heading heading--blue">Добавить план:</h2>
         <ul class="steps add-plan__steps">
           <li class="steps__item steps__item--current">Даты</li>
           <li class="steps__item">Маршрут</li>

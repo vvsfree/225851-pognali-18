@@ -1,5 +1,5 @@
 .intro {
-  padding-top: 96px;
+  padding-top: 19px;
 
   background-color: $blue-color;
   border-bottom-left-radius: $border-radius;
@@ -13,7 +13,10 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    // Псевдо-блок с луной помещается под header (только на мобильной версии)
+    // Высота header на М версии должна быть фиксированная,
+    // там не может быть переполнения контентом - его там нет: только логотип и кнопка
+    top: -73px;
     left: 0;
     right: 0;
     z-index: -1;
@@ -43,7 +46,6 @@
   display: block;
   margin-bottom: 12px;
   width: $mobile-wrapper-width;
-  @include font(36px, 40px, $white-color, 700);
   text-align: center;
 }
 
@@ -100,8 +102,6 @@
   .intro__slogan {
     margin-bottom: 32px;
     width: 100%;
-    font-size: 60px;
-    line-height: 70px;
   }
 
   .intro__user {

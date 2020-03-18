@@ -48,8 +48,18 @@
 }
 
 // catalog
+.main__title,
 .main__country-filter {
+  position: relative;
   margin-bottom: -$border-small-radius;
+}
+
+.main__title {
+  z-index: 90;
+}
+
+.main__country-filter {
+  z-index: 80;
 }
 
 @media (min-width: $tablet-width) {
@@ -64,6 +74,7 @@
   }
 
   // catalog
+  .main__title,
   .main__country-filter {
     margin-bottom: -$border-large-radius;
   }

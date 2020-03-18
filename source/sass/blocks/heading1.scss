@@ -1,0 +1,13 @@
+.heading1 {
+  margin: 0;
+  @include font(36px, 40px, $white-color, 700);
+}
+
+@media (min-width: $tablet-width) {
+  .heading1 {
+    font-size: 60px;
+    line-height: 70px;
+    // TODO: это нужно уже в конкретных блоках...
+    // padding-bottom: 69px;
+  }
+}
