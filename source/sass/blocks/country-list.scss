@@ -8,18 +8,93 @@
   margin: 0;
   padding: 0;
   list-style: none;
-}
 
-.country-list__item {
-  margin-left: 19px;
+  overflow-wrap: break-word;
+  word-break: break-all;
 
-  &:first-of-type {
-    margin-left: 0;
+  &--catalog {
+    display: block;
+    @include font(15px, 18px, $dark-slate-blue-color, 500);
+    text-transform: uppercase;
+
+    .country-list__item {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      margin-bottom: 10px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .country-list__icon {
+      flex-shrink: 0;
+      width: 26px;
+      height: 18px;
+    }
+
+    // TODO: можно вообще убрать. Лишний класс. Нужно у icon сделать margin-right: 14px; И из разметки убрать тоже
+    .country-list__text {
+      margin-left: 14px;
+    }
   }
 }
 
-.country-list__img {
+.country-list__item {
+  margin: 0 8px;
+}
+
+.country-list__icon {
   display: block;
   width: 35px;
   height: 24px;
+}
+
+@media (min-width: $tablet-width) {
+  .country-list {
+    &--catalog {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      align-content: flex-start;
+
+      font-size: 20px;
+      line-height: 30px;
+
+      .country-list__item {
+        margin-right: 26px;
+        margin-bottom: 0;
+      }
+
+      .country-list__icon {
+        flex-shrink: 0;
+        width: 35px;
+        height: 24px;
+      }
+
+      .country-list__text {
+        margin-left: 12px;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .country-list {
+    &--catalog {
+      display: block;
+
+      .country-list__item {
+        margin-right: 0;
+        // line-height: 30, высота иконки: 24, выравнивание по центру -> по 3px пространство сверху и снизу иконки, расстояние между иконками по макету - 13px;
+        margin-bottom: 7px;
+      }
+
+      .country-list__text {
+        margin-left: 20px;
+      }
+    }
+  }
 }

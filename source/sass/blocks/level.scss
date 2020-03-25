@@ -1,0 +1,21 @@
+.level {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  background-color: gray;
+  border: 3px solid #ff8d30;
+  border-radius: 50%;
+}
+
+@media (max-width: $tablet-width - 1) {
+  .level {
+    &--catalog {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}

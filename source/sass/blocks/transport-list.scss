@@ -15,22 +15,100 @@
   justify-content: center;
   align-items: center;
 
-  margin-left: 10px;
-  width: 25px;
-  height: 21px;
+  width: 43px;
+  height: 43px;
 
-  &:first-of-type {
-    margin-left: 0;
-  }
+  border-radius: 50%;
+}
 
+.transport-list__icon {
+  fill: $dark-slate-blue-color;
   opacity: 0.15;
 
   &--active {
     opacity: 1;
   }
+
+  width: 21px;
+  height: 21px;
+
+  &--plane {
+    width: 19px;
+    height: 21px;
+  }
+
+  &--bus {
+    width: 17px;
+    height: 21px;
+  }
+
+  &--bike {
+    width: 24px;
+    height: 21px;
+  }
+
+  &--run {
+    width: 20px;
+    height: 21px;
+  }
 }
 
-// .transport-list__img {
-  // TODO: прописать размеры каждой картинке? Потом будет svg-спрайт. Там и посмотрим
-  // display: block;
-// }
+@media (max-width: $tablet-width - 1) {
+  .transport-list {
+    &--catalog {
+      justify-content: flex-start;
+
+      .transport-list__item {
+        width: 32px;
+        height: 32px;
+        background-color: #edeff6;
+      }
+
+      .transport-list__icon {
+        width: 16px;
+        height: 16px;
+
+        &--plane {
+          width: 14px;
+          height: 16px;
+        }
+
+        &--bus {
+          width: 13px;
+          height: 16px;
+        }
+
+        &--bike {
+          width: 19px;
+          height: 17px;
+        }
+
+        &--run {
+          width: 15px;
+          height: 17px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .transport-list {
+    &--catalog {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .transport-list {
+    &--catalog {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+}

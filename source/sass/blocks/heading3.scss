@@ -1,9 +1,26 @@
 .heading3 {
   margin: 0;
-  @include font(21px, 21px, $dark-blue-color, 700);
+  @include font(21px, 21px, $dark-slate-blue-color, 700);
 
-  &--blue {
-    color: $dark-slate-blue-color;
+  overflow-wrap: break-word;
+  word-break: break-all;
+
+  &--country {
+    color: $dark-blue-color;
+  }
+
+  &--catalog {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: $tablet-width - 1) {
+  .heading3 {
+    &--filter {
+      font-size: 23px;
+      line-height: 23px;
+    }
   }
 }
 
@@ -11,5 +28,10 @@
   .heading3 {
     font-size: 24px;
     line-height: 24px;
+
+    &--catalog {
+      font-size: 30px;
+      line-height: 30px;
+    }
   }
 }

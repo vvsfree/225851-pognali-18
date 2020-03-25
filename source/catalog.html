@@ -8,6 +8,8 @@
   </head>
   <body class="body">
     <header class="header header--dark-blue">
+      <!-- <section class="menu menu--no-js header__menu"> -->
+      <!-- <section class="menu menu--opened header__menu"> -->
       <section class="menu header__menu">
         <h2 class="visually-hidden">Меню</h2>
         <div class="wrapper menu__wrapper">
@@ -26,10 +28,10 @@
 
           <button class="menu__toggle-btn" type="button" aria-label="Открыть меню">
             <svg class="menu__toggle-icon menu__toggle-icon--closed" width="25" height="11" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#icon-menu"></use>
+              <use xlink:href="img/sprite.svg#menu"></use>
             </svg>
             <svg class="menu__toggle-icon menu__toggle-icon--opened" width="19" height="19" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#icon-menu-close"></use>
+              <use xlink:href="img/sprite.svg#menu-close"></use>
             </svg>
           </button>
 
@@ -51,14 +53,14 @@
             <li class="menu-contact-list__item">
               <a class="menu-contact-list__link menu-contact-list__link--phone" href="tel:88005558628" aria-label="8 800 555-86-28">
                 <svg class="menu-contact-list__icon" role="img">
-                  <use xlink:href="img/sprite.svg#icon-topmenu-phone"></use>
+                  <use xlink:href="img/sprite.svg#topmenu-phone"></use>
                 </svg>
               </a>
             </li>
             <li class="menu-contact-list__item">
               <a class="menu-contact-list__link menu-contact-list__link--mail" href="mailto:mail@htmlacademy.ru" aria-label="mail@htmlacademy.ru">
                 <svg class="menu-contact-list__icon" role="img">
-                  <use xlink:href="img/sprite.svg#icon-topmenu-mail"></use>
+                  <use xlink:href="img/sprite.svg#topmenu-mail"></use>
                 </svg>
               </a>
             </li>
@@ -70,7 +72,7 @@
             <li class="contact-list__item">
               <a class="contact-list__link" href="tel:88005558628">
                 <svg class="contact-list__icon" width="18" height="18" role="img">
-                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                  <use xlink:href="img/sprite.svg#contacts-phone"></use>
                 </svg>
                 <span class="contact-list__text">8 800 555-86-28</span>
               </a>
@@ -78,7 +80,7 @@
             <li class="contact-list__item">
               <a class="contact-list__link" href="mailto:mail@htmlacademy.ru">
                 <svg class="contact-list__icon" width="18" height="14" role="img">
-                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                  <use xlink:href="img/sprite.svg#contacts-mail"></use>
                 </svg>
                 <span class="contact-list__text">mail@htmlacademy.ru</span>
               </a>
@@ -89,21 +91,21 @@
             <li class="social-list__item">
               <a class="social-list__link" href="#" aria-label="Фэйсбук">
                 <svg class="social-list__icon social-list__icon--fb" width="11" height="21" role="img">
-                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                  <use xlink:href="img/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item">
               <a class="social-list__link" href="#" aria-label="ВКонтакте">
                 <svg class="social-list__icon social-list__icon--vk" width="23" height="12" role="img">
-                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                  <use xlink:href="img/sprite.svg#vk"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item">
               <a class="social-list__link" href="#" aria-label="Инстаграм">
                 <svg class="social-list__icon social-list__icon--insta" width="18" height="18" role="img">
-                  <use xlink:href="img/sprite.svg#icon-insta"></use>
+                  <use xlink:href="img/sprite.svg#instagram"></use>
                 </svg>
               </a>
             </li>
@@ -121,7 +123,7 @@
           <a class="title__link" href="index.html" aria-label="Вернуться на главную страницу">
             На главную
             <svg class="title__icon" width="32" height="16" role="img">
-              <use xlink:href="img/sprite.svg#icon-return"></use>
+              <use xlink:href="img/sprite.svg#return"></use>
             </svg>
           </a>
         </div>
@@ -454,8 +456,7 @@
         <h2 class="visually-hidden">Каталог</h2>
         <div class="wrapper catalog__wrapper">
           <section class="filter catalog__filter">
-            <!-- TODO: это heading 3его уровня, у него будет другая стилизация-->
-            <h3 class="heading3 filter__heading">Подберите идеального попутчика</h3>
+            <h3 class="heading3 heading3--catalog heading3--filter filter__heading">Подберите идеального попутчика</h3>
             <form class="filter__form" action="https://echo.htmlacademy.ru" method="POST">
               <fieldset class="filter__fieldset">
                 <legend class="filter__legend">Хобби</legend>
@@ -507,119 +508,360 @@
               <article class="traveller travellers__item">
                 <a href="#">
                   <picture>
+                    <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
                     <img class="traveller__img" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Таня Фирсова">
                   </picture>
                 </a>
-                <a class="traveller__link" href="#"><h3 class="traveller__name">Таня Фирсова</h3></a>
-                <span class="traveller__favorites traveller__favorites--active" type="image">1.5 M</span>
-                <ul class="hastag-list traveller__hashtag-list">
-                  <li class="hastag-list__item">ЗОЖ</li>
-                  <li class="hastag-list__item">ПП</li>
-                  <li class="hastag-list__item">Фитнес</li>
-                  <li class="hastag-list__item">пляж</li>
-                  <li class="hastag-list__item">авокадо</li>
-                  <li class="hastag-list__item">смузи</li>
+                <h3 class="heading3 heading3--catalog traveller__name">
+                  <a class="traveller__link" href="#">Таня Фирсова</a>
+                </h3>
+
+                <button class="like-btn like-btn--active traveller__like-btn" type="button">
+                  <span class="like-btn__icons">
+                    <svg class="like-btn__icon" width="13" height="11" role="img" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#heart"></use>
+                    </svg>
+                    <svg class="like-btn__icon" width="13" height="11" role="img" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#heart-active"></use>
+                    </svg>
+                  </span>
+                  1.5 M
+                </button>
+
+                <ul class="hashtag-list traveller__hashtag-list">
+                  <li class="hashtag-list__item">ЗОЖ</li>
+                  <li class="hashtag-list__item">ПП</li>
+                  <li class="hashtag-list__item">Фитнес</li>
+                  <li class="hashtag-list__item">пляж</li>
+                  <li class="hashtag-list__item">авокадо</li>
+                  <li class="hashtag-list__item">смузи</li>
                 </ul>
-                <ul class="country-list">
-                  <li class="country-list__item">Шри-Ланка</li>
-                  <li class="country-list__item">Таиланд</li>
-                  <li class="country-list__item">Сейшеллы</li>
-                </ul>
-                <ul class="transport-list traveller__transport-list">
-                  <li class="transport-list__item transport-list__item--active">Авиаперелет</li>
-                  <li class="transport-list__item">Автотранспорт</li>
-                  <li class="transport-list__item">Велосипед</li>
-                  <li class="transport-list__item">Пешком</li>
-                </ul>
-                <span class="traveller__level">99</span>
-                <a class="btn traveller__btn" href="#">Позвать!</a>
+
+                <div class="traveller__labelled-block">
+                  <p class="traveller__block-label">Хочет посетить:</p>
+                  <ul class="country-list country-list--catalog traveller__country-list">
+                    <li class="country-list__item">
+                      <svg class="country-list__icon" width="26" height="18" role="img" alt="Шри-Ланка">
+                        <use xlink:href="img/sprite.svg#flag-sri-lanka"></use>
+                      </svg>
+                      <span class="country-list__text">Шри-Ланка</span>
+                    </li>
+                    <li class="country-list__item">
+                      <svg class="country-list__icon" width="26" height="18" role="img" alt="Таиланд">
+                        <use xlink:href="img/sprite.svg#flag-thailand"></use>
+                      </svg>
+                      <span class="country-list__text">Таиланд</span>
+                    </li>
+                    <li class="country-list__item">
+                      <svg class="country-list__icon" width="26" height="18" role="img" alt="Сейшеллы">
+                        <use xlink:href="img/sprite.svg#flag-seychelles"></use>
+                      </svg>
+                      <span class="country-list__text">Сейшеллы</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="traveller__labelled-block">
+                  <p class="traveller__block-label">Транспорт:</p>
+                  <ul class="transport-list transport-list--catalog traveller__transport-list">
+                    <li class="transport-list__item">
+                      <svg class="transport-list__icon transport-list__icon--plane transport-list__icon--active" width="14" height="16" role="img" alt="Авиаперелет">
+                        <use xlink:href="img/sprite.svg#plane"></use>
+                      </svg>
+                      <span class="visually-hidden">Авиаперелет</span>
+                    </li>
+                    <li class="transport-list__item">
+                      <svg class="transport-list__icon transport-list__icon--bus" width="13" height="16" role="img" alt="Автотранспорт">
+                        <use xlink:href="img/sprite.svg#bus"></use>
+                      </svg>
+                      <span class="visually-hidden">Автотранспорт</span>
+                    </li>
+                    <li class="transport-list__item">
+                      <svg class="transport-list__icon transport-list__icon--bike" width="19" height="17" role="img" alt="Велосипед">
+                        <use xlink:href="img/sprite.svg#bike"></use>
+                      </svg>
+                      <span class="visually-hidden">Велосипед</span>
+                    </li>
+                    <li class="transport-list__item">
+                      <svg class="transport-list__icon transport-list__icon--run" width="15" height="17" role="img" alt="Пешком">
+                        <use xlink:href="img/sprite.svg#run"></use>
+                      </svg>
+                      <span class="visually-hidden">Пешком</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="traveller__labelled-block">
+                  <p class="traveller__block-label">Левел:</p>
+                  <span class="level level--catalog traveller__level">99</span>
+                </div>
+                <a class="auth-btn traveller__btn" href="#">Позвать!</a>
               </article>
               <article class="traveller travellers__item">
                 <a href="#">
                   <picture>
+                    <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
                     <img class="traveller__img" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Петя Демин">
                   </picture>
                 </a>
-                <a class="traveller__link" href="#"><h3 class="traveller__name">Петя Демин</h3></a class="traveller__link"
-                <span class="traveller__favorites" type="image">150</span>
-                <ul class="hastag-list traveller__hashtag-list">
-                  <li class="hastag-list__item">бургер</li>
-                  <li class="hastag-list__item">бар</li>
-                  <li class="hastag-list__item">футбол</li>
-                  <li class="hastag-list__item">концерт</li>
-                  <li class="hastag-list__item">крафт</li>
+                <h3 class="heading3 heading3--catalog traveller__name">
+                  <a class="traveller__link" href="#">Петя Демин</a>
+                </h3>
+
+                <button class="like-btn traveller__like-btn" type="button">
+                  <span class="like-btn__icons">
+                    <svg class="like-btn__icon" width="13" height="11" role="img" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#heart"></use>
+                    </svg>
+                    <svg class="like-btn__icon" width="13" height="11" role="img" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#heart-active"></use>
+                    </svg>
+                  </span>
+                  150
+                </button>
+
+                <ul class="hashtag-list traveller__hashtag-list">
+                  <li class="hashtag-list__item">бургер</li>
+                  <li class="hashtag-list__item">бар</li>
+                  <li class="hashtag-list__item">футбол</li>
+                  <li class="hashtag-list__item">концерт</li>
+                  <li class="hashtag-list__item">крафт</li>
                 </ul>
-                <ul class="country-list">
-                  <li class="country-list__item">Бельгия</li>
-                  <li class="country-list__item">Чехия</li>
-                </ul>
-                <ul class="transport-list traveller__transport-list">
-                  <li class="transport-list__item transport-list__item--active">Авиаперелет</li>
-                  <li class="transport-list__item transport-list__item--active">Автотранспорт</li>
-                  <li class="transport-list__item">Велосипед</li>
-                  <li class="transport-list__item transport-list__item--active">Пешком</li>
-                </ul>
-                <span class="traveller__level">80</span>
-                <a class="btn traveller__btn" href="#">Позвать!</a>
+
+                <div class="traveller__labelled-block">
+                  <p class="traveller__block-label">Хочет посетить:</p>
+                  <ul class="country-list country-list--catalog">
+                    <li class="country-list__item">
+                      <svg class="country-list__icon" width="26" height="18" role="img" alt="Бельгия">
+                        <use xlink:href="img/sprite.svg#flag-belgium"></use>
+                      </svg>
+                      <span class="country-list__text">Бельгия</span>
+                    </li>
+                    <li class="country-list__item">
+                      <svg class="country-list__icon" width="26" height="18" role="img" alt="Чехия">
+                        <use xlink:href="img/sprite.svg#flag-czech"></use>
+                      </svg>
+                      <span class="country-list__text">Чехия</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="traveller__labelled-block">
+                  <p class="traveller__block-label">Транспорт:</p>
+                  <ul class="transport-list transport-list--catalog traveller__transport-list">
+                    <li class="transport-list__item">
+                      <svg class="transport-list__icon transport-list__icon--plane transport-list__icon--active" width="14" height="16" role="img" alt="Авиаперелет">
+                        <use xlink:href="img/sprite.svg#plane"></use>
+                      </svg>
+                      <span class="visually-hidden">Авиаперелет</span>
+                    </li>
+                    <li class="transport-list__item">
+                      <svg class="transport-list__icon transport-list__icon--bus transport-list__icon--active" width="13" height="16" role="img" alt="Автотранспорт">
+                        <use xlink:href="img/sprite.svg#bus"></use>
+                      </svg>
+                      <span class="visually-hidden">Автотранспорт</span>
+                    </li>
+                    <li class="transport-list__item">
+                      <svg class="transport-list__icon transport-list__icon--bike" width="19" height="17" role="img" alt="Велосипед">
+                        <use xlink:href="img/sprite.svg#bike"></use>
+                      </svg>
+                      <span class="visually-hidden">Велосипед</span>
+                    </li>
+                    <li class="transport-list__item">
+                      <svg class="transport-list__icon transport-list__icon--run transport-list__icon--active" width="15" height="17" role="img" alt="Пешком">
+                        <use xlink:href="img/sprite.svg#run"></use>
+                      </svg>
+                      <span class="visually-hidden">Пешком</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="traveller__labelled-block">
+                  <p class="traveller__block-label">Левел:</p>
+                  <span class="level level--catalog traveller__level">80</span>
+                </div>
+                <a class="auth-btn traveller__btn" href="#">Позвать!</a>
               </article>
               <article class="traveller travellers__item">
                 <a href="#">
                   <picture>
+                    <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
                     <img class="traveller__img" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Марк Смолов">
                   </picture>
                 </a>
-                <a class="traveller__link" href="#"><h3 class="traveller__name">Марк Смолов</h3></a class="traveller__link"
-                <span class="traveller__favorites" type="image">1700</span>
-                <ul class="hastag-list traveller__hashtag-list">
-                  <li class="hastag-list__item">рэп</li>
-                  <li class="hastag-list__item">тату</li>
-                  <li class="hastag-list__item">хайпбист</li>
-                  <li class="hastag-list__item">кроссовки</li>
-                  <li class="hastag-list__item">суприм</li>
+                <h3 class="heading3 heading3--catalog traveller__name">
+                  <a class="traveller__link" href="#">Марк Смолов</a>
+                </h3>
+
+                <button class="like-btn traveller__like-btn" type="button">
+                  <span class="like-btn__icons">
+                    <svg class="like-btn__icon" width="13" height="11" role="img" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#heart"></use>
+                    </svg>
+                    <svg class="like-btn__icon" width="13" height="11" role="img" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#heart-active"></use>
+                    </svg>
+                  </span>
+                  1700
+                </button>
+
+                <ul class="hashtag-list traveller__hashtag-list">
+                  <li class="hashtag-list__item">рэп</li>
+                  <li class="hashtag-list__item">тату</li>
+                  <li class="hashtag-list__item">хайпбист</li>
+                  <li class="hashtag-list__item">кроссовки</li>
+                  <li class="hashtag-list__item">суприм</li>
                 </ul>
-                <ul class="country-list">
-                  <li class="country-list__item">США</li>
-                  <li class="country-list__item">Австралия</li>
-                  <li class="country-list__item">Доминикана</li>
-                </ul>
-                <ul class="transport-list traveller__transport-list">
-                  <li class="transport-list__item transport-list__item--active">Авиаперелет</li>
-                  <li class="transport-list__item">Автотранспорт</li>
-                  <li class="transport-list__item transport-list__item--active">Велосипед</li>
-                  <li class="transport-list__item">Пешком</li>
-                </ul>
-                <span class="traveller__level">25</span>
-                <a class="btn traveller__btn" href="#">Позвать!</a>
+
+                <div class="traveller__labelled-block">
+                  <p class="traveller__block-label">Хочет посетить:</p>
+                  <ul class="country-list country-list--catalog">
+                    <li class="country-list__item">
+                      <svg class="country-list__icon" width="26" height="18" role="img" alt="США">
+                        <use xlink:href="img/sprite.svg#flag-usa"></use>
+                      </svg>
+                      <span class="country-list__text">США</span>
+                    </li>
+                    <li class="country-list__item">
+                      <svg class="country-list__icon" width="26" height="18" role="img" alt="Австралия">
+                        <use xlink:href="img/sprite.svg#flag-australia"></use>
+                      </svg>
+                      <span class="country-list__text">Австралия</span>
+                    </li>
+                    <li class="country-list__item">
+                      <svg class="country-list__icon" width="26" height="18" role="img" alt="Доминикана">
+                        <use xlink:href="img/sprite.svg#flag-dominica"></use>
+                      </svg>
+                      <span class="country-list__text">Доминикана</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="traveller__labelled-block">
+                  <p class="traveller__block-label">Транспорт:</p>
+                  <ul class="transport-list transport-list--catalog traveller__transport-list">
+                    <li class="transport-list__item">
+                      <svg class="transport-list__icon transport-list__icon--plane transport-list__icon--active" width="14" height="16" role="img" alt="Авиаперелет">
+                        <use xlink:href="img/sprite.svg#plane"></use>
+                      </svg>
+                      <span class="visually-hidden">Авиаперелет</span>
+                    </li>
+                    <li class="transport-list__item">
+                      <svg class="transport-list__icon transport-list__icon--bus" width="13" height="16" role="img" alt="Автотранспорт">
+                        <use xlink:href="img/sprite.svg#bus"></use>
+                      </svg>
+                      <span class="visually-hidden">Автотранспорт</span>
+                    </li>
+                    <li class="transport-list__item">
+                      <svg class="transport-list__icon transport-list__icon--bike transport-list__icon--active" width="19" height="17" role="img" alt="Велосипед">
+                        <use xlink:href="img/sprite.svg#bike"></use>
+                      </svg>
+                      <span class="visually-hidden">Велосипед</span>
+                    </li>
+                    <li class="transport-list__item">
+                      <svg class="transport-list__icon transport-list__icon--run" width="15" height="17" role="img" alt="Пешком">
+                        <use xlink:href="img/sprite.svg#run"></use>
+                      </svg>
+                      <span class="visually-hidden">Пешком</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="traveller__labelled-block">
+                  <p class="traveller__block-label">Левел:</p>
+                  <span class="level level--catalog traveller__level">25</span>
+                </div>
+                <a class="auth-btn traveller__btn" href="#">Позвать!</a>
               </article>
               <article class="traveller travellers__item">
                 <a href="#">
                   <picture>
+                    <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
                     <img class="traveller__img" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Лариса Роговая">
                   </picture>
                 </a>
-                <a class="traveller__link" href="#"><h3 class="traveller__name traveller__name--online">Лариса Роговая</h3></a>
-                <span class="traveller__favorites" type="image">23</span>
-                <ul class="hastag-list traveller__hashtag-list">
-                  <li class="hastag-list__item">образование</li>
-                  <li class="hastag-list__item">карьера</li>
-                  <li class="hastag-list__item">учеба</li>
-                  <li class="hastag-list__item">линкедин</li>
+                <h3 class="heading3 heading3--catalog traveller__name traveller__name--online">
+                  <a class="traveller__link" href="#">Лариса Роговая</a>
+                </h3>
+
+                <button class="like-btn traveller__like-btn" type="button">
+                  <span class="like-btn__icons">
+                    <svg class="like-btn__icon" width="13" height="11" role="img" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#heart"></use>
+                    </svg>
+                    <svg class="like-btn__icon" width="13" height="11" role="img" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite.svg#heart-active"></use>
+                    </svg>
+                  </span>
+                  23
+                </button>
+
+                <ul class="hashtag-list traveller__hashtag-list">
+                  <li class="hashtag-list__item">образование</li>
+                  <li class="hashtag-list__item">карьера</li>
+                  <li class="hashtag-list__item">учеба</li>
+                  <li class="hashtag-list__item">линкедин</li>
                 </ul>
-                <ul class="country-list">
-                  <li class="country-list__item">Великобритания</li>
-                  <li class="country-list__item">Германия</li>
-                </ul>
-                <ul class="transport-list traveller__transport-list">
-                  <li class="transport-list__item transport-list__item--active">Авиаперелет</li>
-                  <li class="transport-list__item transport-list__item--active">Автотранспорт</li>
-                  <li class="transport-list__item">Велосипед</li>
-                  <li class="transport-list__item">Пешком</li>
-                </ul>
-                <span class="traveller__level">50</span>
-                <a class="btn traveller__btn" href="#">Позвать!</a>
+
+                <div class="traveller__labelled-block">
+                  <p class="traveller__block-label">Хочет посетить:</p>
+                  <ul class="country-list country-list--catalog">
+                    <li class="country-list__item">
+                      <svg class="country-list__icon" width="26" height="18" role="img" alt="Великобритания">
+                        <use xlink:href="img/sprite.svg#flag-united-kingdom"></use>
+                      </svg>
+                      <span class="country-list__text">Великобритания</span>
+                    </li>
+                    <li class="country-list__item">
+                      <svg class="country-list__icon" width="26" height="18" role="img" alt="Германия">
+                        <use xlink:href="img/sprite.svg#flag-germany"></use>
+                      </svg>
+                      <span class="country-list__text">Германия</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="traveller__labelled-block">
+                  <p class="traveller__block-label">Транспорт:</p>
+                  <ul class="transport-list transport-list--catalog traveller__transport-list">
+                    <li class="transport-list__item">
+                      <svg class="transport-list__icon transport-list__icon--plane transport-list__icon--active" width="14" height="16" role="img" alt="Авиаперелет">
+                        <use xlink:href="img/sprite.svg#plane"></use>
+                      </svg>
+                      <span class="visually-hidden">Авиаперелет</span>
+                    </li>
+                    <li class="transport-list__item">
+                      <svg class="transport-list__icon transport-list__icon--bus transport-list__icon--active" width="13" height="16" role="img" alt="Автотранспорт">
+                        <use xlink:href="img/sprite.svg#bus"></use>
+                      </svg>
+                      <span class="visually-hidden">Автотранспорт</span>
+                    </li>
+                    <li class="transport-list__item">
+                      <svg class="transport-list__icon transport-list__icon--bike" width="19" height="17" role="img" alt="Велосипед">
+                        <use xlink:href="img/sprite.svg#bike"></use>
+                      </svg>
+                      <span class="visually-hidden">Велосипед</span>
+                    </li>
+                    <li class="transport-list__item">
+                      <svg class="transport-list__icon transport-list__icon--run" width="15" height="17" role="img" alt="Пешком">
+                        <use xlink:href="img/sprite.svg#run"></use>
+                      </svg>
+                      <span class="visually-hidden">Пешком</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="traveller__labelled-block">
+                  <p class="traveller__block-label">Левел:</p>
+                  <span class="level level--catalog traveller__level">50</span>
+                </div>
+                <a class="auth-btn traveller__btn" href="#">Позвать!</a>
               </article>
             </div>
             <button class="btn data__btn" type="button">Показать еще</button>
+            <!-- TODO: Здесь ошибочное переименование классов случилось -->
             <div class="bodyr bodyr--short data__bodyr">
               <ul class="bodyr__bodys">
                 <li class="bodyr__body">1</li>
@@ -649,21 +891,21 @@
           <li class="social-list__item">
             <a class="social-list__link" href="#" aria-label="Фэйсбук">
               <svg class="social-list__icon social-list__icon--fb" width="11" height="21" role="img">
-                <use xlink:href="img/sprite.svg#icon-fb"></use>
+                <use xlink:href="img/sprite.svg#facebook"></use>
               </svg>
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-list__link" href="#" aria-label="ВКонтакте">
               <svg class="social-list__icon social-list__icon--vk" width="23" height="12" role="img">
-                <use xlink:href="img/sprite.svg#icon-vk"></use>
+                <use xlink:href="img/sprite.svg#vk"></use>
               </svg>
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-list__link" href="#" aria-label="Инстаграм">
               <svg class="social-list__icon social-list__icon--insta" width="18" height="18" role="img">
-                <use xlink:href="img/sprite.svg#icon-insta"></use>
+                <use xlink:href="img/sprite.svg#instagram"></use>
               </svg>
             </a>
           </li>

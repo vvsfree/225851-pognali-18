@@ -11,6 +11,7 @@
   text-align: left;
   background-color: $yellow-color;
   // TODO: Стоит ли делать inline svg для оптимизации?
+  // TODO: Переделать ее с использованием спрайта
   background-image: url("../../img/triangle-arrow-right.svg");
   background-repeat: no-repeat;
   background-size: 10px 14px;

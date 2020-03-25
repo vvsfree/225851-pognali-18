@@ -1,0 +1,104 @@
+.like-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+
+  @include font(14px, 21px, $dark-blue-color, 700);
+  text-transform: uppercase;
+
+  appearance: none;
+  cursor: pointer;
+
+  &:hover {
+    .like-btn__icons {
+      background-color: #e2e5f2;
+    }
+  }
+
+  &:active {
+    .like-btn__icon {
+      opacity: 0.1;
+    }
+  }
+
+  &--active {
+    .like-btn__icons {
+      background-color: #f9eaea;
+    }
+
+    .like-btn__icon {
+      &:first-of-type {
+        display: none;
+      }
+
+      &:last-of-type {
+        display: block;
+      }
+    }
+
+    &:hover {
+      .like-btn__icons {
+        background-color: #f9d8d8;
+      }
+    }
+
+    &:active {
+      .like-btn__icon {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+.like-btn__icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  margin-right: 7px;
+  width: 31px;
+  height: 31px;
+
+  border-radius: 50%;
+}
+
+.like-btn__icon {
+  width: 13px;
+  height: 11px;
+
+  &:first-of-type {
+    fill: $blue-color;
+    opacity: 0.3;
+  }
+
+  &:last-of-type {
+    display: none;
+    fill: #f02323;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .like-btn {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .like-btn__icons {
+    margin-right: 9px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .like-btn__icon {
+    width: 20px;
+    height: 17px;
+  }
+}

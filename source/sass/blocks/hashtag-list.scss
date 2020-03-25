@@ -1,13 +1,17 @@
 .hashtag-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
 
   margin: 0;
   padding: 0;
   list-style: none;
+
+  &--centered {
+    justify-content: center;
+  }
 }
 
 .hashtag-list__item {
@@ -16,13 +20,15 @@
   justify-content: flex-start;
   align-items: center;
 
-  margin-left: 5px;
-
-  &:first-of-type {
-    margin-left: 0;
-  }
+  margin-right: 5px;
 
   &::before {
     content: "#";
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .hashtag-list__item {
+    margin-right: 6px;
   }
 }
