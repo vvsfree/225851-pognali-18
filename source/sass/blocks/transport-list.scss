@@ -99,6 +99,11 @@
       flex-wrap: nowrap;
       justify-content: flex-start;
       align-items: flex-start;
+
+      .transport-list__item {
+        height: auto;
+        margin-bottom: 12px;
+      }
     }
   }
 }
@@ -109,6 +114,14 @@
       flex-direction: row;
       flex-wrap: wrap;
       align-items: center;
+
+      max-width: 135px;
+
+      .transport-list__item {
+        width: 33px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+      }
     }
   }
 }

@@ -1,4 +1,14 @@
 .traveller {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  flex-wrap: wrap;
+  align-content: flex-start;
+
   padding-top: 15px;
   padding-bottom: 22px;
   @include font(15px, 18px, $black-color, normal);
@@ -6,7 +16,19 @@
   border-radius: $border-small-radius;
 }
 
+.traveller__img-link {
+  position: absolute;
+  top: 15px;
+  left: 18px;
+  z-index: 1;
+}
+
+.traveller__picture {
+  display: block;
+}
+
 .traveller__img {
+  display: block;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -19,14 +41,19 @@
 
 .traveller__name {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   flex-wrap: nowrap;
+
+  margin-left: 104px;
+  margin-right: 22px;
+  width: 100%;
 
   &::after {
     content: "";
     flex-shrink: 0;
-    margin-left: 23px;
+    margin-top: (20px - 6px) / 2;
+    margin-left: 5px;
 
     width: 6px;
     height: 6px;
@@ -41,75 +68,255 @@
   }
 }
 
+.traveller__like-btn {
+  position: relative;
+  z-index: 10;
+  margin-left: 67px;
+  margin-bottom: 14px;
+}
+
 .traveller__hashtag-list {
-   // TODO: временно, так как блок переместится в layout блок, который и будет определять нижний внешний отступ
-  margin-bottom: 23px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 20px;
 }
 
-.traveller__labelled-block {
-  padding: 0 25px;
+.traveller__country-block {
   margin-bottom: 23px;
-  border-top: 1px solid #edeff6;
+  width: 100%;
 }
 
-.traveller__block-label {
-  display: inline-block;
-  margin: 0;
-  margin-bottom: 5px;
-  padding: 0 12px;
+.traveller__country-list {
+  margin: 0 25px;
+}
 
-  transform: translate(-11px, -10px);
+.traveller__transport-block {
+  width: calc(100% - 85px);
+}
 
-  text-transform: lowercase;
-  background-color: $white-color;
+.traveller__transport-list {
+  margin-left: 25px;
+}
+
+.traveller__level-block {
+  width: 85px;
+}
+
+.traveller__btn {
+  margin-top: 14px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100%;
 }
 
 @media (min-width: $tablet-width) {
   .traveller {
     padding-top: 35px;
     padding-bottom: 26px;
-    padding-left: 35px;
-    padding-right: 25px;
+
     font-size: 20px;
     line-height: 24px;
+  }
+
+  .traveller__img-link {
+    top: 35px;
+    left: 35px;
   }
 
   .traveller__img {
     width: 190px;
     height: 190px;
-    border-radius: 0;
+    border-radius: $border-small-radius;
   }
 
   .traveller__name {
+    order: 1;
     justify-content: flex-start;
+    margin-left: 258px;
+    margin-bottom: -43px;
+    max-width: 346px;
 
     &::after {
+      margin-top: (30px - 7px) / 2;
+      margin-left: 23px;
       width: 7px;
       height: 7px;
     }
+  }
+
+  .traveller__name-br {
+    display: none;
+  }
+
+  .traveller__hashtag-list {
+    order: 2;
+    align-self: stretch;
+    margin-left: 260px;
+    margin-top: 43px;
+    margin-bottom: 0;
+    width: 242px;
+  }
+
+  .traveller__transport-block {
+    order: 3;
+    align-self: stretch;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 25px;
+    width: 60px;
+    min-height: 130px;
+
+    border: none;
+
+    .traveller__label {
+      display: none;
+    }
+  }
+
+  .traveller__transport-list {
+    margin: 0;
+  }
+
+  .traveller__btn {
+    order: 4;
+    align-self: center;
+    margin: 0;
+    margin-left: 255px;
+    width: auto;
+  }
+
+  .traveller__like-btn {
+    order: 5;
+    align-self: center;
+    margin: 0;
+  }
+
+  .traveller__level-block {
+    order: 6;
+    align-self: center;
+    margin-left: auto;
+    margin-right: 25px;
+    width: 60px;
+
+    border: none;
+
+    .traveller__label {
+      display: none;
+    }
+  }
+
+  .traveller__country-block {
+    order: 7;
+    margin: 0;
+    margin-top: 27px;
+  }
+
+  .traveller__country-list {
+    margin-left: 36px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .traveller {
-    padding: 0;
+    padding-top: 48px;
+    padding-right: 42px;
+    padding-bottom: 0;
+    min-height: 285px;
+    box-sizing: border-box;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 630px;
+      top: 49px;
+      width: 1px;
+      height: calc(100% - (49px * 2));
+      background: linear-gradient(#fbfbfb, #e5e5e5 35% 65%, #fbfbfb);
+    }
   }
 
   .traveller__img {
     width: 285px;
     height: 285px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .traveller__img-link {
+    top: 0;
+    left: 0;
   }
 
   .traveller__name {
+    order: 1;
     flex-direction: row-reverse;
     justify-content: flex-end;
 
-    // TODO: нужно будет сдвинуть потом на величину зазора и ширину индикатора
-    // transform: translateX(-(18px + 7px));
+    margin-left: 318px;
+    margin-right: 320px - 42px;
+
+    width: 100%;
+    max-width: 100%;
 
     &::after {
       margin-left: 0;
       margin-right: 18px;
     }
+  }
+
+  .traveller__hashtag-list {
+    order: 2;
+    align-self: stretch;
+    margin-left: 347px;
+    margin-right: 0;
+    width: 235px;
+  }
+
+  .traveller__country-block {
+    order: 3;
+    align-self: stretch;
+    margin-top: 0;
+    margin-left: 49px;
+    margin-bottom: 36px;
+    width: auto;
+    min-height: 98px;
+  }
+
+  .traveller__country-list {
+    margin-left: 44px;
+    margin-right: 0;
+    max-width: 230px;
+  }
+
+  .traveller__btn {
+    order: 4;
+    align-self: center;
+    margin: 0;
+    margin-left: 341px;
+  }
+
+  .traveller__like-btn {
+    order: 5;
+    align-self: center;
+    margin: 0;
+  }
+
+  .traveller__transport-block {
+    order: 6;
+    align-self: center;
+    margin: 0;
+    margin-left: auto;
+    width: auto;
+    min-height: 0;
+  }
+
+  .traveller__level-block {
+    order: 7;
+    align-self: center;
+    margin: 0;
+    // 6px: у списка транспортных средств вычисленный размер элемента равен 33px.
+    // Длина списка по макету - 120 (учитывая только иконки), длина списка по длине элемента - 4 * 33 = 132
+    // Итого по 6px справа и слева больше длины макета
+    margin-left: 52px - 6px;
   }
 }

@@ -506,15 +506,19 @@
             <h3 class="visually-hidden">Выборка данных каталога</h3>
             <div class="travellers">
               <article class="traveller travellers__item">
-                <a href="#">
-                  <picture>
+                <a class="traveller__img-link" href="#">
+                  <picture class="traveller__picture">
                     <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
                     <img class="traveller__img" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Таня Фирсова">
                   </picture>
                 </a>
                 <h3 class="heading3 heading3--catalog traveller__name">
-                  <a class="traveller__link" href="#">Таня Фирсова</a>
+                  <a class="traveller__link" href="#">
+                    <span class="traveller__firstname">Таня</span>
+                    <br class="traveller__name-br">
+                    <span class="traveller__lastname">Фирсова</span>
+                  </a>
                 </h3>
 
                 <button class="like-btn like-btn--active traveller__like-btn" type="button">
@@ -538,8 +542,8 @@
                   <li class="hashtag-list__item">смузи</li>
                 </ul>
 
-                <div class="traveller__labelled-block">
-                  <p class="traveller__block-label">Хочет посетить:</p>
+                <div class="labelled-block traveller__country-block">
+                  <p class="labelled-block__label">Хочет посетить:</p>
                   <ul class="country-list country-list--catalog traveller__country-list">
                     <li class="country-list__item">
                       <svg class="country-list__icon" width="26" height="18" role="img" alt="Шри-Ланка">
@@ -561,8 +565,9 @@
                     </li>
                   </ul>
                 </div>
-                <div class="traveller__labelled-block">
-                  <p class="traveller__block-label">Транспорт:</p>
+
+                <div class="labelled-block traveller__transport-block">
+                  <p class="labelled-block__label traveller__label">Транспорт:</p>
                   <ul class="transport-list transport-list--catalog traveller__transport-list">
                     <li class="transport-list__item">
                       <svg class="transport-list__icon transport-list__icon--plane transport-list__icon--active" width="14" height="16" role="img" alt="Авиаперелет">
@@ -590,22 +595,28 @@
                     </li>
                   </ul>
                 </div>
-                <div class="traveller__labelled-block">
-                  <p class="traveller__block-label">Левел:</p>
+
+                <div class="labelled-block labelled-block--center traveller__level-block">
+                  <p class="labelled-block__label traveller__label">Левел:</p>
                   <span class="level level--catalog traveller__level">99</span>
                 </div>
+
                 <a class="auth-btn traveller__btn" href="#">Позвать!</a>
               </article>
               <article class="traveller travellers__item">
-                <a href="#">
-                  <picture>
+                <a class="traveller__img-link" href="#">
+                  <picture class="traveller__picture">
                     <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
                     <img class="traveller__img" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Петя Демин">
                   </picture>
                 </a>
                 <h3 class="heading3 heading3--catalog traveller__name">
-                  <a class="traveller__link" href="#">Петя Демин</a>
+                  <a class="traveller__link" href="#">
+                    <span class="traveller__firstname">Петя</span>
+                    <br class="traveller__name-br">
+                    <span class="traveller__lastname">Демин</span>
+                  </a>
                 </h3>
 
                 <button class="like-btn traveller__like-btn" type="button">
@@ -628,9 +639,9 @@
                   <li class="hashtag-list__item">крафт</li>
                 </ul>
 
-                <div class="traveller__labelled-block">
-                  <p class="traveller__block-label">Хочет посетить:</p>
-                  <ul class="country-list country-list--catalog">
+                <div class="labelled-block traveller__country-block">
+                  <p class="labelled-block__label">Хочет посетить:</p>
+                  <ul class="country-list country-list--catalog traveller__country-list">
                     <li class="country-list__item">
                       <svg class="country-list__icon" width="26" height="18" role="img" alt="Бельгия">
                         <use xlink:href="img/sprite.svg#flag-belgium"></use>
@@ -646,8 +657,8 @@
                   </ul>
                 </div>
 
-                <div class="traveller__labelled-block">
-                  <p class="traveller__block-label">Транспорт:</p>
+                <div class="labelled-block traveller__transport-block">
+                  <p class="labelled-block__label traveller__label">Транспорт:</p>
                   <ul class="transport-list transport-list--catalog traveller__transport-list">
                     <li class="transport-list__item">
                       <svg class="transport-list__icon transport-list__icon--plane transport-list__icon--active" width="14" height="16" role="img" alt="Авиаперелет">
@@ -676,22 +687,27 @@
                   </ul>
                 </div>
 
-                <div class="traveller__labelled-block">
-                  <p class="traveller__block-label">Левел:</p>
+                <div class="labelled-block labelled-block--center traveller__level-block">
+                  <p class="labelled-block__label traveller__label">Левел:</p>
                   <span class="level level--catalog traveller__level">80</span>
                 </div>
+
                 <a class="auth-btn traveller__btn" href="#">Позвать!</a>
               </article>
               <article class="traveller travellers__item">
-                <a href="#">
-                  <picture>
+                <a class="traveller__img-link" href="#">
+                  <picture class="traveller__picture">
                     <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
                     <img class="traveller__img" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Марк Смолов">
                   </picture>
                 </a>
                 <h3 class="heading3 heading3--catalog traveller__name">
-                  <a class="traveller__link" href="#">Марк Смолов</a>
+                  <a class="traveller__link" href="#">
+                    <span class="traveller__firstname">Марк</span>
+                    <br class="traveller__name-br">
+                    <span class="traveller__lastname">Смолов</span>
+                  </a>
                 </h3>
 
                 <button class="like-btn traveller__like-btn" type="button">
@@ -714,9 +730,9 @@
                   <li class="hashtag-list__item">суприм</li>
                 </ul>
 
-                <div class="traveller__labelled-block">
-                  <p class="traveller__block-label">Хочет посетить:</p>
-                  <ul class="country-list country-list--catalog">
+                <div class="labelled-block traveller__country-block">
+                  <p class="labelled-block__label">Хочет посетить:</p>
+                  <ul class="country-list country-list--catalog traveller__country-list">
                     <li class="country-list__item">
                       <svg class="country-list__icon" width="26" height="18" role="img" alt="США">
                         <use xlink:href="img/sprite.svg#flag-usa"></use>
@@ -738,8 +754,8 @@
                   </ul>
                 </div>
 
-                <div class="traveller__labelled-block">
-                  <p class="traveller__block-label">Транспорт:</p>
+                <div class="labelled-block traveller__transport-block">
+                  <p class="labelled-block__label traveller__label">Транспорт:</p>
                   <ul class="transport-list transport-list--catalog traveller__transport-list">
                     <li class="transport-list__item">
                       <svg class="transport-list__icon transport-list__icon--plane transport-list__icon--active" width="14" height="16" role="img" alt="Авиаперелет">
@@ -768,22 +784,27 @@
                   </ul>
                 </div>
 
-                <div class="traveller__labelled-block">
-                  <p class="traveller__block-label">Левел:</p>
+                <div class="labelled-block labelled-block--center traveller__level-block">
+                  <p class="labelled-block__label traveller__label">Левел:</p>
                   <span class="level level--catalog traveller__level">25</span>
                 </div>
+
                 <a class="auth-btn traveller__btn" href="#">Позвать!</a>
               </article>
               <article class="traveller travellers__item">
-                <a href="#">
-                  <picture>
+                <a class="traveller__img-link" href="#">
+                  <picture class="traveller__picture">
                     <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
                     <img class="traveller__img" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Лариса Роговая">
                   </picture>
                 </a>
                 <h3 class="heading3 heading3--catalog traveller__name traveller__name--online">
-                  <a class="traveller__link" href="#">Лариса Роговая</a>
+                  <a class="traveller__link" href="#">
+                    <span class="traveller__firstname">Лариса</span>
+                    <br class="traveller__name-br">
+                    <span class="traveller__lastname">Роговая</span>
+                  </a>
                 </h3>
 
                 <button class="like-btn traveller__like-btn" type="button">
@@ -805,9 +826,9 @@
                   <li class="hashtag-list__item">линкедин</li>
                 </ul>
 
-                <div class="traveller__labelled-block">
-                  <p class="traveller__block-label">Хочет посетить:</p>
-                  <ul class="country-list country-list--catalog">
+                <div class="labelled-block traveller__country-block">
+                  <p class="labelled-block__label">Хочет посетить:</p>
+                  <ul class="country-list country-list--catalog traveller__country-list">
                     <li class="country-list__item">
                       <svg class="country-list__icon" width="26" height="18" role="img" alt="Великобритания">
                         <use xlink:href="img/sprite.svg#flag-united-kingdom"></use>
@@ -823,8 +844,8 @@
                   </ul>
                 </div>
 
-                <div class="traveller__labelled-block">
-                  <p class="traveller__block-label">Транспорт:</p>
+                <div class="labelled-block traveller__transport-block">
+                  <p class="labelled-block__label traveller__label">Транспорт:</p>
                   <ul class="transport-list transport-list--catalog traveller__transport-list">
                     <li class="transport-list__item">
                       <svg class="transport-list__icon transport-list__icon--plane transport-list__icon--active" width="14" height="16" role="img" alt="Авиаперелет">
@@ -853,10 +874,11 @@
                   </ul>
                 </div>
 
-                <div class="traveller__labelled-block">
-                  <p class="traveller__block-label">Левел:</p>
+                <div class="labelled-block labelled-block--center traveller__level-block">
+                  <p class="labelled-block__label traveller__label">Левел:</p>
                   <span class="level level--catalog traveller__level">50</span>
                 </div>
+
                 <a class="auth-btn traveller__btn" href="#">Позвать!</a>
               </article>
             </div>

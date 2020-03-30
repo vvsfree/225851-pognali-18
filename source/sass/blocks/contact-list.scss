@@ -21,8 +21,7 @@
 
   text-decoration: none;
   text-transform: uppercase;
-  overflow-wrap: break-word;
-  word-break: break-all;
+  @include wordWrap();
 
   &::before {
     content: "";

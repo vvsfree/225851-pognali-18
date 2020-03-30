@@ -2,8 +2,7 @@
   margin: 0;
   @include font(21px, 21px, $dark-slate-blue-color, 700);
 
-  overflow-wrap: break-word;
-  word-break: break-all;
+  @include wordWrap();
 
   &--country {
     color: $dark-blue-color;
