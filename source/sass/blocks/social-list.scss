@@ -51,7 +51,9 @@
 
 @media (min-width: $tablet-width) {
   .social-list {
-    justify-content: flex-start;
+    &--menu {
+      justify-content: flex-start;
+    }
   }
 
   .social-list__link {
