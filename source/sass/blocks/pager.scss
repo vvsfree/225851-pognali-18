@@ -1,7 +1,96 @@
 .pager {
-  &--short {
-    .pager__page {
-      display: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.pager__pages {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pager__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+  margin: 0;
+
+  width: 134px;
+  height: 50px;
+
+  border: none;
+  background-color: $white-color;
+  appearance: none;
+  cursor: pointer;
+
+  &--left {
+    border-top-left-radius: $border-small-radius;
+    border-bottom-left-radius: $border-small-radius;
+  }
+
+  &--right {
+    border-top-right-radius: $border-small-radius;
+    border-bottom-right-radius: $border-small-radius;
+  }
+}
+
+.pager__icon {
+  width: 10px;
+  height: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .pager {
+    justify-content: flex-start;
+    padding: 25px 19px 25px 28px;
+
+    background-color: $white-color;
+    border-radius: $border-small-radius;
+  }
+
+  .pager__pages {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 85%;
+  }
+
+  .pager__item {
+    &--active {
+    .pager__btn {
+        background-color: $yellow-color;
+      }
     }
+  }
+
+  .pager__btn {
+    width: 50px;
+    @include font(20px, 30px, $dark-blue-color, bold);
+    border-radius: 50%;
+
+    &--icon {
+      width: 42px;
+      border-radius: 0;
+    }
+
+    &--left {
+      margin-left: auto;
+    }
+
+    &--right {
+      margin-left: 1px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pager {
+    padding: 25px 28px;
   }
 }

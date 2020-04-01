@@ -1,3 +1,7 @@
+.travellers {
+  margin-bottom: 14px;
+}
+
 .travellers__item {
   margin-bottom: 10px;
 
@@ -7,12 +11,20 @@
 }
 
 @media (min-width: $tablet-width) {
+  .travellers {
+    margin-bottom: 33px;
+  }
+
   .travellers__item {
     margin-bottom: 40px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .travellers {
+    margin-bottom: 53px;
+  }
+
   .travellers__item {
     margin-bottom: 30px;
   }

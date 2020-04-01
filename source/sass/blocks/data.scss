@@ -1,2 +1,15 @@
-// .data {
-// }
+.data__btn {
+  margin-bottom: 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .data__btn {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .data__btn {
+    margin-bottom: 59px;
+  }
+}

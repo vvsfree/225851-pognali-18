@@ -882,17 +882,39 @@
                 <a class="auth-btn traveller__btn" href="#">Позвать!</a>
               </article>
             </div>
-            <button class="btn data__btn" type="button">Показать еще</button>
-            <!-- TODO: Здесь ошибочное переименование классов случилось -->
-            <div class="bodyr bodyr--short data__bodyr">
-              <ul class="bodyr__bodys">
-                <li class="bodyr__body">1</li>
-                <li class="bodyr__body">2</li>
-                <li class="bodyr__body">3</li>
-                <li class="bodyr__body">4</li>
+            <a class="auth-btn auth-btn--icon auth-btn--color--dark-blue auth-btn--bg--transparent data__btn" href="#">
+              <svg class="auth-btn__icon auth-btn__icon--plus" width="18" height="18" role="img">
+                <use xlink:href="img/sprite.svg#show-more-plus"></use>
+              </svg>
+              Показать еще
+            </a>
+            <div class="pager data__pager">
+              <ul class="pager__pages">
+                <li class="pager__item pager__item--active">
+                  <button class="pager__btn" type="button">1</button>
+                </li>
+                <li class="pager__item">
+                  <button class="pager__btn" type="button">2</button>
+                </li>
+                <li class="pager__item">
+                  <button class="pager__btn" type="button">3</button>
+                </li>
+                <li class="pager__item">
+                  <button class="pager__btn" type="button">4</button>
+                </li>
               </ul>
-              <button class="bodyr__btn bodyr__btn--left" type="button">Назад</button>
-              <button class="bodyr__btn bodyr__btn--right" type="button">Вперед</button>
+              <button class="pager__btn pager__btn--icon pager__btn--left" type="button">
+                <svg class="pager__icon" width="10" height="20" role="img">
+                  <use xlink:href="img/sprite.svg#triangle-arrow-left"></use>
+                </svg>
+                <span class="visually-hidden">Назад</span>
+              </button>
+              <button class="pager__btn  pager__btn--icon pager__btn--right" type="button">
+                <svg class="pager__icon" width="10" height="20" role="img">
+                  <use xlink:href="img/sprite.svg#triangle-arrow-right"></use>
+                </svg>
+                <span class="visually-hidden">Вперед</span>
+              </button>
             </div>
           </section>
         </div>
