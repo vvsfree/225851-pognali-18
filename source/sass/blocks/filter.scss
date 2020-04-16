@@ -7,18 +7,242 @@
   border-radius: $border-small-radius;
 }
 
-// .filter__heading {
-//   margin: 0;
-//   @include font(22.5px, 22.5px, #1d2e5b, bold);
-// }
+.filter__heading {
+  margin: 0;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 20px;
+}
+
+.filter__fieldset {
+  margin: 0 5px;
+  padding: 0;
+  padding-top: 10px;
+
+  border: none;
+  border-top: 1px solid #f3c72b;
+
+  &--opened,
+  &--no-js {
+    margin-bottom: 16px;
+
+    .filter__legend-icon {
+      transform: rotate(180deg);
+    }
+
+    &:last-of-type {
+      margin-bottom: 22px;
+    }
+  }
+
+  &--no-js {
+    .filter__legend {
+      pointer-events: none;
+    }
+
+    .filter__legend-icon {
+      display: none;
+    }
+  }
+}
 
 .filter__legend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  padding: 0;
+  margin: 0;
+  margin-bottom: 11px;
+
+  width: 100%;
+
   @include font(16px, 18px, #1d2e5b, bold);
   text-transform: uppercase;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.filter__legend-icon {
+  width: 8px;
+  height: 4px;
+}
+
+.filter__fields {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.filter__field {
+  margin-bottom: 12px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .filter__label {
-  @include font(15px, 15px, $black-color, normal);
+  position: relative;
+  display: block;
+  padding-left: 18px + 9px;
+
+  // По макету высота строки 15px, а высота чекбокса 18
+  // Увеличиваю высоту строки до 18, чтобы выровнять чекбокс и лэйбл как на макете
+  @include font(15px, 18px, $black-color, normal);
+}
+
+.filter__label-text {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background-color: $white-color;
+    border-radius: 4px;
+  }
+}
+
+.filter__checkbox {
+  &:focus  ~ .filter__label-text::before {
+    outline: thin dotted;
+  }
+
+  &:checked ~ .filter__label-text::before {
+    background-image: url(../../img/tick.svg);
+    background-position: center;
+    background-size: 9px 9px;
+    background-repeat: no-repeat;
+  }
+
+  &:checked ~ .transport-list__icon {
+    opacity: 1;
+  }
+}
+
+.filter__level-values {
+  position: relative;
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -5px);
+
+    width: 16px;
+    height: 10px;
+    background-color: $white-color;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -1px);
+
+    width: 16px;
+    height: 1px;
+    background-color: #cbced9;
+  }
+}
+
+.filter__level-label {
+  width: 50%;
+}
+
+.filter__level-value {
+  display: block;
+  padding: 7px 10px 8px 10px;
+  width: 100%;
+  box-sizing: border-box;
+
+  @include font(15px, 15px, $dark-slate-blue-color, 500);
+  text-align: center;
+  border: 1px solid #cbced9;
+
+  &--min {
+    // По умолчанию включен левый бордюр правого элемента
+    border-right: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  &--max {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}
+
+.filter__level-ranger {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-1px);
+    width: 100%;
+    height: 2px;
+    background-color: rgba($color: $dark-slate-blue-color, $alpha: 0.2);
+    cursor: pointer;
+  }
+
+  &::after {
+    content: "";
+    order: 2;
+    flex-grow: 1;
+    height: 2px;
+    background-color: $dark-slate-blue-color;
+  }
+}
+
+.filter__level-control {
+  position: relative;
+  z-index: 10;
+  padding: 0;
+
+  width: 10px;
+  height: 10px;
+
+  font-size: 0;
+
+  background-color: $dark-slate-blue-color;
+  border: 0;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  &:first-of-type {
+    order: 1;
+    margin-left: 67px;
+  }
+
+  &:last-of-type {
+    order: 3;
+    margin-right: 45px;
+  }
+}
+
+.filter__submit-btn {
+  width: 100%;
 }
 
 @media (min-width: $tablet-width) {
@@ -30,12 +254,32 @@
     box-sizing: border-box;
   }
 
+  .filter__fieldset {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
   // .filter__heading {
   //   @include font(30px, 30px, #1d2e5b, bold);
   // }
 
   .filter__legend {
+    flex-shrink: 1;
+    margin-right: 0;
+    width: 40%;
     @include font(20px, 20px, $black-color, 400);
+    border: none;
+  }
+
+  .filter__legend-icon {
+    display: none;
+  }
+
+  .filter__fields {
+    flex-shrink: 1;
+    width: 50%;
+    margin-right: 0;
   }
 }
 

@@ -2,7 +2,8 @@
   margin: 0;
   @include font(21px, 21px, $dark-slate-blue-color, 700);
 
-  @include wordWrap();
+  // TODO: Нужно вот также переносить, но сначало по словам, а потом, если слово длинное, то его переносить принудительно
+  // @include wordWrap();
 
   &--country {
     color: $dark-blue-color;

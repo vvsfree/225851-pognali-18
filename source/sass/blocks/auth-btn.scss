@@ -1,5 +1,6 @@
 .auth-btn {
   display: block;
+  margin: 0;
   padding-top: 6px;
   padding-bottom: 4px;
   padding-left: 37px;
@@ -10,6 +11,10 @@
   text-align: center;
   background-color: $yellow-color;
   border-radius: $border-small-radius;
+
+  border: none;
+  appearance: none;
+  cursor: pointer;
 
   &--color {
     &--dark-blue {
@@ -24,6 +29,10 @@
   &--bg {
     &--transparent {
       background-color: transparent;
+    }
+
+    &--white {
+      background-color: $white-color;
     }
   }
 

@@ -458,48 +458,124 @@
           <section class="filter catalog__filter">
             <h3 class="heading3 heading3--catalog heading3--filter filter__heading">Подберите идеального попутчика</h3>
             <form class="filter__form" action="https://echo.htmlacademy.ru" method="POST">
-              <fieldset class="filter__fieldset">
-                <legend class="filter__legend">Хобби</legend>
-                <label class="filter__label"><input type="checkbox">ЗОЖ</label>
-                <label class="filter__label"><input type="checkbox">Фитнес</label>
-                <label class="filter__label"><input type="checkbox">бар</label>
-                <label class="filter__label"><input type="checkbox">футбол</label>
-                <label class="filter__label"><input type="checkbox">концерт</label>
-                <label class="filter__label"><input type="checkbox">тату</label>
-                <label class="filter__label"><input type="checkbox">кроссовки</label>
-                <label class="filter__label"><input type="checkbox">образование</label>
-                <label class="filter__label"><input type="checkbox">линкедин</label>
-              </fieldset>
-              <fieldset class="filter__fieldset">
-                <legend class="filter__legend">Музыка</legend>
-                <label class="filter__label"><input type="checkbox" checked>Тяжелый рок</label>
-                <label class="filter__label"><input type="checkbox">Русский рэп</label>
-                <label class="filter__label"><input type="checkbox">Евроденс</label>
-              </fieldset>
-              <fieldset class="filter__fieldset">
-                <legend class="filter__legend">Еда</legend>
-                <label class="filter__label"><input type="checkbox">авокадо</label>
-                <label class="filter__label"><input type="checkbox">смузи</label>
-                <label class="filter__label"><input type="checkbox">крафт</label>
-                <label class="filter__label"><input type="checkbox">бургер</label>
-              </fieldset>
-              <fieldset class="filter__fieldset">
-                <legend class="filter__legend">Транспорт</legend>
-                <ul class="transport-list">
-                  <li class="transport-list__item transport-list__item--active">Авиаперелет</li>
-                  <li class="transport-list__item transport-list__item--active">Автотранспорт</li>
-                  <li class="transport-list__item">Велосипед</li>
-                  <li class="transport-list__item transport-list__item--active">Пешком</li>
+              <fieldset class="filter__fieldset filter__fieldset--no-js">
+                <legend class="visually-hidden">Хобби</legend>
+                <button class="filter__legend" type="button" disabled>
+                  Хобби
+                  <svg class="filter__legend-icon" width="8" height="4" role="img">
+                    <use xlink:href="img/sprite.svg#dropdown"></use>
+                  </svg>
+                </button>
+                <ul class="filter__fields">
+                  <li class="filter__field"><label class="filter__label"><input class="filter__checkbox visually-hidden" type="checkbox" checked><span class="filter__label-text">Спортзал</span></label></li>
+                  <li class="filter__field"><label class="filter__label"><input class="filter__checkbox visually-hidden" type="checkbox"><span class="filter__label-text">Кальян</span></label></li>
+                  <li class="filter__field"><label class="filter__label"><input class="filter__checkbox visually-hidden" type="checkbox"><span class="filter__label-text">Диван</span></label></li>
                 </ul>
               </fieldset>
-              <fieldset class="fieldset-level filter__fieldset">
-                <legend class="filter__legend">Левел</legend>
-                <div class="fieldset-level__values">
-                  <span class="fieldset-level__min-value"></span>
-                  <span class="fieldset-level__max-value"></span>
+              <fieldset class="filter__fieldset filter__fieldset--no-js">
+                <legend class="visually-hidden">Музыка</legend>
+                <button class="filter__legend" type="button" disabled>
+                  Музыка
+                  <svg class="filter__legend-icon" width="8" height="4" role="img">
+                    <use xlink:href="img/sprite.svg#dropdown"></use>
+                  </svg>
+                </button>
+                <ul class="filter__fields">
+                  <li class="filter__field"><label class="filter__label"><input class="filter__checkbox visually-hidden" type="checkbox" checked><span class="filter__label-text">Тяжелый рок</span></label></li>
+                  <li class="filter__field"><label class="filter__label"><input class="filter__checkbox visually-hidden" type="checkbox"><span class="filter__label-text">Русский рэп</span></label></li>
+                  <li class="filter__field"><label class="filter__label"><input class="filter__checkbox visually-hidden" type="checkbox"><span class="filter__label-text">Евроденс</span></label></li>
+                </ul>
+              </fieldset>
+              <fieldset class="filter__fieldset filter__fieldset--no-js">
+                <legend class="visually-hidden">Еда</legend>
+                <button class="filter__legend" type="button" disabled>
+                  Еда
+                  <svg class="filter__legend-icon" width="8" height="4" role="img">
+                    <use xlink:href="img/sprite.svg#dropdown"></use>
+                  </svg>
+                </button>
+                <ul class="filter__fields">
+                  <li class="filter__field">
+                    <label class="filter__label">
+                      <input class="filter__checkbox visually-hidden" type="checkbox" checked>
+                      <span class="filter__label-text">Мясоед</span>
+                    </label>
+                  </li>
+                  <li class="filter__field"><label class="filter__label"><input class="filter__checkbox visually-hidden" type="checkbox"><span class="filter__label-text">Сидит на ПП</span></label></li>
+                  <li class="filter__field"><label class="filter__label"><input class="filter__checkbox visually-hidden" type="checkbox"><span class="filter__label-text">Веган-сыроед</span></label></li>
+                </ul>
+              </fieldset>
+
+              <fieldset class="filter__fieldset filter__fieldset--no-js">
+                <legend class="visually-hidden">Транспорт</legend>
+                <button class="filter__legend" type="button" disabled>
+                  Транспорт
+                  <svg class="filter__legend-icon" width="8" height="4" role="img">
+                    <use xlink:href="img/sprite.svg#dropdown"></use>
+                  </svg>
+                </button>
+                <ul class="transport-list transport-list--form">
+                  <li class="transport-list__item">
+                    <label class="transport-list__label">
+                      <input class="filter__checkbox visually-hidden" type="checkbox" checked>
+                      <svg class="transport-list__icon transport-list__icon--plane" width="14" height="16" role="img" alt="Авиаперелет">
+                        <use xlink:href="img/sprite.svg#plane"></use>
+                      </svg>
+                      <span class="visually-hidden">Авиаперелет</span>
+                    </label>
+                  </li>
+                  <li class="transport-list__item">
+                    <label class="transport-list__label">
+                      <input class="filter__checkbox visually-hidden" type="checkbox" checked>
+                      <svg class="transport-list__icon transport-list__icon--bus" width="13" height="16" role="img" alt="Автотранспорт">
+                        <use xlink:href="img/sprite.svg#bus"></use>
+                      </svg>
+                      <span class="visually-hidden">Автотранспорт</span>
+                    </label>
+                  </li>
+                  <li class="transport-list__item">
+                    <label class="transport-list__label">
+                      <input class="filter__checkbox visually-hidden" type="checkbox">
+                      <svg class="transport-list__icon transport-list__icon--bike" width="19" height="17" role="img" alt="Велосипед">
+                        <use xlink:href="img/sprite.svg#bike"></use>
+                      </svg>
+                      <span class="visually-hidden">Велосипед</span>
+                    </label>
+                  </li>
+                  <li class="transport-list__item">
+                    <label class="transport-list__label">
+                      <input class="filter__checkbox visually-hidden" type="checkbox" checked>
+                      <svg class="transport-list__icon transport-list__icon--run" width="15" height="17" role="img" alt="Пешком">
+                        <use xlink:href="img/sprite.svg#run"></use>
+                      </svg>
+                      <span class="visually-hidden">Пешком</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+
+              <fieldset class="filter__fieldset filter__fieldset--no-js">
+                <legend class="visually-hidden">Левел</legend>
+                <button class="filter__legend" type="button" disabled>
+                  Левел
+                  <svg class="filter__legend-icon" width="8" height="4" role="img">
+                    <use xlink:href="img/sprite.svg#dropdown"></use>
+                  </svg>
+                </button>
+                <div class="filter__level-values">
+                  <label class="filter__level-label">
+                    <input class="filter__level-value filter__level-value--min" type="number" name="level-min-value" value="30" min="0" max="100">
+                  </label>
+                  <label class="filter__level-label">
+                    <input class="filter__level-value filter__level-value--max" type="number" name="level-max-value" value="100" min="0" max="100">
+                  </label>
+                </div>
+                <div class="filter__level-ranger">
+                  <button class="filter__level-control" type="button">Левый ползунок</button>
+                  <button class="filter__level-control" type="button">Правый ползунок</button>
                 </div>
               </fieldset>
-              <button class="btn btn--white filter__submit-btn" type="submit">Показать</button>
+              <button class="auth-btn auth-btn--color--dark-blue auth-btn--bg--white filter__submit-btn" type="submit">Показать</button>
             </form>
           </section>
           <section class="data catalog__data">
@@ -569,8 +645,8 @@
                 <div class="labelled-block traveller__transport-block">
                   <p class="labelled-block__label traveller__label">Транспорт:</p>
                   <ul class="transport-list transport-list--catalog traveller__transport-list">
-                    <li class="transport-list__item">
-                      <svg class="transport-list__icon transport-list__icon--plane transport-list__icon--active" width="14" height="16" role="img" alt="Авиаперелет">
+                    <li class="transport-list__item transport-list__item--active">
+                      <svg class="transport-list__icon transport-list__icon--plane" width="14" height="16" role="img" alt="Авиаперелет">
                         <use xlink:href="img/sprite.svg#plane"></use>
                       </svg>
                       <span class="visually-hidden">Авиаперелет</span>
@@ -660,14 +736,14 @@
                 <div class="labelled-block traveller__transport-block">
                   <p class="labelled-block__label traveller__label">Транспорт:</p>
                   <ul class="transport-list transport-list--catalog traveller__transport-list">
-                    <li class="transport-list__item">
-                      <svg class="transport-list__icon transport-list__icon--plane transport-list__icon--active" width="14" height="16" role="img" alt="Авиаперелет">
+                    <li class="transport-list__item transport-list__item--active">
+                      <svg class="transport-list__icon transport-list__icon--plane" width="14" height="16" role="img" alt="Авиаперелет">
                         <use xlink:href="img/sprite.svg#plane"></use>
                       </svg>
                       <span class="visually-hidden">Авиаперелет</span>
                     </li>
-                    <li class="transport-list__item">
-                      <svg class="transport-list__icon transport-list__icon--bus transport-list__icon--active" width="13" height="16" role="img" alt="Автотранспорт">
+                    <li class="transport-list__item transport-list__item--active">
+                      <svg class="transport-list__icon transport-list__icon--bus" width="13" height="16" role="img" alt="Автотранспорт">
                         <use xlink:href="img/sprite.svg#bus"></use>
                       </svg>
                       <span class="visually-hidden">Автотранспорт</span>
@@ -678,8 +754,8 @@
                       </svg>
                       <span class="visually-hidden">Велосипед</span>
                     </li>
-                    <li class="transport-list__item">
-                      <svg class="transport-list__icon transport-list__icon--run transport-list__icon--active" width="15" height="17" role="img" alt="Пешком">
+                    <li class="transport-list__item transport-list__item--active">
+                      <svg class="transport-list__icon transport-list__icon--run" width="15" height="17" role="img" alt="Пешком">
                         <use xlink:href="img/sprite.svg#run"></use>
                       </svg>
                       <span class="visually-hidden">Пешком</span>
@@ -757,8 +833,8 @@
                 <div class="labelled-block traveller__transport-block">
                   <p class="labelled-block__label traveller__label">Транспорт:</p>
                   <ul class="transport-list transport-list--catalog traveller__transport-list">
-                    <li class="transport-list__item">
-                      <svg class="transport-list__icon transport-list__icon--plane transport-list__icon--active" width="14" height="16" role="img" alt="Авиаперелет">
+                    <li class="transport-list__item transport-list__item--active">
+                      <svg class="transport-list__icon transport-list__icon--plane" width="14" height="16" role="img" alt="Авиаперелет">
                         <use xlink:href="img/sprite.svg#plane"></use>
                       </svg>
                       <span class="visually-hidden">Авиаперелет</span>
@@ -769,8 +845,8 @@
                       </svg>
                       <span class="visually-hidden">Автотранспорт</span>
                     </li>
-                    <li class="transport-list__item">
-                      <svg class="transport-list__icon transport-list__icon--bike transport-list__icon--active" width="19" height="17" role="img" alt="Велосипед">
+                    <li class="transport-list__item transport-list__item--active">
+                      <svg class="transport-list__icon transport-list__icon--bike" width="19" height="17" role="img" alt="Велосипед">
                         <use xlink:href="img/sprite.svg#bike"></use>
                       </svg>
                       <span class="visually-hidden">Велосипед</span>
@@ -847,14 +923,14 @@
                 <div class="labelled-block traveller__transport-block">
                   <p class="labelled-block__label traveller__label">Транспорт:</p>
                   <ul class="transport-list transport-list--catalog traveller__transport-list">
-                    <li class="transport-list__item">
-                      <svg class="transport-list__icon transport-list__icon--plane transport-list__icon--active" width="14" height="16" role="img" alt="Авиаперелет">
+                    <li class="transport-list__item transport-list__item--active">
+                      <svg class="transport-list__icon transport-list__icon--plane" width="14" height="16" role="img" alt="Авиаперелет">
                         <use xlink:href="img/sprite.svg#plane"></use>
                       </svg>
                       <span class="visually-hidden">Авиаперелет</span>
                     </li>
-                    <li class="transport-list__item">
-                      <svg class="transport-list__icon transport-list__icon--bus transport-list__icon--active" width="13" height="16" role="img" alt="Автотранспорт">
+                    <li class="transport-list__item transport-list__item--active">
+                      <svg class="transport-list__icon transport-list__icon--bus" width="13" height="16" role="img" alt="Автотранспорт">
                         <use xlink:href="img/sprite.svg#bus"></use>
                       </svg>
                       <span class="visually-hidden">Автотранспорт</span>
