@@ -37,6 +37,8 @@
 
   &--no-js {
     .filter__legend {
+      display: block;
+      text-align: left;
       pointer-events: none;
     }
 
@@ -58,7 +60,7 @@
 
   width: 100%;
 
-  @include font(16px, 18px, #1d2e5b, bold);
+  @include font(16px, 18px, $dark-slate-blue-color, bold);
   text-transform: uppercase;
 
   border: none;
@@ -202,7 +204,6 @@
     width: 100%;
     height: 2px;
     background-color: rgba($color: $dark-slate-blue-color, $alpha: 0.2);
-    cursor: pointer;
   }
 
   &::after {
@@ -254,21 +255,50 @@
     box-sizing: border-box;
   }
 
-  .filter__fieldset {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+  .filter__heading {
+    margin: 0;
+    margin-bottom: 34px;
   }
 
-  // .filter__heading {
-  //   @include font(30px, 30px, #1d2e5b, bold);
-  // }
+  .filter__fieldset {
+    margin: 0;
+    margin-bottom: 26px;
+    border: none;
+
+    &:first-of-type {
+      padding-top: 35px;
+      border-top: 1px solid #f3c72b;
+    }
+
+    &:last-of-type {
+      padding-bottom: 36px;
+      margin-bottom: 36px;
+      border-bottom: 1px solid #f3c72b;
+    }
+  }
+
+  .filter__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+
+    &--transport,
+    &--level {
+      align-items: center;
+    }
+  }
 
   .filter__legend {
-    flex-shrink: 1;
-    margin-right: 0;
-    width: 40%;
-    @include font(20px, 20px, $black-color, 400);
+    display: block;
+    text-align: left;
+    margin-right: 5px;
+    margin-bottom: 0;
+    width: 115px;
+    font-size: 20px;
+    // Снизил с 30 (по макету), чтобы было горизонтальное выравнивание с чекбоксами
+    line-height: 22px;
+    font-weight: 500;
     border: none;
   }
 
@@ -277,9 +307,73 @@
   }
 
   .filter__fields {
-    flex-shrink: 1;
-    width: 50%;
-    margin-right: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 492px;
+  }
+
+  .filter__field {
+    margin-bottom: 0;
+    width: 164px;
+  }
+
+  .filter__label {
+    padding-left: 24px + 12px;
+    font-size: 20px;
+    // Поднимаю до высоты чекбокса
+    line-height: 24px;
+  }
+
+  .filter__label-text {
+    &::before {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .filter__checkbox {
+    &:checked ~ .filter__label-text::before {
+      background-size: 12px 12px;
+    }
+  }
+
+  .filter__transport-list {
+    transform: translateX(-5px);
+  }
+
+  .filter__level-label {
+    width: 75px;
+  }
+
+  .filter__level-values {
+    order: 1;
+    margin-left: auto;
+    margin-bottom: 0;
+
+    &::before {
+      transform: translateY(-7px);
+
+      width: 21px;
+      height: 15px;
+    }
+
+    &::after {
+      width: 21px;
+    }
+  }
+
+  .filter__level-value {
+    padding-top: 9px;
+    padding-bottom: 11px;
+    font-size: 20px;
+    line-height: 18px;
+  }
+
+  .filter__level-ranger {
+    width: 282px;
   }
 }
 
@@ -290,5 +384,67 @@
     padding-left: 48px;
     padding-right: 41px;
     box-sizing: border-box;
+  }
+
+  .filter__fieldset {
+    padding-top: 0;
+
+    &:first-of-type {
+      padding-top: 0;
+      margin-bottom: 20px;
+      border-top: none;
+    }
+
+    &:last-of-type {
+      padding-bottom: 0;
+      margin-bottom: 38px;
+      border-bottom: none
+    }
+  }
+
+  .filter__wrapper {
+    display: block;
+
+    &--transport,
+    &--level {
+      .filter__legend {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .filter__legend {
+    margin-right: 0;
+    margin-bottom: 25px;
+    width: 100%;
+    line-height: 30px;
+  }
+
+  .filter__fields {
+    display: block;
+    width: auto;
+  }
+
+  .filter__field {
+    margin-bottom: 16px;
+    width: auto;
+  }
+
+  .filter__transport-list {
+    transform: translateX(0);
+  }
+
+  .filter__level-values {
+    order: 0;
+    margin-left: 0;
+    margin-bottom: 31px;
+  }
+
+  .filter__level-label {
+    width: 50%;
+  }
+
+  .filter__level-ranger {
+    width: 100%;
   }
 }
