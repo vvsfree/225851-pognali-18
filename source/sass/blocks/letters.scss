@@ -7,4 +7,46 @@
   padding: 0;
 
   list-style: none;
+
+  @include font(14px, 14px, $dark-slate-blue-color, 500);
+}
+
+.letters__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: -1px;
+  margin-top: -1px;
+
+  width: 45px;
+  height: 42px;
+  box-sizing: border-box;
+
+  border: 1px solid #cbced9;
+  background-color: $white-color;
+
+  &--active {
+    position: relative;
+    color: $white-color;
+    background-color: $dark-slate-blue-color;
+    border-color: transparent;
+  }
+
+  &:nth-of-type(5n + 1) {
+    margin-left: 0;
+  }
+
+  &:nth-of-type(5n) {
+    width: 44px;
+  }
+}
+
+.letters__country-list {
+  display: none;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }

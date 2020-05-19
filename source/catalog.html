@@ -128,25 +128,38 @@
           </a>
         </div>
       </section>
-      <section class="country-filter main__country-filter">
-      <!-- <section class="country-filter country-filter--expanded main__country-filter"> -->
+      <section class="country-filter country-filter--no-js main__country-filter">
         <div class="wrapper country-filter__wrapper">
           <header class="country-filter__header">
+            <svg class="country-filter__filter-icon" width="15" height="10" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#filter"></use>
+            </svg>
             <h2 class="heading2 country-filter__heading">Фильтрация по странам</h2>
-            <button class="country-filter__expand-btn" type="button">Показать все</button>
-            <button class="country-filter__collapse-btn" type="button">Свернуть</button>
-            <ul class="continent-list country-filter__continents">
-              <li class="continent-list__item">Европа</li>
-              <li class="continent-list__item">Азия</li>
-              <li class="continent-list__item">Америка</li>
-              <li class="continent-list__item">Острова</li>
+
+            <button class="country-filter__open-btn" type="button" aria-label="Открыть фильтр">
+              <svg class="country-filter__open-icon" width="17" height="3" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#dots"></use>
+              </svg>
+            </button>
+
+            <button class="country-filter__close-btn" type="button" aria-label="Закрыть фильтр">
+              <svg class="country-filter__close-icon" width="12" height="12" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#filter-close"></use>
+              </svg>
+            </button>
+
+            <ul class="country-filter__continents">
+              <li class="country-filter__continent country-filter__continent--active"><a class="country-filter__continent-link">Европа</a></li>
+              <li class="country-filter__continent"><a class="country-filter__continent-link" href="#">Азия</a></li>
+              <li class="country-filter__continent"><a class="country-filter__continent-link" href="#">Америка</a></li>
+              <li class="country-filter__continent"><a class="country-filter__continent-link" href="#">Острова</a></li>
             </ul>
           </header>
           <div class="country-filter__content">
             <ul class="letters country-filter__letters">
-              <li class="letter country-filter__letter">
-                <span class="letter__name">А</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item letters__item--active">
+                <span class="letters__name">А</span>
+                <ul class="letters__country-list">
                   <li>Австралия</li>
                   <li>Австрия</li>
                   <li>Азербайджан</li>
@@ -160,9 +173,9 @@
                   <li>Афганистан</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">Б</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">Б</span>
+                <ul class="letters__country-list">
                   <li>Багамские Острова</li>
                   <li>Бангладеш</li>
                   <li>Барбадос</li>
@@ -182,9 +195,9 @@
                   <li>Бутан</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">В</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">В</span>
+                <ul class="letters__country-list">
                   <li>Вануату</li>
                   <li>Великобритания</li>
                   <li>Венгрия</li>
@@ -193,9 +206,9 @@
                   <li>Вьетнам</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">Г</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">Г</span>
+                <ul class="letters__country-list">
                   <li>Габон</li>
                   <li>Гаити</li>
                   <li>Гайана</li>
@@ -211,33 +224,33 @@
                   <li>Грузия</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">Д</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">Д</span>
+                <ul class="letters__country-list">
                   <li>Дания</li>
                   <li>Джибути</li>
                   <li>Доминика</li>
                   <li>Доминикана</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">Е</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">Е</span>
+                <ul class="letters__country-list">
                   <li>
                     Египет
                   </li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">З</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">З</span>
+                <ul class="letters__country-list">
                   <li>Замбия</li>
                   <li>Зимбабве</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">И</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">И</span>
+                <ul class="letters__country-list">
                   <li>Израиль</li>
                   <li>Индия</li>
                   <li>Индонезия</li>
@@ -250,9 +263,9 @@
                   <li>Италия</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">К</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">К</span>
+                <ul class="letters__country-list">
                   <li>Кабо-Верде</li>
                   <li>Казахстан</li>
                   <li>Камбоджа</li>
@@ -267,9 +280,9 @@
                   <li>Колумбия</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">Л</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">Л</span>
+                <ul class="letters__country-list">
                   <li>Лаос</li>
                   <li>Латвия</li>
                   <li>Лесото</li>
@@ -281,9 +294,9 @@
                   <li>Люксембург</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">М</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">М</span>
+                <ul class="letters__country-list">
                   <li>Маврикий</li>
                   <li>Мавритания</li>
                   <li>Мадагаскар</li>
@@ -295,9 +308,9 @@
                   <li>Марокко</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">Н</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">Н</span>
+                <ul class="letters__country-list">
                   <li>Намибия</li>
                   <li>Науру</li>
                   <li>Непал</li>
@@ -309,16 +322,16 @@
                   <li>Норвегия</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">О</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">О</span>
+                <ul class="letters__country-list">
                   <li>ОАЭ</li>
                   <li>Оман</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">П</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">П</span>
+                <ul class="letters__country-list">
                   <li>Пакистан</li>
                   <li>Палау</li>
                   <li>Панама</li>
@@ -329,17 +342,17 @@
                   <li>Португалия</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">Р</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">Р</span>
+                <ul class="letters__country-list">
                   <li>Руанда</li>
                   <li>Румыния</li>
                   <li>Россия</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">С</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">С</span>
+                <ul class="letters__country-list">
                   <li>Сальвадор</li>
                   <li>Самоа</li>
                   <li>Сан-Марино</li>
@@ -354,9 +367,9 @@
                   <li>США</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">Т</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">Т</span>
+                <ul class="letters__country-list">
                   <li>Таджикистан</li>
                   <li>Таиланд</li>
                   <li>Танзания</li>
@@ -369,52 +382,52 @@
                   <li>Турция</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">У</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">У</span>
+                <ul class="letters__country-list">
                   <li>Уганда</li>
                   <li>Узбекистан</li>
                   <li>Украина</li>
                   <li>Уругвай</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">Ф</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">Ф</span>
+                <ul class="letters__country-list">
                   <li>Фиджи</li>
                   <li>Филиппины</li>
                   <li>Финляндия</li>
                   <li>Франция</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">Х</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">Х</span>
+                <ul class="letters__country-list">
                   <li>
                     Хорватия
                   </li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">Ч</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">Ч</span>
+                <ul class="letters__country-list">
                   <li>Чад</li>
                   <li>Черногория</li>
                   <li>Чехия</li>
                   <li>Чили</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">Ш</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">Ш</span>
+                <ul class="letters__country-list">
                   <li>Швейцария</li>
                   <li>Швеция</li>
                   <li>Шри-Ланка</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">Э</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">Э</span>
+                <ul class="letters__country-list">
                   <li>Эквадор</li>
                   <li>Эритрея</li>
                   <li>Эсватини</li>
@@ -422,16 +435,16 @@
                   <li>Эфиопия</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">Ю</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">Ю</span>
+                <ul class="letters__country-list">
                   <li>ЮАР</li>
                   <li>Южный Судан</li>
                 </ul>
               </li>
-              <li class="letter country-filter__letter">
-                <span class="letter__name">Я</span>
-                <ul class="letter__country-list country-filter__country-list">
+              <li class="letters__item">
+                <span class="letters__name">Я</span>
+                <ul class="letters__country-list">
                   <li>Ямайка</li>
                   <li>Япония</li>
                 </ul>
@@ -448,8 +461,12 @@
               <li>Австрия</li>
               <li>Азербайджан</li>
             </ul>
-            <button class="btn country-filter__collapse-btn country-filter__collapse-btn--large" type="button">Свернуть</button>
           </div>
+          <button class="auth-btn auth-btn--bg--periwinkle country-filter__collapse-btn" type="button">
+            <svg class="country-filter__close-icon" width="12" height="12" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#filter-close"></use>
+            </svg>Свернуть
+          </button>
         </div>
       </section>
       <section class="catalog">
@@ -1050,5 +1067,7 @@
         </address>
       </div>
     </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

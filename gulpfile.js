@@ -39,6 +39,11 @@ gulp.task("sprite", function () {
     .pipe(gulp.dest("source/img"))
 });
 
+gulp.task("refresh", function (done) {
+  server.reload();
+  done();
+});
+
 gulp.task("server", function () {
   server.init({
     server: "source/",
@@ -49,6 +54,7 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
+  gulp.watch("source/js/*.js", gulp.series("refresh"));
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
