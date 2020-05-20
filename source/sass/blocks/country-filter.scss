@@ -124,23 +124,30 @@
   text-transform: uppercase;;
 }
 
-.country-filter__continent {
+.country-filter__continent-label {
+  display: block;
   opacity: 0.3;
-
-  &--active {
-    opacity: 1;
-  }
+  cursor: pointer;
 }
 
-.country-filter__continent-link {
-  text-decoration: none;
-  color: inherit;
+.country-filter__continent-radio:checked + .country-filter__continent-label {
+  opacity: 1;
+}
+
+.country-filter__continent-radio:focus + .country-filter__continent-label {
+  outline: thin dotted;
+  outline-offset: 2px;
 }
 
 .country-filter__collapse-btn {
   .country-filter__close-icon {
     margin-right: 12px;
   }
+}
+
+.country-filter__country-link {
+  color: inherit;
+  text-decoration: none;
 }
 
 @media (min-width: $tablet-width) {
