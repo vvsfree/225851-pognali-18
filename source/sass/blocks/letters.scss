@@ -1,6 +1,6 @@
 .letters {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 
   margin: 0;
@@ -12,10 +12,6 @@
 }
 
 .letters__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   margin-left: -1px;
   margin-top: -1px;
 
@@ -67,4 +63,33 @@
 .letters__country-link {
   color: inherit;
   text-decoration: none;
+}
+
+@media (min-width: $tablet-width) {
+  .letters {
+    font-size: 60px;
+    line-height: 1;
+    color: $blue-color;
+  }
+
+  .letters__item {
+    margin: 0;
+  }
+
+  .letters__label {
+    width: 72px;
+    height: 65px + 17px;
+
+    border: none;
+    background-color: transparent;
+    opacity: 0.2;
+  }
+
+  .letters__radio:checked + .letters__label {
+    position: static;
+    color: inherit;
+    opacity: 1;
+    background-color: transparent;
+    border: none;
+  }
 }

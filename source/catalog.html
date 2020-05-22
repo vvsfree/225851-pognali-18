@@ -137,12 +137,14 @@
             <h2 class="heading2 country-filter__heading">Фильтрация по странам</h2>
 
             <button class="country-filter__open-btn" type="button" aria-label="Открыть фильтр">
+              <span class="country-filter__btn-text">Показать все</span>
               <svg class="country-filter__open-icon" width="17" height="3" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite.svg#dots"></use>
               </svg>
             </button>
 
             <button class="country-filter__close-btn" type="button" aria-label="Закрыть фильтр">
+              <span class="country-filter__btn-text">Свернуть</span>
               <svg class="country-filter__close-icon" width="12" height="12" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite.svg#filter-close"></use>
               </svg>
@@ -499,10 +501,11 @@
               <li><a class="country-filter__country-link" href="#">Азербайджан</a></li>
             </ul>
           </div>
-          <button class="auth-btn auth-btn--bg--periwinkle country-filter__collapse-btn" type="button">
-            <svg class="country-filter__close-icon" width="12" height="12" aria-hidden="true" focusable="false">
+          <button class="auth-btn auth-btn--icon auth-btn--bg--periwinkle country-filter__collapse-btn" type="button">
+            <svg class="auth-btn__icon auth-btn__icon--close" width="12" height="12" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite.svg#filter-close"></use>
-            </svg>Свернуть
+            </svg>
+            Свернуть
           </button>
         </div>
       </section>
