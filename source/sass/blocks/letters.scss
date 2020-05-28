@@ -86,10 +86,38 @@
   }
 
   .letters__radio:checked + .letters__label {
-    position: static;
     color: inherit;
     opacity: 1;
     background-color: transparent;
     border: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .letters__item {
+    width: 250px;
+
+    &:nth-of-type(5n) {
+      width: 250px;
+    }
+  }
+
+  .letters__label {
+    display: block;
+    margin-bottom: 30px;
+    width: auto;
+    height: auto;
+    opacity: 1;
+    cursor: auto;
+  }
+
+  .letters__radio:focus + .letters__label {
+    outline: none;
+  }
+
+  .letters__country-list {
+    display: block;
+    margin-bottom: 50px;
+    @include font(20px, 30px, $black-color);
   }
 }
