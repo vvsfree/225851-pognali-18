@@ -9,59 +9,119 @@
 </head>
 
 <body class="body">
-  <header class="inner-header body__inner-header">
-    <section class="menu inner-header__menu">
+  <header class="header header--dark-blue">
+    <section class="menu menu--no-js header__menu">
       <h2 class="visually-hidden">Меню</h2>
       <div class="wrapper menu__wrapper">
         <a class="menu__logo" href="index.html">
-          <picture class="menu__picture">
-            <source media="(min-width: 1400px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+          <picture class="menu__picture menu__picture--closed">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
             <img class="menu__logo-img" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип">
           </picture>
+          <picture class="menu__picture menu__picture--opened">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+            <img class="menu__logo-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип">
+          </picture>
         </a>
-        <button class="menu__toggle-btn" type="button">Открыть меню</button>
+
+        <button class="menu__toggle-btn" type="button" aria-label="Открыть меню">
+          <svg class="menu__toggle-icon menu__toggle-icon--closed" width="25" height="11" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite.svg#menu"></use>
+          </svg>
+          <svg class="menu__toggle-icon menu__toggle-icon--opened" width="19" height="19" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite.svg#menu-close"></use>
+          </svg>
+        </button>
+
         <nav class="main-nav menu__main-nav">
           <ul class="site-list">
             <li class=site-list__item>
-              <a href="#">О сервисе</a>
+              <a class="site-list__link" href="index.html">О сервисе</a>
             </li>
             <li class=site-list__item>
-              <a href="form.html">Направления</a>
+              <a class="site-list__link">Направления</a>
             </li>
             <li class=site-list__item>
-              <a href="catalog.html">Попутчики</a>
+              <a class="site-list__link" href="catalog.html">Попутчики</a>
             </li>
           </ul>
         </nav>
-        <a class="btn menu__auth-btn" href="#">Авторизация</a>
-        <ul class="contact-list menu__contact-list">
-          <li class="contact-list__item">
-            <a href="tel:88005558628">8 800 555-86-28</a>
+
+        <ul class="menu-contact-list menu__top-contact-list">
+          <li class="menu-contact-list__item">
+            <a class="menu-contact-list__link menu-contact-list__link--phone" href="tel:88005558628" aria-label="8 800 555-86-28">
+              <svg class="menu-contact-list__icon" role="img">
+                <use xlink:href="img/sprite.svg#topmenu-phone"></use>
+              </svg>
+            </a>
           </li>
-          <li class="contact-list__item">
-            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <li class="menu-contact-list__item">
+            <a class="menu-contact-list__link menu-contact-list__link--mail" href="mailto:mail@htmlacademy.ru" aria-label="mail@htmlacademy.ru">
+              <svg class="menu-contact-list__icon" role="img">
+                <use xlink:href="img/sprite.svg#topmenu-mail"></use>
+              </svg>
+            </a>
           </li>
         </ul>
-        <ul class="social-list menu__social-list">
+
+        <a class="auth-btn menu__auth-btn" href="#">Авторизация</a>
+
+        <ul class="contact-list contact-list--menu menu__contact-list">
+          <li class="contact-list__item">
+            <a class="contact-list__link" href="tel:88005558628">
+              <svg class="contact-list__icon" width="18" height="18" role="img">
+                <use xlink:href="img/sprite.svg#contacts-phone"></use>
+              </svg>
+              <span class="contact-list__text">8 800 555-86-28</span>
+            </a>
+          </li>
+          <li class="contact-list__item">
+            <a class="contact-list__link" href="mailto:mail@htmlacademy.ru">
+              <svg class="contact-list__icon" width="18" height="14" role="img">
+                <use xlink:href="img/sprite.svg#contacts-mail"></use>
+              </svg>
+              <span class="contact-list__text">mail@htmlacademy.ru</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="social-list social-list--menu menu__social-list">
           <li class="social-list__item">
-            <a href="#">Фэйсбук</a>
+            <a class="social-list__link" href="#" aria-label="Фэйсбук">
+              <svg class="social-list__icon social-list__icon--fb" width="11" height="21" role="img">
+                <use xlink:href="img/sprite.svg#facebook"></use>
+              </svg>
+            </a>
           </li>
           <li class="social-list__item">
-            <a href="#">ВКонтакте</a>
+            <a class="social-list__link" href="#" aria-label="ВКонтакте">
+              <svg class="social-list__icon social-list__icon--vk" width="23" height="12" role="img">
+                <use xlink:href="img/sprite.svg#vk"></use>
+              </svg>
+            </a>
           </li>
           <li class="social-list__item">
-            <a href="#">Инстаграм</a>
+            <a class="social-list__link" href="#" aria-label="Инстаграм">
+              <svg class="social-list__icon social-list__icon--insta" width="18" height="18" role="img">
+                <use xlink:href="img/sprite.svg#instagram"></use>
+              </svg>
+            </a>
           </li>
         </ul>
       </div>
     </section>
-    <div class="wrapper inner-header__wrapper">
-      <h1 class="inner-header__title">Направления</h1>
-    </div>
   </header>
 
   <main class="main body__main">
+    <h1 class="visually-hidden">Направления</h1>
+    <section class="title main__title">
+      <h2 class="visually-hidden">Стилизованный заголовок страницы</h2>
+      <div class="wrapper title__wrapper">
+        <b class="heading1 title__heading">Направления</b>
+      </div>
+    </section>
     <section class="user main__user">
       <h2 class="visually-hidden">Редактирование информации о пользователе</h2>
       <form class="wrapper user__wrapper" action="https://echo.htmlacademy.ru" method="POST">
@@ -384,6 +444,8 @@
       </address>
     </div>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 
 </html>

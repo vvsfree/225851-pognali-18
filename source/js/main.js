@@ -1,3 +1,13 @@
+// All pages. Header. Menu
+const menu = document.querySelector(`.menu`);
+menu.classList.remove(`menu--no-js`);
+
+const menuBtn = menu.querySelector(`.menu__toggle-btn`);
+menuBtn.addEventListener(`click`, () => {
+  menu.classList.toggle(`menu--opened`);
+});
+
+// Catalog. Country Filter
 const countryFilter = document.querySelector(`.country-filter`);
 
 countryFilter.classList.remove(`country-filter--no-js`);
