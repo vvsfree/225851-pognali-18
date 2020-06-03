@@ -125,34 +125,57 @@
     <section class="user main__user">
       <h2 class="visually-hidden">Редактирование информации о пользователе</h2>
       <form class="wrapper user__wrapper" action="https://echo.htmlacademy.ru" method="POST">
-        <span class="user__level">80</span>
-        <picture>
-          <img class="user__img" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="70"
-            height="70" alt="Петя Демин">
+        <span class="level user__level">80</span>
+        <picture class="user__picture">
+          <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x">
+          <img class="user__img" src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@2x.jpg 2x" width="100" height="100" alt="Петя Демин">
         </picture>
-        <a href="#">Сменить фото</a>
-        <fieldset>
-          <legend>Тэги</legend>
-          <label>
-            <textarea name="hastags" cols="30" rows="10">
-              #бургер #бар #футбол #концерт #крафт
-            </textarea>
+        <button class="auth-btn auth-btn--bg--periwinkle user__photo-btn" type="button">Сменить фото</button>
+        <fieldset class="user__fieldset user__tags">
+          <legend class="user__legend">Тэги</legend>
+          <label class="user__label">
+            <textarea class="user__textarea" name="hashtags" cols="30" rows="10">#бургер #бар #футбол #концерт #крафт</textarea>
           </label>
         </fieldset>
-        <fieldset>
-          <legend>Транспорт</legend>
-          <ul class="transport-list user__transport-list">
+        <fieldset class="user__fieldset user__transport">
+          <legend class="user__legend">Транспорт</legend>
+          <ul class="transport-list transport-list--form user__transport-list">
             <li class="transport-list__item">
-              <label><input type="checkbox" name="transport" checked>Авиаперелет</label>
+              <input class="transport-list__checkbox visually-hidden" type="checkbox" name="transport" id="plane" checked>
+              <label class="transport-list__label" for="plane">
+                <svg class="transport-list__icon transport-list__icon--plane" width="14" height="16" role="img" alt="Авиаперелет">
+                  <use xlink:href="img/sprite.svg#plane"></use>
+                </svg>
+                <span class="visually-hidden">Авиаперелет</span>
+              </label>
             </li>
             <li class="transport-list__item">
-              <label><input type="checkbox" name="transport" checked>Автотранспорт</label>
+              <input class="transport-list__checkbox visually-hidden" type="checkbox" name="transport" id="bus" checked>
+              <label class="transport-list__label" for="bus">
+                <svg class="transport-list__icon transport-list__icon--bus" width="13" height="16" role="img" alt="Автотранспорт">
+                  <use xlink:href="img/sprite.svg#bus"></use>
+                </svg>
+                <span class="visually-hidden">Автотранспорт</span>
+              </label>
             </li>
             <li class="transport-list__item">
-              <label><input type="checkbox" name="transport">Велосипед</label>
+              <input class="transport-list__checkbox visually-hidden" type="checkbox" name="transport" id="bike">
+              <label class="transport-list__label" for="bike">
+                <svg class="transport-list__icon transport-list__icon--bike" width="19" height="17" role="img" alt="Велосипед">
+                  <use xlink:href="img/sprite.svg#bike"></use>
+                </svg>
+                <span class="visually-hidden">Велосипед</span>
+              </label>
             </li>
             <li class="transport-list__item">
-              <label><input type="checkbox" name="transport" checked>Пешком</label>
+              <input class="transport-list__checkbox visually-hidden" type="checkbox" name="transport" id="run" checked>
+              <label class="transport-list__label" for="run">
+                <svg class="transport-list__icon transport-list__icon--run" width="15" height="17" role="img" alt="Пешком">
+                  <use xlink:href="img/sprite.svg#run"></use>
+                </svg>
+                <span class="visually-hidden">Пешком</span>
+              </label>
             </li>
           </ul>
         </fieldset>

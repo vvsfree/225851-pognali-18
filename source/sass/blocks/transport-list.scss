@@ -9,9 +9,23 @@
   padding: 0;
   list-style: none;
 
+  &--align--left {
+    justify-content: flex-start;
+  }
+
   &--form {
     .transport-list__item {
       display: block;
+    }
+
+    .transport-list__checkbox {
+      &:focus  ~ .transport-list__label {
+        outline: thin dotted;
+      }
+
+      &:checked ~ .transport-list__label > .transport-list__icon {
+        opacity: 1;
+      }
     }
 
     .transport-list__label {
@@ -76,8 +90,6 @@
   .transport-list {
     &--catalog,
     &--form {
-      justify-content: flex-start;
-
       .transport-list__item {
         width: 32px;
         height: 32px;
@@ -122,7 +134,6 @@
     &--catalog {
       flex-direction: column;
       flex-wrap: nowrap;
-      justify-content: flex-start;
       align-items: flex-start;
 
       .transport-list__item {
@@ -147,10 +158,6 @@
         margin-top: 2px;
         margin-bottom: 2px;
       }
-    }
-
-    &--form {
-      justify-content: flex-start;
     }
   }
 }

@@ -122,10 +122,6 @@
     background-size: 9px 9px;
     background-repeat: no-repeat;
   }
-
-  &:checked ~ .transport-list__icon {
-    opacity: 1;
-  }
 }
 
 .filter__level-values {

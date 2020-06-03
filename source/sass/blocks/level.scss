@@ -12,6 +12,7 @@
 }
 
 @media (max-width: $tablet-width - 1) {
+  // TODO: ну вот не факт. это вполне мог задать родительский блок, потом посмотрим
   .level {
     &--catalog {
       width: 45px;
