@@ -1,6 +1,6 @@
 .heading3 {
   margin: 0;
-  @include font(21px, 21px, $dark-slate-blue-color, 700);
+  @include font(21px, 1, $dark-slate-blue-color, 700);
 
   // TODO: Нужно вот также переносить, но сначало по словам, а потом, если слово длинное, то его переносить принудительно
   // @include wordWrap();
@@ -11,7 +11,10 @@
 
   &--catalog {
     font-size: 20px;
-    line-height: 20px;
+  }
+
+  &--plans {
+    font-size: 16px;
   }
 }
 
@@ -19,7 +22,6 @@
   .heading3 {
     &--filter {
       font-size: 23px;
-      line-height: 23px;
     }
   }
 }
@@ -27,11 +29,13 @@
 @media (min-width: $tablet-width) {
   .heading3 {
     font-size: 24px;
-    line-height: 24px;
 
     &--catalog {
       font-size: 30px;
-      line-height: 30px;
+    }
+
+    &--plans {
+      line-height: 50px;
     }
   }
 }

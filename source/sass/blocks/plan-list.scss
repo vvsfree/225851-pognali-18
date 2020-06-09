@@ -1,19 +1,143 @@
 .plan-list {
   padding: 0;
   margin: 0;
+  @include font(14px, 14px, $dark-slate-blue-color, 500);
   list-style: none;
+  counter-reset: item;
 }
 
 .plan-list__item {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+
   margin-bottom: 10px;
+
+  padding: 26px;
+  padding-top: 22px;
+  padding-bottom: 24px;
+  background-color: $white-color;
+  border-radius: 10px;
+
+  &::before {
+    counter-increment: item;
+    content: counter(item)".";
+  }
 
   &:last-of-type {
     margin-bottom: 0;
   }
 }
 
+.plan-list__heading {
+  margin: 0;
+  margin-left: 5px;
+}
+
+.plan-list__text {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.plan-list__travelmates {
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+
+.plan-list__link {
+  margin-top: 28px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: $tablet-width) {
+  .plan-list__item {
+    padding: 0;
+    padding-top: 26px;
+    padding-bottom: 17px;
+
+    font-size: 20px;
+    line-height: 1;
+
+    &::before {
+      order: -2;
+    }
+
+    &::after {
+      content: "";
+      order: -1;
+      margin-top: 21px;
+      margin-bottom: 17px;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(203, 206, 217, 0.3);
+    }
+  }
+
+  .plan-list__heading {
+    order: -3;
+    margin-left: 36px;
+    width: 80%;
+  }
+
+  .plan-list__item::before,
+  .plan-list__link {
+    margin-left: auto;
+    margin-right: 36px;
+  }
+
+  .plan-list__travelmates {
+    margin: 0;
+    margin-left: 34px;
+    width: 185px;
+  }
+
+  .plan-list__period {
+    width: 200px;
+  }
+
+  .plan-list__link {
+    margin-top: 0;
+    width: auto;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .plan-list__item {
+    flex-wrap: nowrap;
+
     margin-bottom: 15px;
+
+    padding-top: 23px;
+    padding-bottom: 24px;
+
+    &::before {
+      order: 0;
+      margin-left: 44px;
+      width: 51px;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .plan-list__heading {
+    order: 0;
+    margin-left: 0;
+    width: 530px;
+  }
+
+  .plan-list__travelmates {
+    margin-left: 0;
+    width: 178px;
+  }
+
+  .plan-list__link {
+    margin-right: 42px;
+    width: auto;
   }
 }

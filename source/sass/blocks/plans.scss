@@ -6,6 +6,10 @@
   border-top-right-radius: $border-radius;
 }
 
+.plans__heading {
+  margin-bottom: 33px;
+}
+
 @media (min-width: $tablet-width) {
   .plans {
     padding-top: 58px;
@@ -14,6 +18,10 @@
 
   .plans__wrapper {
     padding: 0 $tablet-content-padding;
+  }
+
+  .plans__heading {
+    margin-bottom: 54px;
   }
 }
 
