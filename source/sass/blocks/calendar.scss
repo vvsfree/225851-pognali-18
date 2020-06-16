@@ -1,0 +1,203 @@
+.calendar {
+  @include font(14px, 18px, $black-color);
+}
+
+.calendar__table {
+  margin: 0 auto;
+  // Если у таблицы убрать border (оставив только у ячеек), то ее ширина становится на 1px меньше (правый border ячейки не учитывается)
+  border: 1px solid transparent;
+  border-collapse: collapse;
+}
+
+.calendar__caption {
+  padding: 11px 0;
+  margin-bottom: 14px;
+  @include font(20px, 1, $dark-slate-blue-color, 700);
+  border-top: 1px solid #cbced9;
+  border-bottom: 1px solid #cbced9;
+}
+
+.calendar__caption-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar__month-btn {
+  padding: 0;
+  opacity: 0.3;
+  background-color: transparent;
+  border: 0;
+  appearance: none;
+  cursor: pointer;
+}
+
+.calendar__month-btn-icon {
+  display: block;
+  width: 9px;
+  height: 18px;
+}
+
+.calendar__header {
+  padding: 0;
+  height: 32px;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.calendar__header-letter {
+  display: none;
+}
+
+.calendar__cell {
+  padding: 0;
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid #cbced9;
+
+  &--current {
+    .calendar__label {
+      outline: 2px solid $red-color;
+      outline-offset: -1px;
+    }
+  }
+
+  &--disabled {
+    .calendar__label {
+      background-color: $white-color;
+      cursor: default;
+      opacity: 0.3;
+    }
+  }
+
+  &:nth-of-type(even) {
+    width: 31px;
+  }
+}
+
+.calendar__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: $lilac-color;
+  cursor: pointer;
+}
+
+.calendar__first-day-month,
+.calendar__check-day {
+  display: none;
+}
+
+.calendar__checkbox:checked + .calendar__label {
+  color: $white-color;
+  background-color: $dark-slate-blue-color;
+}
+
+@media (min-width: $tablet-width) {
+  .calendar {
+    @include font(20px, 1, $dark-slate-blue-color, 500);
+  }
+
+  .calendar__caption {
+    padding-top: 25px;
+    padding-bottom: 24px;
+    margin-bottom: 30px;
+    font-size: 36px;
+    border-top: 1px solid #d6d9e6;
+    border-bottom: 1px solid #d6d9e6;
+  }
+
+  .calendar__month-btn-icon {
+    width: 19px;
+    height: 34px;
+  }
+
+  .calendar__header {
+    height: 34px;
+    font-size: 18px;
+    font-weight: normal;
+    color: $black-color;
+  }
+
+  .calendar__header-letter {
+    display: inline;
+  }
+
+  .calendar__cell {
+    width: 75px;
+    height: 68px;
+
+    &--current {
+      .calendar__label {
+        outline: 4px solid $red-color;
+        outline-offset: -2px;
+      }
+    }
+
+    // Если этого не сделать, то таблица сама сожмется под контент и 3 из 7 ячеек сделает 74px шириной
+    // Не отказываюсь здесь от приема, который применил на предыдущей ширине
+    &:nth-of-type(even) {
+      width: 74px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .calendar {
+    @include font(18px, 30px, $black-color, 400);
+  }
+
+  .calendar__caption {
+    margin-bottom: 0;
+  }
+
+  .calendar__header {
+    padding-left: 15px;
+    height: 54px;
+    text-align: left;
+  }
+
+  .calendar__cell {
+    width: 142px;
+    height: 70px;
+
+    &:first-of-type,
+    &:last-of-type {
+      width: 141px;
+    }
+
+    &:nth-of-type(even) {
+      width: 142px;
+    }
+  }
+
+  .calendar__label {
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-top: 11px;
+    padding-left: 15px;
+  }
+
+  .calendar__first-day-month {
+    display: inline;
+    margin-left: 10px;
+  }
+
+  .calendar__check-day {
+    display: block;
+    width: 100%;
+  }
+}
+
+// Для всех ширин
+.calendar__header {
+  &--red {
+    color: $red-color;
+  }
+}
