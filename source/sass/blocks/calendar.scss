@@ -1,9 +1,5 @@
 .calendar {
   @include font(14px, 18px, $black-color);
-}
-
-.calendar__table {
-  margin: 0 auto;
   // Если у таблицы убрать border (оставив только у ячеек), то ее ширина становится на 1px меньше (правый border ячейки не учитывается)
   border: 1px solid transparent;
   border-collapse: collapse;

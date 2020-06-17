@@ -1,0 +1,15 @@
+.more-btn__icon {
+  @include moreBtnIcon();
+}
+
+@media (max-width: $tablet-width - 1) {
+  .more-btn {
+    @include moreBtn($mobile-width);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .more-btn {
+    @include moreBtn($tablet-width);
+  }
+}

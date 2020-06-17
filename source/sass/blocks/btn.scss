@@ -1,57 +1,13 @@
 .btn {
+  // TODO: думаю, что это все-таки должен быть mixin
+  // Убираем системные стили ссылки
   display: block;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  padding-left: 24px;
-  // отступ от стрелки слева + стрелка + отступ от нее справа
-  padding-right: calc(11px + 10px + 23px);
-  box-sizing: border-box;
-  @include font(18px, 18px, #1d2e5b, 700);
   text-decoration: none;
-  text-align: left;
-  background-color: $yellow-color;
-  // TODO: Стоит ли делать inline svg для оптимизации?
-  // TODO: Переделать ее с использованием спрайта
-  background-image: url("../../img/triangle-arrow-right.svg");
-  background-repeat: no-repeat;
-  background-size: 10px 14px;
-  background-position: right 23px top 50%;
 
+  // Убираем системные стили кнопки
+  padding: 0;
+  background-color: transparent;
   border: none;
-  border-radius: $border-extra-small-radius;
-
-  &--bordered {
-    // минус ширина бордюра
-    padding-top: 22px - 3px;
-    padding-bottom: 22px - 3px;
-    padding-left: 24px - 3px;
-    padding-right: 44px - 3px;
-    color: $blue-color;
-    border: 3px solid $blue-color;
-    background-clip: border-box;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .btn {
-    padding-top: 29px;
-    padding-bottom: 28px;
-    padding-left: 34px;
-
-    padding-right: 18px + 10px + 36px;
-
-    font-size: 24px;
-    line-height: 24px;
-
-    background-position: right 36px top 50%;
-    border-radius: $border-small-radius;
-
-    &--bordered {
-      // минус ширина бордюра
-      padding-top: 29px - 3px;
-      padding-bottom: 28px - 3px;
-      padding-left: 34px - 3px;
-      padding-right: 64px - 3px;
-    }
-  }
+  appearance: none;
+  cursor: pointer;
 }

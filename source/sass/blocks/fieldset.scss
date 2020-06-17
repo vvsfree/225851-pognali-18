@@ -29,6 +29,20 @@
   .fieldset__legend {
     @include font(36px, 36px, #1d2e5b, 700);
   }
+
+  .fieldset__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .fieldset__next-btn {
+    min-width: 285px;
+  }
+
+  .fieldset__prev-btn {
+    min-width: 180px;
+  }
 }
 
 @media (min-width: $desktop-width) {

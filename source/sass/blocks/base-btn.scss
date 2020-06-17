@@ -1,26 +1,11 @@
-.auth-btn {
-  display: block;
-  margin: 0;
-  padding-top: 6px;
-  padding-bottom: 4px;
-  padding-left: 37px;
-  padding-right: 40px;
-  @include font(17px, 30px, $dark-blue-color, 700);
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-  background-color: $yellow-color;
-  border-radius: $border-small-radius;
-
-  border: none;
-  appearance: none;
-  cursor: pointer;
+.base-btn {
+  @include baseBtn();
 
   &--color {
     &--dark-blue {
       color: $dark-slate-blue-color;
 
-      .auth-btn__icon {
+      .base-btn__icon {
         fill: $dark-slate-blue-color;
       }
     }
@@ -49,7 +34,7 @@
   }
 }
 
-.auth-btn__icon {
+.base-btn__icon {
   flex-shrink: 0;
 
   &--plus {
@@ -66,7 +51,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .auth-btn {
+  .base-btn {
     padding-left: 28px;
     padding-right: 30px;
     padding-top: 10px;
@@ -75,7 +60,7 @@
     border-radius: 25px;
   }
 
-  .auth-btn__icon {
+  .base-btn__icon {
     &--plus {
       margin-right: 25px;
       width: 27px;

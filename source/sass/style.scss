@@ -6,7 +6,9 @@
 // common blocks
 @import "blocks/body.scss";
 @import "blocks/btn.scss";
-@import "blocks/auth-btn.scss";
+@import "blocks/base-btn.scss";
+@import "blocks/more-btn.scss";
+@import "blocks/step-btn.scss";
 @import "blocks/like-btn.scss";
 @import "blocks/labelled-block.scss";
 
@@ -52,8 +54,11 @@
 @import "blocks/add-plan.scss";
 @import "blocks/calendar.scss";
 @import "blocks/dropdown.scss";
-@import "blocks/fieldset.scss";
 @import "blocks/form.scss";
+@import "blocks/fieldset.scss";
+@import "blocks/step-1.scss";
+@import "blocks/step-2.scss";
+
 
 // catalog
 @import "blocks/country-filter.scss";

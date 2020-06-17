@@ -5,15 +5,9 @@
   flex-wrap: nowrap;
 
   margin: 0;
-  padding: 0;
-  background-color: transparent;
-  border: none;
 
   @include font(14px, 21px, $dark-blue-color, 700);
   text-transform: uppercase;
-
-  appearance: none;
-  cursor: pointer;
 
   &:hover {
     .like-btn__icons {

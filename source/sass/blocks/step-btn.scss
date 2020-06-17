@@ -1,0 +1,32 @@
+// Смешение стилей: на мобильной ширине кнопка выглядит как base-btn, на планшетной и дальше - как more-btn
+@media (max-width: $tablet-width - 1) {
+  .step-btn {
+    @include baseBtn();
+  }
+
+  .step-btn__icon {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .step-btn {
+    @include moreBtn($tablet-width);
+
+    &--back {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .step-btn__icon {
+    display: block;
+    @include moreBtnIcon();
+  }
+}
+
+.step-btn {
+  &--back {
+    background-color: transparent;
+  }
+}
