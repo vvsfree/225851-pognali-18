@@ -10,10 +10,49 @@
   background-color: $white-color;
 }
 
+.fieldset__header,
+.fieldset__content {
+  padding: 0 5px;
+}
+
+.fieldset__header {
+  margin-bottom: 20px;
+}
+
 .fieldset__legend {
-  float: left;
   padding: 0;
-  @include font(20px, 20px, #1d2e5b, 700);
+  margin: 0;
+  margin-bottom: 15px;
+  width: 100%;
+  @include font(20px, 20px, $dark-slate-blue-color, 700);
+}
+
+.fieldset__steps {
+  display: none;
+}
+
+.fieldset__text {
+  margin: 0;
+}
+
+.fieldset__text-br {
+  display: none;
+}
+
+.fieldset__content {
+  margin-bottom: 22px;
+}
+
+.fieldset__travelmate-count {
+  margin-bottom: 18px;
+}
+
+.fieldset__travel-period {
+  margin-bottom: 21px;
+}
+
+.fieldset__children {
+  margin-bottom: 21px;
 }
 
 @media (min-width: $tablet-width) {
@@ -26,8 +65,49 @@
     border-radius: $border-radius;
   }
 
+  .fieldset__header,
+  .fieldset__content {
+    padding: 0;
+  }
+
+  .fieldset__header {
+    margin-bottom: 22px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #d6d9e6;
+  }
+
   .fieldset__legend {
-    @include font(36px, 36px, #1d2e5b, 700);
+    margin-bottom: 35px;
+    @include font(36px, 36px, $dark-slate-blue-color, 700);
+  }
+
+  .fieldset__text-br {
+    display: inline;
+  }
+
+  .fieldset__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    margin-bottom: 46px;
+  }
+
+  .fieldset__travelmate-count {
+    order: -2;
+    margin-bottom: 25px;
+  }
+
+  .fieldset__travel-period {
+    margin-bottom: 59px;
+  }
+
+  .fieldset__children {
+    order: -1;
+    margin-bottom: 25px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid #d6d9e6;
   }
 
   .fieldset__controls {
@@ -54,7 +134,94 @@
     border-radius: $border-large-radius;
   }
 
+  .fieldset__header {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+  }
+
   .fieldset__legend {
-    @include font(36px, 50px, #1d2e5b, 700);
+    margin-bottom: 30px;
+    padding-right: 250px;
+    @include font(36px, 50px, $dark-slate-blue-color, 700);
+  }
+
+  .fieldset__legend-br {
+    display: none;
+  }
+
+  .fieldset__steps {
+    display: block;
+    margin: 0;
+    margin-top: -60px;
+    margin-left: auto;
+    padding: 0;
+    width: 227px;
+
+    line-height: 1;
+    letter-spacing: 0.1em;
+    color: rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
+
+    list-style-type: none;
+  }
+
+  .fieldset__step {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 22px;
+
+    &::before {
+      content: "";
+      margin-right: 38px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: rgba(128, 130, 133, 0.3);
+    }
+
+    &--active {
+      color: #000000;
+
+      &::before {
+        background-color: $dark-slate-blue-color;
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .fieldset__text {
+    width: 750px;
+  }
+
+  .fieldset__content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin-bottom: 56px;
+  }
+
+  .fieldset__travelmate-count {
+    margin-bottom: 0;
+  }
+
+  .fieldset__travel-period {
+    margin-top: 14px;
+    margin-bottom: 32px;
+  }
+
+  .fieldset__children {
+    margin-bottom: 0;
+    padding: 0;
+    border: none;
   }
 }

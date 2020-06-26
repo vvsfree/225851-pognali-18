@@ -1,0 +1,140 @@
+.number-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include font(16px, 1, $dark-slate-blue-color, 500);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.number-control__measure {
+  font-size: inherit;
+  opacity: 0.3;
+}
+
+.number-control__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  order: 1;
+
+  margin-top: 8px;
+  width: 100%;
+
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+}
+
+.number-control__input {
+  padding: 0;
+  width: 100px;
+  font-size: 15px;
+  text-align: center;
+  border: none;
+}
+
+.number-control__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 41px;
+  height: 41px;
+}
+
+.number-control__icon {
+  display: block;
+
+  &--minus {
+    width: 14px;
+    height: 2px;
+  }
+
+  &--plus {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.number-control__use {
+  opacity: 0.3;
+
+  &--large {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .number-control {
+    font-size: 20px;
+  }
+
+  .number-control__wrapper {
+    margin-top: 22px;
+  }
+
+  .number-control__input {
+    font-size: 20px;
+  }
+
+  .number-control__btn {
+    width: 58px;
+    height: 68px;
+  }
+
+  .number-control__icon {
+    &--minus {
+      width: 20px;
+      height: 2px;
+    }
+
+    &--plus {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .number-control__use {
+    opacity: 0.2;
+
+    &--small {
+      display: none;
+    }
+
+    &--large {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .number-control {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+
+    width: 530px;
+  }
+
+  .number-control__label {
+    width: 220px;
+  }
+
+  .number-control__wrapper {
+    order: 0;
+    margin-top: 0;
+    width: 181px;
+    box-sizing: border-box;
+  }
+
+  .number-control__input {
+    width: 60px;
+  }
+
+  .number-control__measure {
+    margin-left: 36px;
+    opacity: 1;
+  }
+}

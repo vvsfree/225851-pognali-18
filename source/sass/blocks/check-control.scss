@@ -1,0 +1,54 @@
+.check-control {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include font(15px, 1, $black-color);
+}
+
+.check-control__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 12px;
+  width: 26px;
+  height: 26px;
+  box-sizing: border-box;
+
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+}
+
+.check-control__input:focus + .check-control__box {
+  outline: thin dotted;
+}
+
+.check-control__icon {
+  width: 9px;
+  height: 9px;
+  fill: $blue-color;
+}
+
+.check-control__input:not(:checked) + .check-control__box > .check-control__icon {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .check-control {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: $dark-slate-blue-color;
+    text-transform: uppercase;
+  }
+
+  .check-control__box {
+    margin-right: 24px;
+  }
+
+  .check-control__icon {
+    width: 12px;
+    height: 12px;
+  }
+}
