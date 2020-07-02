@@ -8,6 +8,24 @@
   border: none;
   border-radius: 10px;
   background-color: $white-color;
+
+  &--step-1 {
+    .fieldset__content {
+      margin-bottom: 22px;
+    }
+  }
+
+  &--step-2 {
+    .fieldset__content {
+      margin-bottom: 25px;
+    }
+  }
+
+  &--step-3 {
+    .fieldset__content {
+      margin-bottom: 22px;
+    }
+  }
 }
 
 .fieldset__header,
@@ -16,7 +34,7 @@
 }
 
 .fieldset__header {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .fieldset__legend {
@@ -39,10 +57,6 @@
   display: none;
 }
 
-.fieldset__content {
-  margin-bottom: 22px;
-}
-
 .fieldset__travelmate-count {
   margin-bottom: 18px;
 }
@@ -55,6 +69,16 @@
   margin-bottom: 21px;
 }
 
+.fieldset__roadmap:not(:last-of-type) {
+  margin-bottom: 23px;
+}
+
+.fieldset__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
 @media (min-width: $tablet-width) {
   .fieldset {
     padding-left: 44px;
@@ -63,6 +87,36 @@
     padding-bottom: 53px;
     @include font(20px, 24px, $black-color, 400);
     border-radius: $border-radius;
+
+    &--step-1 {
+      .fieldset__header {
+        margin-bottom: 22px;
+      }
+
+      .fieldset__content {
+        margin-bottom: 46px;
+      }
+    }
+
+    &--step-2 {
+      .fieldset__header {
+        margin-bottom: 41px;
+      }
+
+      .fieldset__content {
+        margin-bottom: 49px;
+      }
+    }
+
+    &--step-3 {
+      .fieldset__header {
+        margin-bottom: 27px;
+      }
+
+      .fieldset__content {
+        margin-bottom: 47px;
+      }
+    }
   }
 
   .fieldset__header,
@@ -71,7 +125,6 @@
   }
 
   .fieldset__header {
-    margin-bottom: 22px;
     padding-bottom: 40px;
     border-bottom: 1px solid #d6d9e6;
   }
@@ -90,8 +143,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-
-    margin-bottom: 46px;
   }
 
   .fieldset__travelmate-count {
@@ -110,8 +161,12 @@
     border-bottom: 1px solid #d6d9e6;
   }
 
+  .fieldset__roadmap:not(:last-of-type) {
+    margin-bottom: 43px;
+  }
+
   .fieldset__controls {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
@@ -132,6 +187,25 @@
     padding-top: 100px;
     padding-bottom: 105px;
     border-radius: $border-large-radius;
+
+
+    &--step-1 {
+      .fieldset__header {
+        margin-bottom: 30px;
+      }
+    }
+
+    &--step-2 {
+      .fieldset__header {
+        margin-bottom: 62px;
+      }
+    }
+
+    &--step-3 {
+      .fieldset__header {
+        margin-bottom: 74px;
+      }
+    }
   }
 
   .fieldset__header {
@@ -140,7 +214,6 @@
     flex-wrap: wrap;
 
     padding-bottom: 50px;
-    margin-bottom: 30px;
   }
 
   .fieldset__legend {
@@ -223,5 +296,9 @@
     margin-bottom: 0;
     padding: 0;
     border: none;
+  }
+
+  .fieldset__roadmap:not(:last-of-type) {
+    margin-bottom: 46px;
   }
 }

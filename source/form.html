@@ -218,7 +218,7 @@
         </ul>
       </header>
       <form class="wrapper form add-plan__form" action="https://echo.htmlacademy.ru" method="POST">
-        <fieldset class="fieldset step-1 form__fieldset">
+        <fieldset class="fieldset fieldset--step-1 form__fieldset">
           <div class="fieldset__header">
             <p class="fieldset__legend">Шаг 1. <br class="fieldset__legend-br">Даты пребывания</p>
             <p class="fieldset__text">
@@ -648,16 +648,20 @@
           </div>
 
           <div class="fieldset__content">
-            <!-- TODO: расширяют fieldset -->
-            <label>
-              Босния и герцеговина
-              <textarea name="country" cols="30" rows="10"></textarea>
+            <label class="text-control fieldset__roadmap">
+              <span class="text-control__text">Босния и герцеговина</span>
+              <svg class="text-control__icon" width="35" height="24" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#flag-bosnia"></use>
+              </svg>
+              <textarea class="text-control__area" name="country" placeholder="План действий"></textarea>
             </label>
-            <label>
-              Чехия
-              <textarea name="country" cols="30" rows="10">
-                  Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
-                </textarea>
+            <label class="text-control fieldset__roadmap">
+              <span class="text-control__text">Чехия</span>
+              <svg class="text-control__icon" width="35" height="24" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#flag-czech"></use>
+              </svg>
+              <textarea class="text-control__area" name="country" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+              </textarea>
             </label>
           </div>
 
