@@ -1,0 +1,147 @@
+.dropdown-btn {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding: 11px 14px 11px 9px;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  @include font(14px, 18px, $dark-slate-blue-color, 500);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  background-color: $white-color;
+
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+
+  /* Кружок */
+
+  &::after {
+    content: "";
+    flex-shrink: 0;
+    margin-right: 22px;
+    width: 8px;
+    height: 8px;
+    box-sizing: border-box;
+    background-color: inherit;
+    border: 1px solid #cbced9;
+    border-radius: 50%;
+  }
+
+  /* Кнопка добавления новой страны */
+
+  &--add {
+    padding-right: 13px;
+    background-color: $lilac-color;
+    border-color: transparent;
+
+    &::after {
+      margin-right: 21px;
+    }
+
+    .dropdown-btn__text {
+      /* fade эффект текста кнопки */
+      &::after {
+        background-image: linear-gradient(90deg, transparent, $lilac-color 14px);
+      }
+    }
+
+    .dropdown-btn__icon {
+      width: 14px;
+      height: 14px;
+    }
+
+    .dropdown-btn__more-plus-use {
+      display: none;
+    }
+  }
+}
+
+.dropdown-btn__text {
+  position: relative;
+
+  flex-grow: 1;
+
+  // Кнопка не должна расти в высоту
+  // Если текст не помещается, то он скрывается с fade эффектом
+  height: 18px;
+
+  text-align: left;
+  word-break: break-all;
+  overflow-y: hidden;
+
+  /* fade эффект текста кнопки */
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    background-image: linear-gradient(90deg, transparent, #ffffff 14px);
+  }
+}
+
+.dropdown-btn__icon {
+  order: 1;
+  flex-shrink: 0;
+  width: 12px;
+  height: 7px;
+  opacity: 0.3;
+}
+
+@media (min-width: $tablet-width) {
+  .dropdown-btn {
+    padding: 24px 26px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: -36px;
+      transform: translateY(-50%);
+      margin-right: 0;
+      width: 15px;
+      height: 15px;
+    }
+
+    &--add {
+      .dropdown-btn__icon {
+        width: 18px;
+        height: 18px;
+      }
+
+      .dropdown-btn__qty-plus-use {
+        display: none;
+      }
+
+      .dropdown-btn__more-plus-use {
+        display: inline;
+      }
+    }
+  }
+
+  .dropdown-btn__text {
+    height: 20px;
+  }
+
+  .dropdown-btn__icon {
+    width: 17px;
+    height: 9px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .dropdown-btn {
+    &::after {
+      right: -53px;
+    }
+  }
+}

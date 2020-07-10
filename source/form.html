@@ -518,10 +518,80 @@
           </div>
 
           <div class="fieldset__content">
-            <label class="form__label"><input class="form__input" type="text" name="country" value="Босния и герцеговина" placeholder="Выберите страну" readonly></label>
-            <label class="form__label"><input class="form__input" type="text" name="country" value="Чехия" placeholder="Выберите страну" readonly></label>
 
-            <div class="dropdown step-2__dropdown">
+            <div class="dropdown-control dropdown-control--filled fieldset__dropdown-control">
+              <input class="dropdown-control__input" type="hidden" name="countries" value="Босния и герцеговина">
+              <button class="btn dropdown-btn dropdown-control__dropdown-btn fieldset__dropdown-btn" type="button">
+                <span class="dropdown-btn__text">Босния и герцеговина</span>
+                <svg class="dropdown-btn__icon" width="12" height="7" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/sprite.svg#dropdown-form"></use>
+                </svg>
+              </button>
+              <svg class="dropdown-control__flag-icon" width="35" height="24" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#flag-bosnia"></use>
+              </svg>
+              <button class="btn dropdown-control__del-btn" type="button">
+                <svg class="dropdown-control__del-icon" width="9" height="9" aria-hidden="true" focusable="false">
+                  <use class="dropdown-control__small-cross-use" xlink:href="img/sprite.svg#small-cross"></use>
+                  <use class="dropdown-control__menu-close-use" xlink:href="img/sprite.svg#menu-close"></use>
+                </svg>
+              </button>
+              <svg class="dropdown-control__arrow-icon" width="5" height="10" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#small-arrow"></use>
+              </svg>
+            </div>
+
+            <div class="dropdown-control dropdown-control--filled fieldset__dropdown-control">
+              <input class="dropdown-control__input" type="hidden" name="countries" value="Чехия">
+              <button class="btn dropdown-btn dropdown-control__dropdown-btn fieldset__dropdown-btn" type="button">
+                <span class="dropdown-btn__text">Чехия</span>
+                <svg class="dropdown-btn__icon" width="12" height="7" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/sprite.svg#dropdown-form"></use>
+                </svg>
+              </button>
+              <svg class="dropdown-control__flag-icon" width="35" height="24" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#flag-czech"></use>
+              </svg>
+              <button class="btn dropdown-control__del-btn" type="button">
+                <svg class="dropdown-control__del-icon" width="9" height="9" aria-hidden="true" focusable="false">
+                  <use class="dropdown-control__small-cross-use" xlink:href="img/sprite.svg#small-cross"></use>
+                  <use class="dropdown-control__menu-close-use" xlink:href="img/sprite.svg#menu-close"></use>
+                </svg>
+              </button>
+              <svg class="dropdown-control__arrow-icon" width="5" height="10" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#small-arrow"></use>
+              </svg>
+            </div>
+
+            <div class="dropdown-control fieldset__dropdown-control">
+              <input class="dropdown-control__input" type="hidden" name="countries" value="">
+              <button class="btn dropdown-btn dropdown-control__dropdown-btn fieldset__dropdown-btn" type="button">
+                <span class="dropdown-btn__text">Выберите страну</span>
+                <svg class="dropdown-btn__icon" width="12" height="7" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/sprite.svg#dropdown-form"></use>
+                </svg>
+              </button>
+              <!-- add svg with flag here (dropdown-control__flag-icon) -->
+              <button class="btn dropdown-control__del-btn" type="button">
+                <svg class="dropdown-control__del-icon" width="9" height="9" aria-hidden="true" focusable="false">
+                  <use class="dropdown-control__small-cross-use" xlink:href="img/sprite.svg#small-cross"></use>
+                  <use class="dropdown-control__menu-close-use" xlink:href="img/sprite.svg#menu-close"></use>
+                </svg>
+              </button>
+              <svg class="dropdown-control__arrow-icon" width="5" height="10" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#small-arrow"></use>
+              </svg>
+            </div>
+
+            <button class="btn dropdown-btn dropdown-btn--add fieldset__dropdown-btn" type="button">
+              <span class="dropdown-btn__text">Добавить страну</span>
+              <svg class="dropdown-btn__icon" width="14" height="14" aria-hidden="true" focusable="false">
+                <use class="dropdown-btn__qty-plus-use" xlink:href="img/sprite.svg#qty-plus-mobile"></use>
+                <use class="dropdown-btn__more-plus-use" xlink:href="img/sprite.svg#show-more-plus"></use>
+              </svg>
+            </button>
+
+            <div class="dropdown fieldset__country-dropdown">
               <label class="form__label dropdown__label">
                 <input class="form__input" type="text" name="country" value="" placeholder="Выберите страну" readonly>
               </label>
@@ -617,7 +687,6 @@
               </div>
             </div>
 
-            <button class="step-2__add-country-btn" type="button">Добавить страну</button>
           </div>
 
           <div class="fieldset__controls">
@@ -653,14 +722,14 @@
               <svg class="text-control__icon" width="35" height="24" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite.svg#flag-bosnia"></use>
               </svg>
-              <textarea class="text-control__area" name="country" placeholder="План действий"></textarea>
+              <textarea class="text-control__area" name="plans" placeholder="План действий"></textarea>
             </label>
             <label class="text-control fieldset__roadmap">
               <span class="text-control__text">Чехия</span>
               <svg class="text-control__icon" width="35" height="24" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite.svg#flag-czech"></use>
               </svg>
-              <textarea class="text-control__area" name="country" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+              <textarea class="text-control__area" name="plans" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
               </textarea>
             </label>
           </div>

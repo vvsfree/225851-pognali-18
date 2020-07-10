@@ -1,0 +1,124 @@
+.dropdown-control {
+  position: relative;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &--filled {
+    .dropdown-control__dropdown-btn {
+      /* Контрол, в котором страна уже определена
+        Нужно покрасить кружок */
+
+        &::after {
+          background-color: $dark-slate-blue-color;
+          border: none;
+
+          @media (max-width: $tablet-width - 1) {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(50%, -50%);
+
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+.dropdown-control__flag-icon {
+  flex-shrink: 0;
+  margin-left: -1px;
+  padding: 8px;
+  width: 35px;
+  height: 24px;
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+}
+
+.dropdown-control__del-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  width: 21px;
+  height: 21px;
+
+  background-color: $lilac-color;
+  border-radius: 50%;
+}
+
+.dropdown-control__del-icon {
+  width: 9px;
+  height: 9px;
+  opacity: 0.3;
+}
+
+.dropdown-control__menu-close-use {
+  display: none;
+}
+
+.dropdown-control__arrow-icon {
+  position: absolute;
+
+  right: 50px;
+  bottom: -17px;
+
+  width: 5px;
+  height: 10px;
+  fill: #cbced9;
+}
+
+@media (min-width: $tablet-width) {
+  .dropdown-control__flag-icon {
+    margin-left: 53px;
+    padding: 0;
+    width: 70px;
+    height: 47px;
+    border: none
+  }
+
+  .dropdown-control__del-btn {
+    position: static;
+    transform: translateX(2px);
+    margin-left: auto;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+  }
+
+  .dropdown-control__del-icon {
+    width: 18px;
+    height: 18px;
+    opacity: 0.2;
+  }
+
+  .dropdown-control__small-cross-use {
+    display: none;
+  }
+
+  .dropdown-control__menu-close-use {
+    display: inline;
+  }
+
+  .dropdown-control__arrow-icon {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .dropdown-control__flag-icon {
+    margin-left: 85px;
+  }
+
+  .dropdown-control__del-btn {
+    transform: translateX(-6px);
+  }
+}
