@@ -74,11 +74,22 @@
 /* Step 2 */
 
 .fieldset__dropdown-control {
+  position: relative;
+
   margin-bottom: 22px;
 }
 
-.fieldset__country-dropdown {
+.fieldset__country-widget {
   display: none;
+
+  &--expanded {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    display: block;
+  }
 }
 
 /* Step 3 */
@@ -198,6 +209,13 @@
     width: calc(100% - 163px);
   }
 
+  .fieldset__country-widget {
+    &--expanded {
+      display: flex;
+      width: calc(100% + 43px);
+      box-sizing: border-box;
+    }
+  }
 
   /* Step 3 */
 
@@ -366,6 +384,12 @@
 
   .fieldset__dropdown-btn {
     width: calc(100% - 270px);
+  }
+
+  .fieldset__country-widget {
+    &--expanded {
+      width: calc(100% - 270px);
+    }
   }
 
   /* Step 3 */

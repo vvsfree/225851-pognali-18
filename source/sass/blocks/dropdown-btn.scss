@@ -59,6 +59,41 @@
       display: none;
     }
   }
+
+  &--active {
+    padding-right: 16px;
+
+    color: $white-color;
+
+    background-color: $dark-slate-blue-color;
+
+    border-color: transparent;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    /* Кружок прячем */
+    @media (max-width: $tablet-width - 1) {
+      &::after {
+        content: none;
+      }
+    }
+
+    .dropdown-btn__text {
+      /* fade эффект текста кнопки */
+      &::after {
+        background-image: linear-gradient(90deg, transparent, $dark-slate-blue-color 14px);
+      }
+    }
+
+    .dropdown-btn__icon {
+      display: none;
+    }
+
+    .dropdown-btn__close-icon {
+      display: block;
+      fill: $white-color;
+    }
+  }
 }
 
 .dropdown-btn__text {
@@ -95,6 +130,18 @@
   opacity: 0.3;
 }
 
+.dropdown-btn__close-icon {
+  flex-shrink: 0;
+  display: none;
+  width: 9px;
+  height: 9px;
+}
+
+.dropdown-btn__menu-close-use {
+  display: none;
+}
+
+
 @media (min-width: $tablet-width) {
   .dropdown-btn {
     padding: 24px 26px;
@@ -126,6 +173,14 @@
         display: inline;
       }
     }
+
+    &--active {
+      padding-right: 25px;
+
+      &::after {
+        background-color: $white-color;
+      }
+    }
   }
 
   .dropdown-btn__text {
@@ -135,6 +190,19 @@
   .dropdown-btn__icon {
     width: 17px;
     height: 9px;
+  }
+
+  .dropdown-btn__close-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .dropdown-btn__small-cross-use {
+    display: none;
+  }
+
+  .dropdown-btn__menu-close-use {
+    display: inline;
   }
 }
 

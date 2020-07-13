@@ -29,3 +29,16 @@ if (countryFilter) {
     countryFilter.classList.remove(`country-filter--expanded`);
   });
 }
+
+
+// Form. Country Selection Widget
+// Временно работаю только с "пустым" контролом выбора страны
+const dropdownControl = document.querySelector('.dropdown-control:not(.dropdown-control--filled)');
+const dropdownBtn = dropdownControl.querySelector('.dropdown-btn');
+const countryWidget = document.querySelector('.fieldset__country-widget');
+
+dropdownBtn.addEventListener('click', () => {
+  dropdownControl.classList.toggle('dropdown-control--active');
+  dropdownBtn.classList.toggle('dropdown-btn--active');
+  countryWidget.classList.toggle('fieldset__country-widget--expanded');
+});

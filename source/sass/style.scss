@@ -31,6 +31,7 @@
 @import "blocks/country-list.scss";
 @import "blocks/transport-list.scss";
 @import "blocks/letters.scss";
+@import "blocks/country-widget.scss";
 
 // header
 @import "blocks/menu.scss";
@@ -58,7 +59,6 @@
 @import "blocks/plan-list.scss";
 @import "blocks/add-plan.scss";
 @import "blocks/calendar.scss";
-@import "blocks/dropdown.scss";
 @import "blocks/form.scss";
 @import "blocks/fieldset.scss";
 
@@ -79,4 +79,4 @@
 @import "blocks/copyright.scss";
 @import "blocks/footer.scss";
 
-@import "outline.scss";
+// @import "outline.scss";

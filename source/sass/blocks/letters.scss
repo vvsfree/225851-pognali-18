@@ -9,6 +9,22 @@
   list-style: none;
 
   @include font(14px, 14px, $dark-slate-blue-color, 500);
+
+  &--catalog {
+    .letters__radio:checked + .letters__label {
+      position: relative;
+      color: $white-color;
+      background-color: $dark-slate-blue-color;
+      border-color: transparent;
+    }
+
+  }
+
+  &--form {
+    .letters__radio:checked + .letters__label {
+      background-color: $lilac-color;
+    }
+  }
 }
 
 .letters__item {
@@ -20,7 +36,9 @@
   }
 
   &:nth-of-type(5n) {
-    width: 44px;
+    .letters__label {
+      width: 44px;
+    }
   }
 }
 
@@ -37,13 +55,6 @@
   background-color: $white-color;
 
   cursor: pointer;
-}
-
-.letters__radio:checked + .letters__label {
-  position: relative;
-  color: $white-color;
-  background-color: $dark-slate-blue-color;
-  border-color: transparent;
 }
 
 .letters__radio:focus + .letters__label {
@@ -67,57 +78,115 @@
 
 @media (min-width: $tablet-width) {
   .letters {
-    font-size: 60px;
     line-height: 1;
-    color: $blue-color;
-  }
 
-  .letters__item {
-    margin: 0;
-  }
+    &--catalog {
+      font-size: 60px;
+      color: $blue-color;
 
-  .letters__label {
-    width: 72px;
-    height: 65px + 17px;
+      .letters__item {
+        margin: 0;
+      }
 
-    border: none;
-    background-color: transparent;
-    opacity: 0.2;
-  }
+      .letters__label {
+        width: 72px;
+        height: 65px + 17px;
 
-  .letters__radio:checked + .letters__label {
-    color: inherit;
-    opacity: 1;
-    background-color: transparent;
-    border: none;
+        border: none;
+        background-color: transparent;
+        opacity: 0.2;
+      }
+
+      .letters__radio:checked + .letters__label {
+        color: inherit;
+        opacity: 1;
+        background-color: transparent;
+        border: none;
+      }
+    }
+
+    &--form {
+      font-size: 20px;
+      line-height: 1;
+
+      .letters__item {
+        &:nth-of-type(5n) {
+          .letters__label {
+            width: 54px;
+          }
+        }
+      }
+
+      .letters__label {
+        width: 53px;
+        height: 70px;
+      }
+
+      .letters__radio:checked + .letters__label {
+        color: $white-color;
+        background-color: $dark-slate-blue-color;
+        border: transparent;
+      }
+
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
-  .letters__item {
-    width: 250px;
+  .letters {
+    &--catalog {
+      .letters__item {
+        width: 250px;
 
-    &:nth-of-type(5n) {
-      width: 250px;
+        &:nth-of-type(5n) {
+          width: 250px;
+        }
+      }
+
+      .letters__label {
+        display: block;
+        margin-bottom: 30px;
+        width: auto;
+        height: auto;
+        opacity: 1;
+        cursor: auto;
+      }
+
+      .letters__radio:focus + .letters__label {
+        outline: none;
+      }
+
+      .letters__country-list {
+        display: block;
+        margin-bottom: 50px;
+        @include font(20px, 30px, $black-color);
+      }
     }
-  }
 
-  .letters__label {
-    display: block;
-    margin-bottom: 30px;
-    width: auto;
-    height: auto;
-    opacity: 1;
-    cursor: auto;
-  }
+    &--form {
+      margin-top: -15px;
 
-  .letters__radio:focus + .letters__label {
-    outline: none;
-  }
+      .letters__item {
+        margin-left: 15px;
+        margin-top: 15px;
 
-  .letters__country-list {
-    display: block;
-    margin-bottom: 50px;
-    @include font(20px, 30px, $black-color);
+        &:nth-of-type(5n + 1) {
+          margin-left: 0;
+        }
+
+        &:nth-of-type(5n) {
+          .letters__label {
+            width: 60px;
+          }
+        }
+      }
+
+      .letters__label {
+        width: 60px;
+        height: 70px;
+
+        border-radius: 4px;
+      }
+    }
   }
 }

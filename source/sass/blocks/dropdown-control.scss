@@ -10,22 +10,31 @@
       /* Контрол, в котором страна уже определена
         Нужно покрасить кружок */
 
-        &::after {
-          background-color: $dark-slate-blue-color;
-          border: none;
+      &::after {
+        background-color: $dark-slate-blue-color;
+        border: none;
 
-          @media (max-width: $tablet-width - 1) {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translate(50%, -50%);
+        /* Только на мобильной версии кружок нужно сдвинуть на границу кнопки */
+        @media (max-width: $tablet-width - 1) {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translate(50%, -50%);
 
-            margin-right: 0;
-          }
+          margin-right: 0;
         }
       }
     }
   }
+
+  &--active {
+    @media (max-width: $tablet-width - 1) {
+      .dropdown-control__del-btn {
+        display: none;
+      }
+    }
+  }
+}
 
 .dropdown-control__flag-icon {
   flex-shrink: 0;

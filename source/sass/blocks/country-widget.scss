@@ -1,0 +1,125 @@
+.country-widget--catalog {
+  padding: 0 $mobile-content-padding;
+
+  .country-widget__letters {
+    margin-bottom: 48px;
+  }
+}
+
+.country-widget--form {
+  background-color: $white-color;
+
+  border-bottom-left-radius: $border-extra-small-radius;
+  border-bottom-right-radius: $border-extra-small-radius;
+
+  box-shadow: inset 0 0 0 1px #cbced9, 0px 20px 50px 0px rgba(29, 46, 91, 0.1);;
+
+  .country-widget__letters {
+    margin-bottom: 56px;
+  }
+
+  .country-widget__country-extra-list {
+    padding: 18px;
+    padding-top: 0;
+  }
+}
+
+.country-widget__country-extra-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include font(16px, 22px, $black-color);
+}
+
+.country-widget__country-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (min-width: $tablet-width) {
+  .country-widget {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding: 0;
+  }
+
+  .country-widget--catalog {
+    .country-widget__letters,
+    .country-widget__country-extra-list {
+      padding: 0;
+    }
+
+    .country-widget__letters {
+      margin: 0;
+      width: 360px;
+    }
+
+    .country-widget__country-extra-list {
+      padding-top: 17px;
+      width: 176px;
+    }
+  }
+
+  .country-widget--form {
+    position: relative;
+
+    padding: 34px 27px;
+    box-shadow: 0px 20px 50px 0px rgba(29, 46, 91, 0.1);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 206px;
+      width: 1px;
+      height: 100%;
+      background-color: #cbced9;
+    }
+
+    .country-widget__letters {
+      margin-bottom: 0;
+      width: 262px;
+    }
+
+    .country-widget__country-extra-list {
+      padding: 0;
+      width: 154px;
+    }
+  }
+
+  .country-widget__country-extra-list {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .country-widget--catalog {
+    .country-widget__letters {
+      margin-bottom: 59px;
+      width: 100%;
+    }
+
+    .country-widget__country-extra-list {
+      display: none;
+    }
+  }
+
+  .country-widget--form {
+    &::after {
+      right: 240px;
+      opacity: 0.5;
+    }
+
+    .country-widget__letters {
+      width: 360px;
+    }
+
+    .country-widget__country-extra-list {
+      width: 188px;
+    }
+  }
+}
