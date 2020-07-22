@@ -14,37 +14,37 @@
       <h2 class="visually-hidden">Меню</h2>
       <div class="wrapper menu__wrapper">
         <a class="menu__logo" href="index.html">
-          <picture class="menu__picture menu__picture--closed">
+          <picture class="menu__picture menu__picture--white">
             <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
             <img class="menu__logo-img" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип">
           </picture>
-          <picture class="menu__picture menu__picture--opened">
-            <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+          <picture class="menu__picture menu__picture--blue">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
             <img class="menu__logo-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип">
           </picture>
         </a>
 
         <button class="menu__toggle-btn" type="button" aria-label="Открыть меню">
-          <svg class="menu__toggle-icon menu__toggle-icon--closed" width="25" height="11" aria-hidden="true" focusable="false">
+          <svg class="menu__toggle-icon menu__toggle-icon--burger" width="25" height="11" aria-hidden="true" focusable="false">
             <use xlink:href="img/sprite.svg#menu"></use>
           </svg>
-          <svg class="menu__toggle-icon menu__toggle-icon--opened" width="19" height="19" aria-hidden="true" focusable="false">
+          <svg class="menu__toggle-icon menu__toggle-icon--close" width="19" height="19" aria-hidden="true" focusable="false">
             <use xlink:href="img/sprite.svg#menu-close"></use>
           </svg>
         </button>
 
         <nav class="main-nav menu__main-nav">
-          <ul class="site-list">
-            <li class=site-list__item>
-              <a class="site-list__link" href="index.html">О сервисе</a>
+          <ul class="main-nav__list menu__main-nav-list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">О сервисе</a>
             </li>
-            <li class=site-list__item>
-              <a class="site-list__link">Направления</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link">Направления</a>
             </li>
-            <li class=site-list__item>
-              <a class="site-list__link" href="catalog.html">Попутчики</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Попутчики</a>
             </li>
           </ul>
         </nav>

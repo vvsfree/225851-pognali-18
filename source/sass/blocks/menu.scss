@@ -1,6 +1,43 @@
 .menu {
   padding-top: 27px;
   padding-bottom: 27px;
+
+  &--sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    background-color: $white-color;
+
+    .menu__picture {
+      &--blue {
+        display: block;
+      }
+
+      &--white {
+        display: none;
+      }
+    }
+
+    .menu__toggle-icon {
+      &--burger {
+        fill: #cccccc;
+      }
+    }
+
+    .menu__main-nav {
+      color: $blue-color;
+    }
+
+    .menu__main-nav-list {
+      &::before {
+        background-color: $blue-color;
+      }
+    }
+
+  }
 }
 
 .menu__wrapper {
@@ -26,21 +63,21 @@
 .menu__toggle-icon {
   display: block;
 
-  &--closed {
+  &--burger {
     width: 25px;
     height: 11px;
     fill: #ffffff;
   }
 
-  &--opened {
+  &--close {
     width: 19px;
     height: 19px;
     fill: #cccccc;
   }
 }
 
-.menu__picture--opened,
-.menu__toggle-icon--opened,
+.menu__picture--blue,
+.menu__toggle-icon--close,
 .menu__top-contact-list,
 .menu__main-nav,
 .menu__auth-btn,
@@ -51,13 +88,15 @@
 
 @media (max-width: $desktop-width - 1) {
   .menu {
-    &--opened,
+    &--opened:not(&--sticky),
     &--no-js {
       position: absolute;
       left: 0;
       right: 0;
-      z-index: 20;
+    }
 
+    &--opened,
+    &--no-js {
       padding-bottom: 40px;
 
       background-color: $white-color;
@@ -88,21 +127,21 @@
       }
 
       .menu__picture {
-        &--opened {
+        &--blue {
           display: block;
         }
 
-        &--closed {
+        &--white {
           display: none;
         }
       }
 
       .menu__toggle-icon {
-        &--opened {
+        &--close {
           display: block;
         }
 
-        &--closed {
+        &--burger {
           display: none;
         }
       }
@@ -132,7 +171,7 @@
   }
 
   .menu__toggle-icon {
-    &--opened {
+    &--close {
       width: 18px;
       height: 18px;
     }
@@ -174,6 +213,11 @@
   .menu {
     padding-top: 47px;
     padding-bottom: 11px;
+
+    &--sticky {
+      padding-top: 20px;
+      padding-bottom: 18px;
+    }
   }
 
   .menu__wrapper {

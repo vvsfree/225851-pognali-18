@@ -51,6 +51,10 @@
     padding: 0 $tablet-content-padding;
 
     background-image: url("../../img/flags-back@1x.png");
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../../img/flags-back@2x.png");
+    }
+
     background-position: right top;
     background-repeat: no-repeat;
     background-size: 289px auto;

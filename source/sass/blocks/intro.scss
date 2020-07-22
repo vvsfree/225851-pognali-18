@@ -5,29 +5,35 @@
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
 
-  // Необходимо для того, чтобы луну закрепить снизу блока, чтобы при увеличении ширины экрана
-  // луна росла вверх, визуально расширяясь - этому способствует contain.
-  // Как вариант, убрать этот блок и в самом intro добавить изображение луны, закрепленное сверху.
-  // Тогда при увеличении ширины экрана луна будет уходить вниз, уходя с видимой части экрана ближе к планшетной ширине.
-  // Если оставить луну как есть, без contain, то при расширении экрана она будет выглядеть огрызком посреди экрана.
-  &::before {
-    content: "";
-    position: absolute;
-    // Псевдо-блок с луной помещается под header (только на мобильной версии)
-    // Высота header на М версии должна быть фиксированная,
-    // там не может быть переполнения контентом - его там нет: только логотип и кнопка
-    top: -73px;
-    left: 0;
-    right: 0;
-    z-index: -1;
+  @media (max-width: $tablet-width - 1) {
+    // Необходимо для того, чтобы луну закрепить снизу блока, чтобы при увеличении ширины экрана
+    // луна росла вверх, визуально расширяясь - этому способствует contain.
+    // Как вариант, убрать этот блок и в самом intro добавить изображение луны, закрепленное сверху.
+    // Тогда при увеличении ширины экрана луна будет уходить вниз, уходя с видимой части экрана ближе к планшетной ширине.
+    // Если оставить луну как есть, без contain, то при расширении экрана она будет выглядеть огрызком посреди экрана.
+    &::before {
+      content: "";
+      position: absolute;
+      // Псевдо-блок с луной помещается под header (только на мобильной версии)
+      // Высота header на М версии должна быть фиксированная,
+      // там не может быть переполнения контентом - его там нет: только логотип и кнопка
+      top: -73px;
+      left: 0;
+      right: 0;
+      z-index: -1;
 
-    width: 100%;
-    height: 569px;
+      width: 100%;
+      height: 569px;
 
-    background-image: url("../../img/globe-back-mobile@1x.jpg");
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
+      background-image: url("../../img/globe-back-mobile@1x.jpg");
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../../img/globe-back-mobile@2x.jpg");
+      }
+
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 }
 
@@ -74,6 +80,11 @@
     padding-top: 36px;
 
     background-image: url("../../img/globe-back-tablet@1x.jpg"), linear-gradient(to bottom, #182044 868px, $blue-color 868px);
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../../img/globe-back-tablet@2x.jpg"), linear-gradient(to bottom, #182044 868px, $blue-color 868px);
+    }
+
     background-position: center top 256px, left top;
     background-repeat: no-repeat, no-repeat;
     background-size: 1479px 612px, 100% 100%;
@@ -127,6 +138,11 @@
 
     background-color: $dark-blue-color;
     background-image: url("../../img/globe-back-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../../img/globe-back-desktop@2x.jpg");
+    }
+
     background-position: center bottom;
     background-size: 1800px 750px;
   }

@@ -7,6 +7,16 @@ menuBtn.addEventListener(`click`, () => {
   menu.classList.toggle(`menu--opened`);
 });
 
+// Sticky menu
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset >= window.innerHeight) {
+    menu.classList.add("menu--sticky")
+  } else {
+    menu.classList.remove("menu--sticky");
+  }
+});
+
+
 // Catalog. Country Filter
 const countryFilter = document.querySelector(`.country-filter`);
 
@@ -34,11 +44,13 @@ if (countryFilter) {
 // Form. Country Selection Widget
 // Временно работаю только с "пустым" контролом выбора страны
 const dropdownControl = document.querySelector('.dropdown-control:not(.dropdown-control--filled)');
-const dropdownBtn = dropdownControl.querySelector('.dropdown-btn');
-const countryWidget = document.querySelector('.fieldset__country-widget');
+if (dropdownControl) {
+  const dropdownBtn = dropdownControl.querySelector('.dropdown-btn');
+  const countryWidget = document.querySelector('.fieldset__country-widget');
 
-dropdownBtn.addEventListener('click', () => {
-  dropdownControl.classList.toggle('dropdown-control--active');
-  dropdownBtn.classList.toggle('dropdown-btn--active');
-  countryWidget.classList.toggle('fieldset__country-widget--expanded');
-});
+  dropdownBtn.addEventListener('click', () => {
+    dropdownControl.classList.toggle('dropdown-control--active');
+    dropdownBtn.classList.toggle('dropdown-btn--active');
+    countryWidget.classList.toggle('fieldset__country-widget--expanded');
+  });
+}
