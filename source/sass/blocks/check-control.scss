@@ -25,13 +25,14 @@
 }
 
 .check-control__icon {
+  display: none;
   width: 9px;
   height: 9px;
   fill: $blue-color;
 }
 
-.check-control__input:not(:checked) + .check-control__box > .check-control__icon {
-  display: none;
+.check-control__input:checked + .check-control__box > .check-control__icon {
+  display: block;
 }
 
 @media (min-width: $tablet-width) {

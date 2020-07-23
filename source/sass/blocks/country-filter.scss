@@ -67,6 +67,7 @@
 .country-filter__heading {
   margin: 0;
   margin-left: 12px;
+
   @include font(16px, 22px, $blue-color, 700);
   text-transform: uppercase;
 }
@@ -242,7 +243,7 @@
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width - 1){
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
   .country-filter__filter-icon,
   .country-filter__heading {
     @include visuallyHidden();
@@ -251,7 +252,6 @@
 
 @media (min-width: $desktop-width) {
   .country-filter {
-
     &#{&}--expanded,
     &#{&}--no-js {
       position: static;

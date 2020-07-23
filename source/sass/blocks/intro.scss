@@ -26,6 +26,7 @@
       height: 569px;
 
       background-image: url("../../img/globe-back-mobile@1x.jpg");
+
       @media (min-resolution: $retina-dppx) {
         background-image: url("../../img/globe-back-mobile@2x.jpg");
       }

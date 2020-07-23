@@ -17,7 +17,6 @@
       background-color: $dark-slate-blue-color;
       border-color: transparent;
     }
-
   }
 
   &--form {
@@ -127,7 +126,6 @@
         background-color: $dark-slate-blue-color;
         border: transparent;
       }
-
     }
   }
 }
@@ -159,6 +157,7 @@
       .letters__country-list {
         display: block;
         margin-bottom: 50px;
+
         @include font(20px, 30px, $black-color);
       }
     }

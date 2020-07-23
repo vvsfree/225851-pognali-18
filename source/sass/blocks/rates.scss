@@ -1,6 +1,7 @@
 .rates {
   padding-top: 37px + $border-radius;
   padding-bottom: $border-radius;
+
   @include font(16px, 22px, $black-color, 300);
   background-color: $lilac-color;
   border-bottom-left-radius: $border-radius;
@@ -23,6 +24,7 @@
     width: 99px;
     height: 99px;
     background-image: url("../../img/rates@1x.png");
+
     @media (min-resolution: $retina-dppx) {
       background-image: url("../../img/rates@2x.png");
     }
@@ -93,13 +95,13 @@
   }
 }
 
-// .rates__price {
-//   margin-bottom: 14px;
-// }
-
 .rates__link {
   @include font(16px, 16px, $blue-color, bold);
   text-decoration: none;
+}
+
+.rates__img {
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -119,7 +121,6 @@
   }
 
   .rates__heading {
-    // display: block;
     margin-bottom: 74px;
     text-align: center;
 
@@ -143,6 +144,7 @@
       width: 99px;
       height: 99px;
       background-image: url("../../img/rates@1x.png");
+
       @media (min-resolution: $retina-dppx) {
         background-image: url("../../img/rates@2x.png");
       }
@@ -165,15 +167,6 @@
     }
   }
 
-  // .rates__term,
-  // .rates__price {
-  //   display: table-cell;
-  //   padding: 0;
-  //   padding-top: 16px;
-  //   padding-bottom: 17px;
-  //   margin: 0;
-  // }
-
   .rates__term {
     // padding-right: 10px;
     width: 71%;
@@ -190,9 +183,7 @@
   }
 
   .rates__price {
-    // padding-left: 10px;
     width: 29%;
-    // text-align: right;
   }
 
   .rates__link {
@@ -205,22 +196,22 @@
     width: 75%;
 
     @include font(20px, 20px, #132576, bold);
+  }
 
-    &::before {
-      content: "";
-      flex-shrink: 0;
-      margin-right: 23px;
+  .rates__img {
+    display: block;
+    flex-shrink: 0;
 
-      width: 67px;
-      height: 67px;
-      background-color: #e2e5f2;
-      background-image: url("../../img/business.svg");
-      background-repeat: no-repeat;
-      background-size: 17px 21px;
-      background-position: center;
+    margin-right: 23px;
+    padding: 23px 25px;
 
-      border-radius: 50%;
-    }
+    width: 17px;
+    height: 21px;
+
+    fill: currentColor;
+
+    background-color: #e2e5f2;
+    border-radius: 50%;
   }
 }
 
@@ -254,6 +245,7 @@
       width: 198px;
       height: 198px;
       background-image: url("../../img/rates@1x.png");
+
       @media (min-resolution: $retina-dppx) {
         background-image: url("../../img/rates@2x.png");
       }

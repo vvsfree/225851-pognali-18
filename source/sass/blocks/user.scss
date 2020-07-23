@@ -1,6 +1,7 @@
 .user {
   padding-top: 22px + $border-small-radius;
   padding-bottom: 33px + $border-radius;
+
   @include font(16px, 22px, $black-color, normal);
   background-color: $lilac-color;
 }
@@ -78,6 +79,7 @@
 .user__legend {
   padding: 0 17px;
   text-align: center;
+
   @include font(16px, 18px, $dark-slate-blue-color, 700);
   text-transform: uppercase;
 }
@@ -153,6 +155,7 @@
     left: 50%;
     bottom: 0;
     transform: translate(-50%, 50%);
+
     @include font(20px, 18px, $dark-slate-blue-color, 500);
     background-color: $lilac-color;
   }

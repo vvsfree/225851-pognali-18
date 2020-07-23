@@ -1,5 +1,6 @@
 .text {
   margin: 0;
+
   @include font(16px, 22px, $white-color, 300);
   font-style: normal;
 

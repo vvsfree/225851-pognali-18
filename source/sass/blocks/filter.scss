@@ -112,12 +112,12 @@
 }
 
 .filter__checkbox {
-  &:focus  ~ .filter__label-text::before {
+  &:focus ~ .filter__label-text::before {
     outline: thin dotted;
   }
 
   &:checked ~ .filter__label-text::before {
-    background-image: url(../../img/tick.svg);
+    background-image: url("../../img/tick.svg");
     background-position: center;
     background-size: 9px 9px;
     background-repeat: no-repeat;
@@ -394,7 +394,7 @@
     &:last-of-type {
       padding-bottom: 0;
       margin-bottom: 38px;
-      border-bottom: none
+      border-bottom: none;
     }
   }
 

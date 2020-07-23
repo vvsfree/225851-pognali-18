@@ -4,6 +4,7 @@
   padding-right: 20px;
   padding-top: 24px;
   padding-bottom: 22px;
+
   @include font(16px, 22px, $black-color, 400);
   border: none;
   border-radius: 10px;
@@ -42,6 +43,7 @@
   margin: 0;
   margin-bottom: 15px;
   width: 100%;
+
   @include font(20px, 20px, $dark-slate-blue-color, 700);
 }
 
@@ -110,6 +112,7 @@
     padding-right: 43px;
     padding-top: 49px;
     padding-bottom: 53px;
+
     @include font(20px, 24px, $black-color, 400);
     border-radius: $border-radius;
 
@@ -167,6 +170,7 @@
 
   .fieldset__legend {
     margin-bottom: 35px;
+
     @include font(36px, 36px, $dark-slate-blue-color, 700);
   }
 
@@ -295,6 +299,7 @@
   .fieldset__legend {
     margin-bottom: 30px;
     padding-right: 250px;
+
     @include font(36px, 50px, $dark-slate-blue-color, 700);
   }
 

@@ -36,7 +36,6 @@
         background-color: $blue-color;
       }
     }
-
   }
 }
 
@@ -178,7 +177,7 @@
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width - 1){
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
   .menu {
     &--opened,
     &--no-js {

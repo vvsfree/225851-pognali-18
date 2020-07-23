@@ -24,7 +24,7 @@
     margin-bottom: 0;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
@@ -51,6 +51,7 @@
     padding: 0 $tablet-content-padding;
 
     background-image: url("../../img/flags-back@1x.png");
+
     @media (min-resolution: $retina-dppx) {
       background-image: url("../../img/flags-back@2x.png");
     }
@@ -79,7 +80,7 @@
       position: relative;
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: -40px;
         left: -$tablet-content-padding;

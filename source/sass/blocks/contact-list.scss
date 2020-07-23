@@ -21,6 +21,7 @@
 
   text-decoration: none;
   text-transform: uppercase;
+
   @include wordWrap();
 
   &::before {
@@ -58,7 +59,6 @@
     width: 27px;
     height: 27px;
   }
-
 }
 
 @media (min-width: $desktop-width) {

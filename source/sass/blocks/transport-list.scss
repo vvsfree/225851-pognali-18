@@ -19,7 +19,7 @@
     }
 
     .transport-list__checkbox {
-      &:focus  ~ .transport-list__label {
+      &:focus ~ .transport-list__label {
         outline: thin dotted;
       }
 

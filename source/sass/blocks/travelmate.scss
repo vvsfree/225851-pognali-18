@@ -2,6 +2,7 @@
   position: relative;
   padding-bottom: 22px;
   background-color: $white-color;
+
   @include font(16px, 18px, $black-color, 400);
   text-align: center;
   border-radius: $border-extra-small-radius;

@@ -10,7 +10,7 @@
   // то квадрат всегда будет __над__ картинкой.
   // Как вариант, квадрат можно нарисовать в SVG и сделать множественный фон (SVG + картинка)
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 40px + $border-radius;
     // для того, чтобы квадрат уперся в левую границу wrapper добавляем к right позиции 3px:
@@ -27,7 +27,7 @@
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 40px + $border-radius;
     left: 0;
@@ -37,6 +37,7 @@
     height: 352px;
 
     background-image: url("../../img/about-mobile@1x.png");
+
     @media (min-resolution: $retina-dppx) {
       background-image: url("../../img/about-mobile@2x.png");
     }
@@ -97,6 +98,7 @@
       height: 548px;
 
       background-image: url("../../img/about-tablet@1x.png");
+
       @media (min-resolution: $retina-dppx) {
         background-image: url("../../img/about-tablet@2x.png");
       }
@@ -156,6 +158,7 @@
       height: 665px;
 
       background-image: url("../../img/about-desktop@1x.png");
+
       @media (min-resolution: $retina-dppx) {
         background-image: url("../../img/about-desktop@2x.png");
       }

@@ -7,6 +7,7 @@ var sass = require("gulp-sass");
 
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
+var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 
 var postcss = require("gulp-postcss");
@@ -25,6 +26,14 @@ gulp.task("css", function () {
     .pipe(gulp.dest("source/css"))
     .pipe(server.stream());
 });
+
+gulp.task("webp", function () {
+  return gulp.src("source/img/*.{png,jpg}")
+    .pipe(plumber())
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest("source/img-webp"));
+});
+
 
 gulp.task("sprite", function () {
   return gulp.src("source/img/*.svg")

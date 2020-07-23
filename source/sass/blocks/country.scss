@@ -1,6 +1,7 @@
 .country {
   display: flex;
   flex-direction: column;
+
   @include font(16px, 18px, $black-color, 500);
 }
 

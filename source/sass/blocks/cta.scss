@@ -48,6 +48,7 @@
   width: 100%;
   height: 62px;
   box-sizing: border-box;
+
   @include font(18px, 18px, rgba(68, 68, 68, 0.3), 700);
   border: none;
   border-radius: $border-extra-small-radius;

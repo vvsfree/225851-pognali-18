@@ -63,7 +63,7 @@
 
   .pager__item {
     &--active {
-    .pager__btn {
+      .pager__btn {
         background-color: $yellow-color;
       }
     }
@@ -71,6 +71,7 @@
 
   .pager__btn {
     width: 50px;
+
     @include font(20px, 30px, $dark-blue-color, bold);
     border-radius: 50%;
 

@@ -13,18 +13,24 @@
         <div class="wrapper menu__wrapper">
           <a class="menu__logo" href="index.html">
             <picture class="menu__picture menu__picture--white">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x" type="image/webp">
               <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x" type="image/webp">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+              <source srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x" type="image/webp">
               <img class="menu__logo-img" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип">
             </picture>
             <picture class="menu__picture menu__picture--blue">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x" type="image/webp">
               <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x" type="image/webp">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+              <source srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x" type="image/webp">
               <img class="menu__logo-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип">
             </picture>
           </a>
 
-          <button class="menu__toggle-btn" type="button" aria-label="Открыть меню">
+          <button class="menu__toggle-btn" type="button" aria-label="Меню">
             <svg class="menu__toggle-icon menu__toggle-icon--burger" width="25" height="11" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite.svg#menu"></use>
             </svg>
@@ -50,14 +56,14 @@
           <ul class="menu-contact-list menu__top-contact-list">
             <li class="menu-contact-list__item">
               <a class="menu-contact-list__link menu-contact-list__link--phone" href="tel:88005558628" aria-label="8 800 555-86-28">
-                <svg class="menu-contact-list__icon" role="img">
+                <svg class="menu-contact-list__icon" width="18" height="18" role="img">
                   <use xlink:href="img/sprite.svg#topmenu-phone"></use>
                 </svg>
               </a>
             </li>
             <li class="menu-contact-list__item">
               <a class="menu-contact-list__link menu-contact-list__link--mail" href="mailto:mail@htmlacademy.ru" aria-label="mail@htmlacademy.ru">
-                <svg class="menu-contact-list__icon" role="img">
+                <svg class="menu-contact-list__icon" width="18" height="14" role="img">
                   <use xlink:href="img/sprite.svg#topmenu-mail"></use>
                 </svg>
               </a>
@@ -77,7 +83,7 @@
             </li>
             <li class="contact-list__item">
               <a class="contact-list__link" href="mailto:mail@htmlacademy.ru">
-                <svg class="contact-list__icon" width="18" height="14" role="img">
+                <svg class="contact-list__icon" width="18" height="13" role="img">
                   <use xlink:href="img/sprite.svg#contacts-mail"></use>
                 </svg>
                 <span class="contact-list__text">mail@htmlacademy.ru</span>
@@ -168,6 +174,7 @@
             </ul>
           </header>
           <article class="country-widget country-widget--catalog country-filter__content">
+            <h3 class="visually-hidden">Виджет выбора страны</h3>
             <ul class="letters letters--catalog country-widget__letters">
               <li class="letters__item">
                 <input class="letters__radio visually-hidden" type="radio" name="letter" id="letter_1" checked>
@@ -581,7 +588,7 @@
                     <li class="transport-list__item">
                       <input class="transport-list__checkbox visually-hidden" type="checkbox" name="transport" id="plane" checked>
                       <label class="transport-list__label" for="plane">
-                        <svg class="transport-list__icon transport-list__icon--plane" width="14" height="16" role="img" alt="Авиаперелет">
+                        <svg class="transport-list__icon transport-list__icon--plane" width="14" height="16" role="img">
                           <use xlink:href="img/sprite.svg#plane"></use>
                         </svg>
                         <span class="visually-hidden">Авиаперелет</span>
@@ -590,7 +597,7 @@
                     <li class="transport-list__item">
                       <input class="transport-list__checkbox visually-hidden" type="checkbox" name="transport" id="bus" checked>
                       <label class="transport-list__label" for="bus">
-                        <svg class="transport-list__icon transport-list__icon--bus" width="13" height="16" role="img" alt="Автотранспорт">
+                        <svg class="transport-list__icon transport-list__icon--bus" width="13" height="16" role="img">
                           <use xlink:href="img/sprite.svg#bus"></use>
                         </svg>
                         <span class="visually-hidden">Автотранспорт</span>
@@ -599,7 +606,7 @@
                     <li class="transport-list__item">
                       <input class="transport-list__checkbox visually-hidden" type="checkbox" name="transport" id="bike">
                       <label class="transport-list__label" for="bike">
-                        <svg class="transport-list__icon transport-list__icon--bike" width="19" height="17" role="img" alt="Велосипед">
+                        <svg class="transport-list__icon transport-list__icon--bike" width="19" height="17" role="img">
                           <use xlink:href="img/sprite.svg#bike"></use>
                         </svg>
                         <span class="visually-hidden">Велосипед</span>
@@ -608,7 +615,7 @@
                     <li class="transport-list__item">
                       <input class="transport-list__checkbox visually-hidden" type="checkbox" name="transport" id="run" checked>
                       <label class="transport-list__label" for="run">
-                        <svg class="transport-list__icon transport-list__icon--run" width="15" height="17" role="img" alt="Пешком">
+                        <svg class="transport-list__icon transport-list__icon--run" width="15" height="17" role="img">
                           <use xlink:href="img/sprite.svg#run"></use>
                         </svg>
                         <span class="visually-hidden">Пешком</span>
@@ -650,8 +657,11 @@
               <article class="traveller travellers__item">
                 <a class="traveller__img-link" href="#">
                   <picture class="traveller__picture">
+                    <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-destop@2x.webp 2x" type="image/webp">
                     <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-destop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x" type="image/webp">
                     <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+                    <source srcset="img/firsova-mobile@1x.jpg 1x, img/firsova-mobile@2x.jpg 2x" type="image/webp">
                     <img class="traveller__img" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Таня Фирсова">
                   </picture>
                 </a>
@@ -688,19 +698,19 @@
                   <p class="labelled-block__label">Хочет посетить:</p>
                   <ul class="country-list country-list--catalog traveller__country-list">
                     <li class="country-list__item">
-                      <svg class="country-list__icon" width="26" height="18" role="img" alt="Шри-Ланка">
+                      <svg class="country-list__icon" width="26" height="18" role="img">
                         <use xlink:href="img/sprite.svg#flag-sri-lanka"></use>
                       </svg>
                       <span class="country-list__text">Шри-Ланка</span>
                     </li>
                     <li class="country-list__item">
-                      <svg class="country-list__icon" width="26" height="18" role="img" alt="Таиланд">
+                      <svg class="country-list__icon" width="26" height="18" role="img">
                         <use xlink:href="img/sprite.svg#flag-thailand"></use>
                       </svg>
                       <span class="country-list__text">Таиланд</span>
                     </li>
                     <li class="country-list__item">
-                      <svg class="country-list__icon" width="26" height="18" role="img" alt="Сейшеллы">
+                      <svg class="country-list__icon" width="26" height="18" role="img">
                         <use xlink:href="img/sprite.svg#flag-seychelles"></use>
                       </svg>
                       <span class="country-list__text">Сейшеллы</span>
@@ -712,25 +722,25 @@
                   <p class="labelled-block__label traveller__label">Транспорт:</p>
                   <ul class="transport-list transport-list--catalog transport-list--align--left traveller__transport-list">
                     <li class="transport-list__item transport-list__item--active">
-                      <svg class="transport-list__icon transport-list__icon--plane" width="14" height="16" role="img" alt="Авиаперелет">
+                      <svg class="transport-list__icon transport-list__icon--plane" width="14" height="16" role="img">
                         <use xlink:href="img/sprite.svg#plane"></use>
                       </svg>
                       <span class="visually-hidden">Авиаперелет</span>
                     </li>
                     <li class="transport-list__item">
-                      <svg class="transport-list__icon transport-list__icon--bus" width="13" height="16" role="img" alt="Автотранспорт">
+                      <svg class="transport-list__icon transport-list__icon--bus" width="13" height="16" role="img">
                         <use xlink:href="img/sprite.svg#bus"></use>
                       </svg>
                       <span class="visually-hidden">Автотранспорт</span>
                     </li>
                     <li class="transport-list__item">
-                      <svg class="transport-list__icon transport-list__icon--bike" width="19" height="17" role="img" alt="Велосипед">
+                      <svg class="transport-list__icon transport-list__icon--bike" width="19" height="17" role="img">
                         <use xlink:href="img/sprite.svg#bike"></use>
                       </svg>
                       <span class="visually-hidden">Велосипед</span>
                     </li>
                     <li class="transport-list__item">
-                      <svg class="transport-list__icon transport-list__icon--run" width="15" height="17" role="img" alt="Пешком">
+                      <svg class="transport-list__icon transport-list__icon--run" width="15" height="17" role="img">
                         <use xlink:href="img/sprite.svg#run"></use>
                       </svg>
                       <span class="visually-hidden">Пешком</span>
@@ -748,8 +758,11 @@
               <article class="traveller travellers__item">
                 <a class="traveller__img-link" href="#">
                   <picture class="traveller__picture">
+                    <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x" type="image/webp">
                     <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x" type="image/webp">
                     <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+                    <source srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x" type="image/webp">
                     <img class="traveller__img" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Петя Демин">
                   </picture>
                 </a>
@@ -785,13 +798,13 @@
                   <p class="labelled-block__label">Хочет посетить:</p>
                   <ul class="country-list country-list--catalog traveller__country-list">
                     <li class="country-list__item">
-                      <svg class="country-list__icon" width="26" height="18" role="img" alt="Бельгия">
+                      <svg class="country-list__icon" width="26" height="18" role="img">
                         <use xlink:href="img/sprite.svg#flag-belgium"></use>
                       </svg>
                       <span class="country-list__text">Бельгия</span>
                     </li>
                     <li class="country-list__item">
-                      <svg class="country-list__icon" width="26" height="18" role="img" alt="Чехия">
+                      <svg class="country-list__icon" width="26" height="18" role="img">
                         <use xlink:href="img/sprite.svg#flag-czech"></use>
                       </svg>
                       <span class="country-list__text">Чехия</span>
@@ -803,25 +816,25 @@
                   <p class="labelled-block__label traveller__label">Транспорт:</p>
                   <ul class="transport-list transport-list--catalog transport-list--align--left traveller__transport-list">
                     <li class="transport-list__item transport-list__item--active">
-                      <svg class="transport-list__icon transport-list__icon--plane" width="14" height="16" role="img" alt="Авиаперелет">
+                      <svg class="transport-list__icon transport-list__icon--plane" width="14" height="16" role="img">
                         <use xlink:href="img/sprite.svg#plane"></use>
                       </svg>
                       <span class="visually-hidden">Авиаперелет</span>
                     </li>
                     <li class="transport-list__item transport-list__item--active">
-                      <svg class="transport-list__icon transport-list__icon--bus" width="13" height="16" role="img" alt="Автотранспорт">
+                      <svg class="transport-list__icon transport-list__icon--bus" width="13" height="16" role="img">
                         <use xlink:href="img/sprite.svg#bus"></use>
                       </svg>
                       <span class="visually-hidden">Автотранспорт</span>
                     </li>
                     <li class="transport-list__item">
-                      <svg class="transport-list__icon transport-list__icon--bike" width="19" height="17" role="img" alt="Велосипед">
+                      <svg class="transport-list__icon transport-list__icon--bike" width="19" height="17" role="img">
                         <use xlink:href="img/sprite.svg#bike"></use>
                       </svg>
                       <span class="visually-hidden">Велосипед</span>
                     </li>
                     <li class="transport-list__item transport-list__item--active">
-                      <svg class="transport-list__icon transport-list__icon--run" width="15" height="17" role="img" alt="Пешком">
+                      <svg class="transport-list__icon transport-list__icon--run" width="15" height="17" role="img">
                         <use xlink:href="img/sprite.svg#run"></use>
                       </svg>
                       <span class="visually-hidden">Пешком</span>
@@ -839,8 +852,11 @@
               <article class="traveller travellers__item">
                 <a class="traveller__img-link" href="#">
                   <picture class="traveller__picture">
+                    <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x" type="image/webp">
                     <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x" type="image/webp">
                     <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
+                    <source srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x" type="image/webp">
                     <img class="traveller__img" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Марк Смолов">
                   </picture>
                 </a>
@@ -876,19 +892,19 @@
                   <p class="labelled-block__label">Хочет посетить:</p>
                   <ul class="country-list country-list--catalog traveller__country-list">
                     <li class="country-list__item">
-                      <svg class="country-list__icon" width="26" height="18" role="img" alt="США">
+                      <svg class="country-list__icon" width="26" height="18" role="img">
                         <use xlink:href="img/sprite.svg#flag-usa"></use>
                       </svg>
                       <span class="country-list__text">США</span>
                     </li>
                     <li class="country-list__item">
-                      <svg class="country-list__icon" width="26" height="18" role="img" alt="Австралия">
+                      <svg class="country-list__icon" width="26" height="18" role="img">
                         <use xlink:href="img/sprite.svg#flag-australia"></use>
                       </svg>
                       <span class="country-list__text">Австралия</span>
                     </li>
                     <li class="country-list__item">
-                      <svg class="country-list__icon" width="26" height="18" role="img" alt="Доминикана">
+                      <svg class="country-list__icon" width="26" height="18" role="img">
                         <use xlink:href="img/sprite.svg#flag-dominica"></use>
                       </svg>
                       <span class="country-list__text">Доминикана</span>
@@ -900,25 +916,25 @@
                   <p class="labelled-block__label traveller__label">Транспорт:</p>
                   <ul class="transport-list transport-list--catalog transport-list--align--left traveller__transport-list">
                     <li class="transport-list__item transport-list__item--active">
-                      <svg class="transport-list__icon transport-list__icon--plane" width="14" height="16" role="img" alt="Авиаперелет">
+                      <svg class="transport-list__icon transport-list__icon--plane" width="14" height="16" role="img">
                         <use xlink:href="img/sprite.svg#plane"></use>
                       </svg>
                       <span class="visually-hidden">Авиаперелет</span>
                     </li>
                     <li class="transport-list__item">
-                      <svg class="transport-list__icon transport-list__icon--bus" width="13" height="16" role="img" alt="Автотранспорт">
+                      <svg class="transport-list__icon transport-list__icon--bus" width="13" height="16" role="img">
                         <use xlink:href="img/sprite.svg#bus"></use>
                       </svg>
                       <span class="visually-hidden">Автотранспорт</span>
                     </li>
                     <li class="transport-list__item transport-list__item--active">
-                      <svg class="transport-list__icon transport-list__icon--bike" width="19" height="17" role="img" alt="Велосипед">
+                      <svg class="transport-list__icon transport-list__icon--bike" width="19" height="17" role="img">
                         <use xlink:href="img/sprite.svg#bike"></use>
                       </svg>
                       <span class="visually-hidden">Велосипед</span>
                     </li>
                     <li class="transport-list__item">
-                      <svg class="transport-list__icon transport-list__icon--run" width="15" height="17" role="img" alt="Пешком">
+                      <svg class="transport-list__icon transport-list__icon--run" width="15" height="17" role="img">
                         <use xlink:href="img/sprite.svg#run"></use>
                       </svg>
                       <span class="visually-hidden">Пешком</span>
@@ -936,8 +952,11 @@
               <article class="traveller travellers__item">
                 <a class="traveller__img-link" href="#">
                   <picture class="traveller__picture">
+                    <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x" type="image/webp">
                     <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x" type="image/webp">
                     <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
+                    <source srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x" type="image/webp">
                     <img class="traveller__img" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Лариса Роговая">
                   </picture>
                 </a>
@@ -972,13 +991,13 @@
                   <p class="labelled-block__label">Хочет посетить:</p>
                   <ul class="country-list country-list--catalog traveller__country-list">
                     <li class="country-list__item">
-                      <svg class="country-list__icon" width="26" height="18" role="img" alt="Великобритания">
+                      <svg class="country-list__icon" width="26" height="18" role="img">
                         <use xlink:href="img/sprite.svg#flag-united-kingdom"></use>
                       </svg>
                       <span class="country-list__text">Великобритания</span>
                     </li>
                     <li class="country-list__item">
-                      <svg class="country-list__icon" width="26" height="18" role="img" alt="Германия">
+                      <svg class="country-list__icon" width="26" height="18" role="img">
                         <use xlink:href="img/sprite.svg#flag-germany"></use>
                       </svg>
                       <span class="country-list__text">Германия</span>
@@ -990,25 +1009,25 @@
                   <p class="labelled-block__label traveller__label">Транспорт:</p>
                   <ul class="transport-list transport-list--catalog transport-list--align--left traveller__transport-list">
                     <li class="transport-list__item transport-list__item--active">
-                      <svg class="transport-list__icon transport-list__icon--plane" width="14" height="16" role="img" alt="Авиаперелет">
+                      <svg class="transport-list__icon transport-list__icon--plane" width="14" height="16" role="img">
                         <use xlink:href="img/sprite.svg#plane"></use>
                       </svg>
                       <span class="visually-hidden">Авиаперелет</span>
                     </li>
                     <li class="transport-list__item transport-list__item--active">
-                      <svg class="transport-list__icon transport-list__icon--bus" width="13" height="16" role="img" alt="Автотранспорт">
+                      <svg class="transport-list__icon transport-list__icon--bus" width="13" height="16" role="img">
                         <use xlink:href="img/sprite.svg#bus"></use>
                       </svg>
                       <span class="visually-hidden">Автотранспорт</span>
                     </li>
                     <li class="transport-list__item">
-                      <svg class="transport-list__icon transport-list__icon--bike" width="19" height="17" role="img" alt="Велосипед">
+                      <svg class="transport-list__icon transport-list__icon--bike" width="19" height="17" role="img">
                         <use xlink:href="img/sprite.svg#bike"></use>
                       </svg>
                       <span class="visually-hidden">Велосипед</span>
                     </li>
                     <li class="transport-list__item">
-                      <svg class="transport-list__icon transport-list__icon--run" width="15" height="17" role="img" alt="Пешком">
+                      <svg class="transport-list__icon transport-list__icon--run" width="15" height="17" role="img">
                         <use xlink:href="img/sprite.svg#run"></use>
                       </svg>
                       <span class="visually-hidden">Пешком</span>
@@ -1067,11 +1086,13 @@
       <div class="wrapper footer__wrapper">
         <a class="footer__logo" href="index.html">
           <picture class="footer__picture">
-            <source media="(min-width: 1400px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x" type="image/webp">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-            <img class="footer__logo-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x"
-              width="100" height="19" alt="Логотип">
-          </picture>
+            <source srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x" type="image/webp">
+            <img class="footer__logo-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип">
+            </picture>
         </a>
         <ul class="social-list footer__social-list">
           <li class="social-list__item">

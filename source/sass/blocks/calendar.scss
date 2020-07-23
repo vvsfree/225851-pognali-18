@@ -8,6 +8,7 @@
 .calendar__caption {
   padding: 11px 0;
   margin-bottom: 14px;
+
   @include font(20px, 1, $dark-slate-blue-color, 700);
   border-top: 1px solid #cbced9;
   border-bottom: 1px solid #cbced9;
@@ -40,6 +41,10 @@
   font-weight: normal;
   text-align: center;
   vertical-align: middle;
+
+  &--red {
+    color: $red-color;
+  }
 }
 
 .calendar__header-letter {
@@ -188,12 +193,5 @@
   .calendar__check-day {
     display: block;
     width: 100%;
-  }
-}
-
-// Для всех ширин
-.calendar__header {
-  &--red {
-    color: $red-color;
   }
 }

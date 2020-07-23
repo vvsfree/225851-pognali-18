@@ -1,5 +1,6 @@
 .heading2 {
   margin: 0;
+
   @include font(24px, 24px, $orange-color, 700);
 
   &--form {

@@ -1,6 +1,7 @@
 .plan-list {
   padding: 0;
   margin: 0;
+
   @include font(14px, 14px, $dark-slate-blue-color, 500);
   list-style: none;
   counter-reset: item;
@@ -22,7 +23,7 @@
 
   &::before {
     counter-increment: item;
-    content: counter(item)".";
+    content: counter(item) ".";
   }
 
   &:last-of-type {

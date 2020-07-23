@@ -21,6 +21,7 @@
 
   .step-btn__icon {
     display: block;
+
     @include moreBtnIcon();
   }
 }

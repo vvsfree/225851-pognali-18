@@ -13,6 +13,7 @@
 
   &--catalog {
     display: block;
+
     @include font(15px, 18px, $dark-slate-blue-color, 500);
     text-transform: uppercase;
 

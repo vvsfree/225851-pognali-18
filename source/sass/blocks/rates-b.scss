@@ -7,11 +7,12 @@
   padding-top: 20px;
 
   width: $mobile-wrapper-width;
+
   @include font(16px, 22px, $black-color, 300);
   background-color: transparent;
   border-bottom-left-radius: $border-small-radius;
   border-bottom-right-radius: $border-small-radius;
-  box-shadow: 0px 20px 50px 0px rgba(29, 46, 91, 0.1);
+  box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
 
   &--opened {
     display: block;
@@ -44,6 +45,7 @@
   padding-top: 17px;
   padding-bottom: 18px;
   width: 100%;
+
   @include font(16px, 24px, #1d2e5b, 700);
   text-transform: uppercase;
   background-color: #f3f4f8;
@@ -88,7 +90,6 @@
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
   }
-
 }
 
 @media (min-width: $desktop-width) {
